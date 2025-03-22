@@ -625,7 +625,7 @@ button:hover {
     position: relative;
     width: 100%;
     height: 30vh; /* ارتفاع السكشن */
-    background: url('img/reg.jpg') center/cover no-repeat;
+    background: url('https://alfey28.github.io/clinck/img/reg.jpg') center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
