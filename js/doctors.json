@@ -23,7 +23,7 @@
                 "twitter": "https://twitter.com/ahmedali"
             }
         },
-        "image": "img/doctor1.jpg"
+        "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor1.jpg?raw=true"
     },
     {
       "id": 2,
@@ -49,7 +49,7 @@
           "twitter": "https://twitter.com/mohamedhassan"
         }
       },
-      "image": "img/doctor2.jpg"
+      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor2.jpg?raw=true"
     },
     {
       "id": 3,
@@ -75,7 +75,7 @@
           "twitter": "https://twitter.com/yasminmahmoud"
         }
       },
-      "image": "img/doctor3.png"
+      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor3.png?raw=true"
     },
     {
       "id": 4,
@@ -101,7 +101,7 @@
           "twitter": "https://twitter.com/samiabdullah"
         }
       },
-      "image": "img/doctor4.jpg"
+      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor4.jpg?raw=true"
     },
     {
       "id": 5,
@@ -127,7 +127,7 @@
           "twitter": "https://twitter.com/leilaibrahim"
         }
       },
-      "image": "img/doctor5.jpg"
+      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor5.jpg?raw=true"
     },
     {
       "id": 6,
@@ -153,7 +153,7 @@
           "twitter": "https://twitter.com/karimsharkawy"
         }
       },
-      "image": "img/doctor6.jpg"
+      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor6.jpg?raw=true"
     },
     {
       "id": 7,
@@ -179,7 +179,7 @@
           "twitter": "https://twitter.com/karimsharkawy"
         }
       },
-      "image": "img/doctor7.jpg"
+      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor7.jpg?raw=true"
     },
     {
       "id": 8,
@@ -205,7 +205,7 @@
           "twitter": "https://twitter.com/karimsharkawy"
         }
       },
-      "image": "img/doctor8.jpeg"
+      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor8.jpeg?raw=true"
     },
     {
       "id": 9,
@@ -231,7 +231,7 @@
           "twitter": "https://twitter.com/karimsharkawy"
         }
       },
-      "image": "img/doctor9.png"
+      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor9.png?raw=true"
     }
   ]
   
