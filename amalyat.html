@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>عمليات</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="عيادة، مستشفى، طبيب، صحة" name="keywords">
+    <meta content="قالب موقع عيادة حديث ومتجاوب" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap RTL Stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Template Stylesheet -->
+    
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/styleama.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wowfadeIn"data-wow-delay="0.1s"> 
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto p-4 p-lg-0">
+                    <li class="nav-item"><a href="index.html#amount" class="nav-link">أحجز كشفك الأن</a><li>
+                    <li class="nav-item"><a href="phar.html" class="nav-link">صيدليات</a></li>
+                    <li class="nav-item"><a href="info.html" class="nav-link">معلومات طبية</a></li>
+                    </ul>
+                <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5 ">
+                    <h1 class="m-0 highlight"><i class="far fa-hospital me-2"></i>كلينيك</h1>
+                </a>
+                <ul class="navbar-nav ms-auto ml-5 margin">
+                    <li class="nav-item"><a href="index.html" class="nav-link active">الرئيسية</a></li>
+                    <li class="nav-item"><a href="index.html#specialization" class="nav-link">تخصصات</a></li>
+                    <li class="nav-item"><a href="index.html#doctors" class="nav-link">أطباء</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    
+
+    <h2>تفاصيل التخصص</h2>
+    <p><strong>التخصص:</strong> <span id="specialty-name"></span></p>
+    
+    <h3>تفاصيل العملية</h3>
+    <p><strong>اسم العملية:</strong> <span id="procedure-title"></span></p>
+    <p><strong>الوصف:</strong> <span id="procedure-description"></span></p>
+    
+
+
+
+
+
+
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <!-- العنوان -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-4">العنوان</h5>
+                    <a href="https://www.google.com/maps/place/79+%D8%B7%D8%B1%D9%8A%D9%82+%D8%A7%D9%84%D9%86%D8%B5%D8%B1%D8%8C+%D8%A7%D9%84%D9%85%D9%86%D8%B7%D9%82%D8%A9+%D8%A7%D9%84%D8%A3%D9%88%D9%84%D9%89%D8%8C+%D9%85%D8%AF%D9%8A%D9%86%D8%A9+%D9%86%D8%B5%D8%B1%D8%8C+%D9%85%D8%AD%D8%A7%D9%81%D8%B8%D8%A9+%D8%A7%D9%84%D9%82%D8%A7%D9%87%D8%B1%D8%A9%E2%80%AC+4450233%E2%80%AD/@30.0677738,31.3322354,17z/data=!3m1!4b1!4m6!3m5!1s0x14583e6a89beab27:0xd46ad0e9dfc7038!8m2!3d30.0677738!4d31.3322354!16s%2Fg%2F11q2n7jr30?entry=ttu&g_ep=EgoyMDI1MDMxOC4wIKXMDSoJLDEwMjExNjQwSAFQAw%3D%3D" class="btn btn-link"><i class="fa fa-map-marker-alt me-2"></i> 79 أبراج طيبة طريق النصر مدينة نصر</a>
+                    <a href="https://wa.me/201201233396" class="btn btn-link"><i class="fa fa-phone-alt me-2"></i> +012 012 33396</a>
+                    <a href="mailto:emereld-emarkting@gmail.com" class="btn btn-link"><i class="fa fa-envelope me-2"></i> emereld-emarkting@gmail.com</a>
+                </div>
+    
+                <!-- التخصصات -->
+                <div class="col-lg-6 col-md-6">
+                    <h5 class="mb-4 text-center">التخصصات</h5>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <a href="specialization.html?id=cardiology" class="btn btn-link">قلب</a>
+                            <a href="specialization.html?id=ophthalmology" class="btn btn-link">عيون</a>
+                            <a href="specialization.html?id=pediatrics" class="btn btn-link">أطفال</a>
+                            <a href="specialization.html?id=surgery" class="btn btn-link">جراحة</a>
+                            <a href="specialization.html?id=dentistry" class="btn btn-link">أسنان</a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="specialization.html?id=cosmetic" class="btn btn-link">تجميل</a>
+                            <a href="specialization.html?id=urology" class="btn btn-link">ذكورة</a>
+                            <a href="specialization.html?id=Kidney" class="btn btn-link">الكلى</a>
+                            <a href="specialization.html?id=orthopedics" class="btn btn-link">عظام</a>
+                            <a href="specialization.html?id=dermatology" class="btn btn-link">جلدية</a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="specialization.html?id=Chest" class="btn btn-link">الصدر</a>
+                            <a href="specialization.html?id=psy" class="btn btn-link">نفسي</a>
+                            <a href="specialization.html?id=ban" class="btn btn-link">مخ و أعصاب</a>
+                            <a href="specialization.html?id=gynecology" class="btn btn-link">نساء وتوليد</a>
+                            <a href="specialization.html?id=ent" class="btn btn-link">أنف وأذن وحنجرة</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- الروابط -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-4">روابط</h5>
+                    <a href="index.html" class="btn btn-link">الرئيسية</a>
+                    <a href="#specialization" class="btn btn-link">تخصصات</a>
+                    <a href="#doctors" class="btn btn-link">أطباء</a>
+                    <a href="phar.html" class="btn btn-link">صيدليات</a>
+                    <a href="info.html" class="btn btn-link">معلومات طبية</a>
+                    <a href="#amount" class="btn btn-link"> أحجز كشفك الأن</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Copyright Section -->
+    <div>
+        <div class="copyright text-center py-3 border-top">
+            &copy; <a href="#">كلينيك</a>, All Right Reserved.
+            Designed By <a href="https://htmlcodex.com">(HTML Codex)</a>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+     <script src="js/amalyat.js"></script>
+    <script src="js/main.js"></script>
+</body>

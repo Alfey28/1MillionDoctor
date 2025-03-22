@@ -1,0 +1,823 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Tajawal', sans-serif;
+}
+/***  جزء العمليات ***/
+.header-text-p{
+    font-size: 20px;
+}
+.header-text-h1{
+    color: #32BCCB;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.filter-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    width: 70%;
+}
+
+.custom-select {
+    width: 100%;
+    padding: 10px;
+    border: 3px solid #007bff;
+    border-radius: 10px;
+    color: black;
+    font-size: 18px;
+}
+
+.custom-select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.filter-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.filter-btn:hover {
+    background: #03376e;
+}
+
+
+
+
+/********** Template CSS **********/
+:root {
+    --primary: #0463FA;
+    --light: #EFF5FF;
+    --dark: #1B2C51;
+}
+
+.fw-medium {
+    font-weight: 500 !important;
+}
+
+.fw-bold {
+    font-weight: 700 !important;
+}
+
+.fw-black {
+    font-weight: 900 !important;
+}
+
+.back-to-top {
+    background-color: #32BCCB !important; /* ضمان تغيير اللون */
+    position: fixed;
+    right: 20px; /* تقليل البعد عن الحافة اليمنى */
+    bottom: 20px; /* تقليل البعد عن الحافة السفلية */
+    z-index: 99;
+}
+
+
+
+/*** Spinner ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*** Button ***/
+.btn {
+    font-weight: 500;
+    transition: .5s;
+}
+
+.btn.btn-primary,
+.btn.btn-secondary {
+    color: #FFFFFF;
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+}
+
+
+/*** Navbar ***/
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+
+.navbar .navbar-nav .nav-link {
+    margin-right: 30px;
+    padding: 25px 0;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    outline: none;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+@media (max-width: 991.98px) {
+    .navbar .navbar-nav .nav-link  {
+        margin-right: 0;
+        padding: 10px 0;
+    }
+
+    .navbar .navbar-nav {
+        border-top: 1px solid #EEEEEE;
+    }
+}
+
+.navbar .navbar-brand,
+.navbar a.btn {
+    height: 75px;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: var(--dark);
+    font-weight: 500;
+}
+
+
+.navbar.sticky-top {
+    top: -100px;
+    transition: .5s;
+}
+
+@media (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        border: none;
+        margin-top: 0;
+        top: 150%;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        top: 100%;
+        visibility: visible;
+        transition: .5s;
+        opacity: 1;
+    }
+}
+.margin{
+    margin-left: 5%;
+}
+/*** Header ***/
+.header-section{
+    margin-bottom: 70px;
+}
+
+/* جعل الصورة تغطي العرض بالكامل مع ارتفاع متناسق */
+.full-height {
+    width: 100%;
+    height: 92vh; /* تقليل الارتفاع ليكون متناسقًا */
+    object-fit: cover;
+    position: relative;
+}
+
+/* إضافة طبقة سوداء شفافة فوق الصورة */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* طبقة شفافة */
+}
+
+/* تحسين تموضع النصوص */
+.header-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 2;
+    padding: 2rem;
+}
+
+/* تحسين تنسيق العنوان */
+.header-text h1 p {
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    font-size: 3rem; /* تقليل الحجم ليكون متناسقًا */
+}
+
+/* تصميم احترافي للزر */
+.custom-btn {
+    background: #0357DE; /* لون جذاب */
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* تأثير عند تمرير الماوس على الزر */
+.custom-btn:hover {
+    background: white;
+    color: #0357DE;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.select-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+select, button {
+    font-weight: bold;
+    width: 30%;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    background: #0D6EFD;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+select {
+    background: white;
+    text-align: center;
+    color: black;
+    cursor: pointer;
+}
+
+select:hover{
+    background-color: rgba(97, 252, 236, 0.295);
+}
+
+
+button:hover {
+    background: #024791;
+}
+/*** About US ***/
+/* تحسين تنسيق القسم */
+.about-section {
+    background-color: #f9f9f9;
+}
+
+/* تنسيق الصور وجعلها تبدو متداخلة من الجهة الأخرى */
+.image-container {
+    margin-left: 30%;
+    position: relative;
+    display: block;
+
+}
+
+
+.right-text i {
+    margin-left: 10px; /* يضيف مسافة بين الأيقونة والنص */
+}
+
+.main-img {
+    width: 90%;
+    position: relative;
+    left: 20%;
+    border-radius: 10px;
+    border: 3px solid #1B2C51; /* نفس لون العنوان */
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 1);
+}
+
+.overlay-img {
+    width: 60%;
+    position: absolute;
+    left: -10%; /* خروج الصورة من الجهة اليسرى */
+    top: 50%;
+    border: 3px solid #1B2C51; /* نفس لون العنوان */
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 1);
+}
+
+/* تحسين تنسيق العنوان ليتم استخدام لونه في الـ border */
+.title-text {
+    color: #32BCCB;
+}
+
+.about-p{
+    text-align: right;
+    font-weight: bold;
+    font-size: 18px;
+}
+.about-pp{
+    text-align: right;
+}
+
+/* تحسين تنسيق زرار "Read More" */
+.custom-btn {
+    background: #007bff;
+    color: white;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 5px 10px rgba(0, 123, 255, 0.3);
+    margin-left: 30%;
+    /* text-decoration: none; */
+    /* display: inline-block; */
+}
+
+/* تأثير Hover للزر */
+.custom-btn:hover {
+    transform: scale(1);
+    background: white;
+    color: #007bff;
+    border: 2px solid #007bff;
+    box-shadow: 0px 5px 15px rgba(0, 123, 255, 0.5);
+}
+
+
+
+
+/*** Service ***/
+
+/* التوزيع بناءً على الشاشة */
+@media (max-width: 575px) {
+    .col-sm-6 {
+        width: 50%; /* موبايل: عنصرين في الصف */
+    }
+}
+@media (min-width: 576px) and (max-width: 991px) {
+    .col-md-2 {
+        width: 20%; /* تابلت: 5 عناصر في الصف */
+    }
+}
+@media (min-width: 992px) {
+    .col-lg-2 {
+        width: 16.66%; /* شاشات كبيرة: 6 عناصر في الصف */
+    }
+}
+
+/* تصميم الخدمة */
+.service-item {
+    width: 100%;
+    min-height: 15vh;
+    transition: 0.5s;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+}
+
+/* تأثير التحويم */
+.service-item:hover {
+    background-color: #32BCCB !important;
+    color: white;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.08);
+}
+
+/* تنسيق الأيقونة والعنوان */
+.service-item .icon-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.service-item .icon-title i {
+    font-size: 24px;
+}
+
+/* تغيير لون النص عند التحويم */
+.service-item:hover h4 {
+    color: white !important;
+}
+
+
+
+/*** Team ***/
+.slider img {
+    height: 200px; /* يفضل تحديد الارتفاع لمنع التشوه */
+    object-fit: cover; /* يضمن ملء الصورة دون تمدد غير طبيعي */
+    border-radius: 8px; /* تحسين الشكل لو أردت */
+}
+.text-decoration{
+    text-decoration: none;
+    color: black;
+}
+.team{
+    margin-top: 5%;
+}
+.backg-team{
+    background-color: #F9F9F9;
+    width: 100%;
+}
+.team-text{
+    background-color: #b4bcbd3b;
+}
+.team-text h5{
+    font-size: 20px;
+    font-weight: bold;
+}
+.team-text .special-color{
+    color: #32bccb;
+    font-size: 18px;
+    font-weight: bold;
+}
+.team-text .address-color{
+    font-size: 15;
+    color: rgb(0, 0, 0);
+}
+
+.team-item img {
+    position: relative;
+    top: 0;
+    transition: .5s;
+}
+
+.team-social{
+    color: #0463FA;
+}
+
+.team-item:hover img {
+    top: -30px;
+}
+
+.team-item .team-text {
+    position: relative;
+    height: 100px;
+    transition: .5s;
+}
+
+.team-item:hover .team-text {
+    margin-top: -60px;
+    height: 160px;
+}
+
+.team-item .team-text .team-social {
+    opacity: 0;
+    transition: .5s;
+}
+
+.team-item:hover .team-text .team-social {
+    opacity: 1;
+}
+
+.team-item .team-social .btn {
+    display: inline-flex;
+    color: var(--primary);
+    background: #ffffff;
+    border-radius: 40px;
+}
+
+.team-item .team-social .btn:hover {
+    color: #FFFFFF;
+    background: var(--primary);
+}
+
+
+/*** Appointment ***/
+/* تحسين التصميم وجعله أكثر احترافية */
+
+.error {
+    border: 2px solid rgba(245, 109, 109, 0.856) !important;
+    background-color: #ffe6e6; /* لون خلفية خفيف */
+}
+
+.container-xxl {
+    background-color: #eff0f1;
+    padding: 50px 0;
+}
+
+.title-text-a {
+    color: #007bff;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.about-pp {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.bg-light {
+    background: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.bg-light .d-flex {
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.bg-light .d-flex:hover {
+    background-color: #e9ecef;
+}
+
+.rounded-circle {
+    width: 60px;
+    height: 60px;
+    background-color: #007bff;
+    color: white;
+    font-size: 22px;
+}
+
+.form-control, .form-select {
+    border: 2px solid #dee2e6;
+    border-radius: 6px;
+    font-size: 16px;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+    text-align: right;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    .title-text {
+        font-size: 24px;
+    }
+    .form-control, .form-select {
+        font-size: 14px;
+    }
+}
+
+
+
+/*** register ***/
+.register-section {
+    position: relative;
+    width: 100%;
+    height: 30vh; /* ارتفاع السكشن */
+    background: url('/img/reg.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* طبقة سوداء شفافة */
+    display: flex;
+    justify-content: space-between; /* النص في اليمين والمحتوى في اليسار */
+    align-items: center;
+    padding: 0 10%;
+}
+
+.text-section {
+    color: white;
+    text-align: right;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* محاذاة النص بالكامل لليمين */
+}
+
+.text-section h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.highlight {
+    font-size: 50px;
+    font-weight: bold;
+    color: #0D6EFD; /* لون مختلف لكلمة كلينيك */
+}
+
+.logo {
+    width: 120px; /* حجم الشعار */
+    margin-top: 10px;
+}
+
+/* الحاوية الخاصة بالخيارات والزر */
+.options-container {
+    display: flex;
+    flex-direction: column; /* ترتيب العناصر عموديًا */
+    align-items: flex-start; /* محاذاة للعناصر لليسار */
+    position: absolute;
+    left: 10%; /* تثبيت العناصر على اليسار */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* الأزرار الجانبية لطبيب وصيدلية */
+.options {
+    display: flex;
+    gap: 15px; /* مسافة بين طبيب وصيدلية */
+    margin-bottom: 15px; /* مسافة لأسفل الزر */
+}
+
+.option {
+    background: #32BCCB;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    width: 100px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+}
+
+.option i {
+    font-size: 24px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.option h4 {
+    font-size: 14px;
+}
+
+/* زر سجل الآن */
+.btn-register {
+    margin-top: 10%;
+    width: 100%;
+    text-align: center;
+    background: white;
+    color: #32BCCB;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
+    transition: 0.3s;
+}
+
+.btn-register:hover {
+    background: #0D6EFD;
+    color: white;
+}
+
+
+/*** Footer ***/
+.footer .btn.btn-social {
+    margin-right: 5px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light);
+    border: 1px solid #FFFFFF;
+    transition: .3s;
+}
+
+.footer .btn.btn-social:hover {
+    color: var(--primary);
+}
+
+.footer .btn.btn-link {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: .3s;
+    text-decoration: none;
+}
+
+.footer .btn.btn-link:hover {
+    color: var(--primary);
+    letter-spacing: 1px;
+    box-shadow: none;
+}
+
+/* تحسين تنسيق الأيقونات مع النصوص */
+.footer p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap; /* يمنع النص من النزول لسطر جديد */
+}
+
+/* تقليل ارتفاع جزء الـ copyright */
+.footer .copyright {
+    padding: 10px 0;
+    font-size: 15px;
+    border-top: 1px solid rgba(256, 256, 256, .1);
+}
+.copyright{
+    background-color: #ffffff;
+    color: #32bccb;
+}
+.footer .copyright a {
+    color: var(--light);
+    text-decoration: none;
+}
+
+.footer .copyright a:hover {
+    color: var(--primary);
+}
+
+/* تقليل المسافة بين أعمدة التخصصات */
+.footer .specialties {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* قلل المسافة بين الأعمدة */
+    flex-wrap: wrap;
+}
+
+/* ضبط محاذاة النصوص في جزء التخصصات */
+.footer .specialties div {
+    text-align: center;
+    flex: 1;
+    min-width: 120px; /* يضمن أن الأعمدة لا تكون متباعدة جدًا */
+}
+/* تقليل المسافة بين أعمدة التخصصات */
+.footer .row .col-md-4 {
+    padding: 0 5px; /* تقليل المسافة بين الأعمدة */
+}
+
+/* ضبط عرض عمود التخصصات */
+.footer .col-lg-6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* تقليل المسافات بين النصوص داخل التخصصات */
+.footer .col-md-4 p {
+    margin-bottom: 5px; /* تقليل المسافة بين العناصر */
+    text-align: center; /* ضبط المحاذاة */
+}
