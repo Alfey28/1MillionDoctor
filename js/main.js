@@ -377,7 +377,19 @@ document.addEventListener("DOMContentLoaded", function () {
         reader.readAsDataURL(event.target.files[0]);
     }
     
+    document.addEventListener("DOMContentLoaded", function () {
+        const offerText = document.querySelector(".offer-text");
     
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    offerText.classList.add("visible");
+                }
+            });
+        }, { threshold: 0.5 });
+    
+        observer.observe(offerText);
+    });    
     
     
     

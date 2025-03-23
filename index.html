@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>كلينيك</title>
+    <title>1 MillionDoctor</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="عيادة، مستشفى، طبيب، صحة" name="keywords">
     <meta content="قالب موقع عيادة حديث ومتجاوب" name="description">
@@ -62,7 +62,7 @@
             <!-- القائمة اليمنى -->
             <div class="collapse navbar-collapse order-2" id="navbarContent">
                 <ul class="navbar-nav mb-2 mb-lg-0">
-                    <li class="nav-item"><a href="#amount" class="nav-link">أحجز كشفك الآن</a></li>
+                    <li class="nav-item"><a href="#amount" class="nav-link">أحجز كشفك الأن</a></li>
                     <li class="nav-item"><a href="phar.html" class="nav-link">صيدليات</a></li>
                     <li class="nav-item"><a href="info.html" class="nav-link">معلومات طبية</a></li>
                 </ul>
@@ -115,7 +115,6 @@
             </div>
         </div>
     </div>
-    
     <!-- Header End -->
 
 
@@ -125,7 +124,7 @@
             <div class="row g-5 align-items-center right-text">
                 <!-- قسم النصوص -->
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.6s">
-                    <h2 class="mb-4 title-text">لماذا تستخدم موقع كلينيك ؟</h2>
+                    <h2 class="mb-4 title-text-about">لماذا تستخدم موقع <span><span>1</span>MillionDoctor ؟ </span></h2>
                     <p class="about-pp">لأنه يمكنك من خلاله إجراء حجوزاتك الطبية والبحث عن جميع المستشفيات، كما يمكنك القيام بالاستشارات الطبية وقراءة المعلومات الطبية الهامة</p>
                     <p class="mb-4 about-p  fw-bold">: أهم مميزات موقع كلينيك</p>
                     <p class="text-end d-flex align-items-center justify-content-end"> حجز مواعيد <i class="far fa-check-circle text-primary ms-2"></i></p>
@@ -217,6 +216,12 @@
                         <h4 class="text-dark">تجميل</h4>
                     </div>
                 </a>
+                <a href="specialization.html?id=SLP" class="col-xl-2 col-lg-2 col-md-2 col-sm-6 wow fadeInUp text-decoration-none" data-wow-delay="0.7s">
+                    <div class="service-item bg-light rounded text-center p-3">
+                        <i class="fa fa-comments text-primary fs-4" style="margin-right: 10px;"></i>
+                        <h4 class="text-dark">تخاطب</h4>
+                    </div>
+                </a>
                 <a href="specialization.html?id=pediatrics" class="col-xl-2 col-lg-2 col-md-2 col-sm-6 wow fadeInUp text-decoration-none" data-wow-delay="0.8s">
                     <div class="service-item bg-light rounded text-center p-3">
                         <i class="fa fa-baby text-primary fs-4" style="margin-right: 10px;"></i>
@@ -282,10 +287,12 @@
         <div class="container">
             <div class="row g-5">
                 <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width:600px;">
-                    <h2 class="mb-4 title-text">أحجز استشارتك الطبية بسهولة</h2>
+                    <h2 class="title-text">أحجز استشارتك الطبية بسهولة</h2>
                     <p class="about-pp">يمكنك حجز كشفك أو أستشارتك الطبية بسهولة من خلال ملئ النموذج وأختيار دكتورك المفضل والمكان المناسب أو يمكنك التواصل معنا من خلال الطرق الأتية</p>
                 </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="offer-section">
+                    <p class="offer-text">أحجز الآن بخصم حتى <span>%20</span></p>
+                </div>                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="bg-light rounded h-100 d-flex a p-5">
                         <!-- رسالة الخطأ -->
                         <div id="error-message" style="display: none; color: red; text-align: center; font-weight: bold; margin-bottom: 10px;">
@@ -312,9 +319,16 @@
                                 </div>
     
                                 <!-- اليوم -->
-                                <div class="col-12 col-sm-6 time">
-                                    <input type="date" id="dateInput" placeholder="اليوم" class="form-control border-0" style="height: 55px;" required>
-                                    <span id="dayOfWeek" style="font-weight: bold; margin-right: 10px; display: inline-block;"></span>
+                                <div class="col-12 col-sm-6 time" style="position: relative;">
+                                    <input type="date" id="dateInput" class="form-control border-0 date-picker"
+                                        style="height: 55px; background: white; color: transparent; width: 100%; padding: 15px; border-radius: 5px; border: 1px solid #ccc;" required>
+                                    <span id="fakePlaceholder" 
+                                        style="position: absolute; top: 50%; left: 77%; transform: translateY(-50%); color: #595C5F;  cursor: pointer;">
+                                        اليوم
+                                    </span>
+                                    <span id="dayOfWeek" 
+                                        style="position: absolute; top: 50%; right: 65%; transform: translateY(-50%); font-weight: bold; color: #333;">
+                                    </span>
                                 </div>
     
                                 <!-- الطبيب -->
@@ -328,9 +342,16 @@
                                 </div>
     
                                 <!-- الوقت -->
-                                <div class="col-12 col-sm-6 time">
-                                    <input type="time" id="timeInput" placeholder="الوقت" class="form-control border-0" style="height: 55px;" required>
-                                    <span id="timePeriod" style="font-weight: bold; margin-right: 10px;"></span>
+                                <div class="col-12 col-sm-6 time" style="position: relative;">
+                                    <input type="time" id="timeInput" class="form-control border-0 time-picker"
+                                        style="height: 55px; background: white; color: transparent; width: 100%; padding: 15px; border-radius: 5px; border: 1px solid #ccc;" required>
+                                    <span id="fakeTimePlaceholder" 
+                                        style="position: absolute; top: 50%; left: -8%; transform: translateY(-50%); color: #595C5F; width: 100%; cursor: pointer;">
+                                        الوقت
+                                    </span>
+                                    <span id="formattedTime" 
+                                        style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); font-weight: bold; color: #333;">
+                                    </span>
                                 </div>
     
                                 <div class="col-12">
@@ -442,6 +463,13 @@
                             <a href="specialization.html?id=gynecology" class="btn btn-link">نساء وتوليد</a>
                             <a href="specialization.html?id=ent" class="btn btn-link">أنف وأذن وحنجرة</a>
                         </div>
+                        <div class="specialty-column">
+                            <a href="specialization.html?id=SLP" class="btn btn-link">تخاطب</a>
+                            <a href="specialization.html?id=audiology" class="btn btn-link"></a>
+                            <a href="specialization.html?id=nutrition" class="btn btn-link"> </a>
+                            <a href="specialization.html?id=physical-therapy" class="btn btn-link"> </a>
+                            <a href="specialization.html?id=physical-therapy" class="btn btn-link"> </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -476,8 +504,67 @@
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
     
     <!-- Template Javascript -->
-
     <script src="js/main.js"></script>
+    <script>
+          const dateInput = document.getElementById("dateInput");
+    const fakePlaceholder = document.getElementById("fakePlaceholder");
+    const dayOfWeek = document.getElementById("dayOfWeek");
+
+    // عند الضغط على أي مكان داخل input يتم فتح التقويم
+    dateInput.addEventListener("click", function() {
+        this.showPicker();
+    });
+
+    // عند تغيير التاريخ، نخفي العنصر الوهمي ونظهر يوم الأسبوع
+    dateInput.addEventListener("change", function() {
+        if (this.value) {
+            fakePlaceholder.style.display = "none";
+            this.style.color = "black"; // إظهار النص عند اختيار التاريخ
+            dayOfWeek.textContent = getDayName(this.value); // عرض يوم الأسبوع
+        } else {
+            fakePlaceholder.style.display = "block";
+            this.style.color = "transparent";
+            dayOfWeek.textContent = ""; // إخفاء يوم الأسبوع
+        }
+    });
+
+    // دالة لإرجاع اسم يوم الأسبوع بناءً على التاريخ المختار
+    function getDayName(dateString) {
+        const days = ["الأحد", "الإثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة", "السبت"];
+        const date = new Date(dateString);
+        return days[date.getDay()];
+    }
+        const timeInput = document.getElementById("timeInput");
+        const fakeTimePlaceholder = document.getElementById("fakeTimePlaceholder");
+
+        // عند الضغط على العنصر الوهمي أو أي مكان في input يتم فتح محدد الوقت
+        fakeTimePlaceholder.addEventListener("click", function() {
+            timeInput.showPicker(); // فتح محدد الوقت
+        });
+
+        // عند تغيير الوقت، يظهر النص ويختفي العنصر الوهمي
+        timeInput.addEventListener("change", function() {
+            if (this.value) {
+                fakeTimePlaceholder.style.display = "none";
+                timeInput.style.color = "black"; // إظهار النص عند اختيار الوقت
+            } else {
+                fakeTimePlaceholder.style.display = "block";
+                timeInput.style.color = "transparent";
+            }
+        });
+
+        // عند التركيز على الإدخال، يظهر النص حتى بدون اختيار وقت
+        timeInput.addEventListener("focus", function() {
+            this.style.color = "black";
+        });
+
+        // عند مغادرة الإدخال بدون اختيار وقت، يصبح شفافًا
+        timeInput.addEventListener("blur", function() {
+            if (!this.value) {
+                this.style.color = "transparent";
+            }
+        });
+    </script>
 </body>
 
 </html>
