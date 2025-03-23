@@ -38,10 +38,7 @@ body {
     font-size: 18px;
 }
 
-.custom-select:focus {
-    outline: none;
-    border-color: #007bff;
-}
+
 
 .filter-btn {
     background: #007bff;
@@ -326,15 +323,10 @@ select, button {
 
 /* تنسيق select */
 select {
-    background: white;
+    background-color: #ffffffc5;
     text-align: center;
     color: black;
 }
-
-select:hover {
-    background-color: rgba(97, 252, 236, 0.295);
-}
-
 button:hover {
     background: #024791;
 }
@@ -927,4 +919,83 @@ button:hover {
 .copyright a{
     text-decoration: none;
     color: white;
+}
+
+
+
+
+.form-container {
+    direction: rtl;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.container-reg {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+.form-group-reg {
+    margin-bottom: 15px;
+}
+.form-group-reg label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+.form-group-reg input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.profile-pic-reg {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 10px auto;
+    object-fit: cover;
+}
+.form-group-reg button {
+    width: 50%; /* بدلًا من 100% */
+    max-width: 300px; /* تحكم في أقصى عرض */
+    padding: 10px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto; /* يجعل الزرار في المنتصف */
+    text-align: center;
+}
+.form-group-reg button:hover {
+    background: #0056b3;
+}
+.form-group-reg input[type="file"] {
+    display: none; /* إخفاء العنصر الأصلي */
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #70f4f875;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.custom-file-upload:hover {
+    background-color: #0f7d8165;
 }
