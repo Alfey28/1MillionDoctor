@@ -16,14 +16,21 @@
     new WOW().init();
 
 
-    // Sticky Navbar
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 300) {
-            $('.sticky-top').addClass('shadow-sm').css('top', '0px');
-        } else {
-            $('.sticky-top').removeClass('shadow-sm').css('top', '-100px');
-        }
-    });
+    let lastScrollTop = 0;
+$(window).scroll(function () {
+    let scrollTop = $(this).scrollTop();
+
+    if (scrollTop > lastScrollTop && scrollTop > 300) {
+        // عند التمرير لأسفل يخفي الـ Navbar
+        $('.sticky-top').css('top', '-100px');
+    } else {
+        // عند التمرير لأعلى يظهر الـ Navbar
+        $('.sticky-top').css('top', '0px').addClass('shadow-sm');
+    }
+
+    lastScrollTop = scrollTop;
+});
+
     
     
     // Back to top button

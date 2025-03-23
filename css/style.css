@@ -3,6 +3,10 @@ html {
 }
 body {
     font-family: 'Tajawal', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* هذا يمنع التمرير الأفقي */
 }
 /***  جزء العمليات ***/
 .header-text-p{
@@ -139,89 +143,104 @@ body {
 
 
 /*** Navbar ***/
-.navbar .dropdown-toggle::after {
+
+.navbar {
+    border-bottom: 2px solid #0042f7;
+    
+}
+
+.navbar-nav .nav-link:hover {
+    color: #0042f7; /* تغيير لون النص */
+    font-weight: bold; /* جعل النص عريض */
+    transition: color 0.1s ease-in-out; /* تأثير انتقالي ناعم */
+}
+
+/* توسيط اللوجو بين القائمتين */
+.navbar .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* اجعل القوائم تأخذ نفس المساحة */
+.navbar .navbar-collapse {
+    flex: 1;
+}
+
+/* توسيط اللوجو */
+.navbar .navbar-brand {
+    color: #0042f7;
+}
+
+/* تحسين مظهر زر القائمة */
+.navbar-toggler {
     border: none;
-    content: "\f107";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    vertical-align: middle;
-    margin-left: 8px;
-}
-
-
-.navbar .navbar-nav .nav-link {
-    margin-right: 30px;
-    padding: 25px 0;
-    color: #FFFFFF;
-    font-size: 15px;
-    font-weight: 500;
-    text-transform: uppercase;
     outline: none;
+    margin-left: 30px;
 }
 
-.navbar .navbar-nav .nav-link:hover,
-.navbar .navbar-nav .nav-link.active {
-    color: var(--primary);
-}
-
-@media (max-width: 991.98px) {
-    .navbar .navbar-nav .nav-link  {
-        margin-right: 0;
-        padding: 10px 0;
+/* تحسين التخطيط في الشاشات الصغيرة */
+@media (max-width: 991px) {
+    .navbar {
+        position: relative;
+    }
+    .navbar li{
+        transition: color 0.3s ease-in-out; /* تأثير انتقالي ناعم */
+    }
+    .navbar li:hover{
+        transform: scale(1.1); /* تكبير اللوجو عند التمرير */
+        
+    }
+    /* تثبيت اللوجو في مكانه */
+    .navbar .navbar-brand {
+        position: absolute;
+        left: 70%;
+        transform: translateX(-50%);
+        white-space: nowrap;
     }
 
-    .navbar .navbar-nav {
-        border-top: 1px solid #EEEEEE;
-    }
-}
-
-.navbar .navbar-brand,
-.navbar a.btn {
-    height: 75px;
-}
-
-.navbar .navbar-nav .nav-link {
-    color: var(--dark);
-    font-weight: 500;
-}
-
-
-.navbar.sticky-top {
-    top: -100px;
-    transition: .5s;
-}
-
-@media (min-width: 992px) {
-    .navbar .nav-item .dropdown-menu {
-        display: block;
-        border: none;
-        margin-top: 0;
-        top: 150%;
-        opacity: 0;
-        visibility: hidden;
-        transition: .5s;
+    /* جعل زر القائمة في أقصى اليسار */
+    .navbar-toggler {
+        margin-left: 5px;
     }
 
-    .navbar .nav-item:hover .dropdown-menu {
+    /* ضبط القائمة عند فتحها */
+    .navbar-collapse {
+        position: absolute;
         top: 100%;
-        visibility: visible;
-        transition: .5s;
-        opacity: 1;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 5px 0;
+        text-align: center;
     }
+
+    /* تنسيق عناصر القائمة */
+    .navbar-nav {
+        width: 100%;
+    }
+
+    
 }
-.margin{
-    margin-left: 5%;
-}
+
+
+
+
+
+
+
+
+
 /*** Header ***/
-.header-section{
+.header-section {
     margin-bottom: 70px;
 }
 
 /* جعل الصورة تغطي العرض بالكامل مع ارتفاع متناسق */
 .full-height {
     width: 100%;
-    height: 92vh; /* تقليل الارتفاع ليكون متناسقًا */
-    object-fit: cover;
+    height: 90vh; /* تقليل الارتفاع ليكون متناسقًا */
+    object-fit: fill;
     position: relative;
 }
 
@@ -277,7 +296,8 @@ body {
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
 }
 
-.select-container {
+/* تنسيق الفلتر container */
+.filter-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -286,8 +306,11 @@ body {
     padding: 15px;
     border-radius: 10px;
     backdrop-filter: blur(5px);
+    width: 75%; /* تأكد من أن الحاوية تأخذ العرض الكامل */
+    margin-top: 15px;
 }
 
+/* تنسيق الأزرار وقوائم الاختيارات */
 select, button {
     font-weight: bold;
     width: 30%;
@@ -301,21 +324,70 @@ select, button {
     transition: 0.3s;
 }
 
+/* تنسيق select */
 select {
     background: white;
     text-align: center;
     color: black;
-    cursor: pointer;
 }
 
-select:hover{
+select:hover {
     background-color: rgba(97, 252, 236, 0.295);
 }
-
 
 button:hover {
     background: #024791;
 }
+
+/* تجاوب مع الشاشات الصغيرة والمتوسطة */
+@media (max-width: 768px) {
+    .header-text h1 {
+        font-size: 1.8rem; /* تصغير حجم العنوان في الشاشات الصغيرة */
+    }
+
+    .header-text p {
+        font-size: 1rem; /* تصغير حجم الفقرة */
+    }
+
+    /* تغيير ترتيب العناصر في الشاشات الصغيرة */
+    .filter-container {
+        flex-direction: column; /* ترتيب العناصر عموديًا */
+        gap: 10px;
+        width: 100%;
+        align-items: center; /* محاذاة العناصر في الوسط */
+    }
+
+    /* تغيير عرض الأزرار وقوائم الاختيارات */
+    .filter-container button,
+    .filter-container select {
+        width: 80%; /* جعل الأزرار تأخذ 80% من العرض */
+    }
+
+    /* جعل ترتيب العناصر يكون التخصص أولاً ثم العملية ثم العرض */
+    #specialty-select {
+        order: 1; /* التخصص أولاً */
+    }
+    #procedure-select {
+        order: 2; /* العملية ثانياً */
+    }
+    #show-button {
+        order: 3; /* عرض ثالثاً */
+    }
+}
+
+@media (max-width: 480px) {
+    .header-text h1 {
+        font-size: 1.5rem; /* تصغير العنوان بشكل أكبر في الشاشات الصغيرة جدًا */
+    }
+
+    .filter-container button,
+    .filter-container select {
+        width: 90%; /* جعل الأزرار تأخذ 90% من العرض */
+    }
+}
+
+
+
 /*** About US ***/
 /* تحسين تنسيق القسم */
 .about-section {
@@ -355,7 +427,9 @@ button:hover {
 
 /* تحسين تنسيق العنوان ليتم استخدام لونه في الـ border */
 .title-text {
+    text-align: center;
     color: #32BCCB;
+    font-weight: bold;
 }
 
 .about-p{
@@ -611,6 +685,7 @@ button:hover {
         padding: 20px;
     }
     .title-text {
+        text-align: center;
         font-size: 24px;
     }
     .form-control, .form-select {
@@ -622,6 +697,8 @@ button:hover {
 
 /*** register ***/
 .register-section {
+    border-radius: 30px;
+    margin-bottom: 4%;
     position: relative;
     width: 100%;
     height: 30vh; /* ارتفاع السكشن */
@@ -631,6 +708,10 @@ button:hover {
     align-items: center;
 }
 
+.register-section .overlay{
+    border-radius: 30px;
+
+}
 .overlay {
     width: 100%;
     height: 100%;
@@ -725,99 +806,125 @@ button:hover {
     background: #0D6EFD;
     color: white;
 }
+/* تعديل حجم السكشنات في الشاشات الصغيرة */
+@media (max-width: 768px) {
+    
+    .options{
+        position: relative;
+        left: -10%;
+        width: 20%;
+    }
+    .btn-register{
+        position: relative;
+        left: -13%;
+        width: 70%;
+    }
+}
 
 
 /*** Footer ***/
-.footer .btn.btn-social {
-    margin-right: 5px;
-    width: 35px;
-    height: 35px;
+/* تحسين الـ footer في الشاشات الكبيرة */
+
+.footer {
+    background-color: #eff0f1;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    color: #000000;
+}
+
+.footer h5 {
+    color: #32BCCB;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* تنظيم الأعمدة داخل الـ footer */
+.footer .row {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--light);
-    border: 1px solid #FFFFFF;
-    transition: .3s;
+    justify-content: space-between;
+    flex-wrap: wrap; /* السماح للأعمدة بالتوزيع بشكل مناسب */
 }
 
-.footer .btn.btn-social:hover {
-    color: var(--primary);
-}
-
-.footer .btn.btn-link {
-    display: block;
+/* تخصيص الأزرار داخل الفوتر */
+.footer .btn {
     margin-bottom: 5px;
-    padding: 0;
+    display: block;
+    width: 100%;
     text-align: left;
-    color: #FFFFFF;
-    font-size: 15px;
-    font-weight: normal;
-    text-transform: capitalize;
-    transition: .3s;
-    text-decoration: none;
+    padding: 0;
+    color: #444444;
+    font-size: 18px;
+    transition: 0.3s;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    transition: transform 0.3s ease; /* تأثير التكبير عند التمرير */
 }
 
-.footer .btn.btn-link:hover {
-    color: var(--primary);
-    letter-spacing: 1px;
-    box-shadow: none;
+.footer .btn:hover {
+    color: #0042f7;
+    transform: scale(1.1); /* تكبير العنصر بنسبة 10% */
 }
 
-/* تحسين تنسيق الأيقونات مع النصوص */
-.footer p {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    white-space: nowrap; /* يمنع النص من النزول لسطر جديد */
-}
-
-/* تقليل ارتفاع جزء الـ copyright */
-.footer .copyright {
-    padding: 10px 0;
-    font-size: 15px;
-    border-top: 1px solid rgba(256, 256, 256, .1);
-}
-.copyright{
-    background-color: #ffffff;
-    color: #32bccb;
-}
-.footer .copyright a {
-    color: var(--light);
-    text-decoration: none;
-}
-
-.footer .copyright a:hover {
-    color: var(--primary);
-}
-
-/* تقليل المسافة بين أعمدة التخصصات */
+/* تخصيص عمود التخصصات */
 .footer .specialties {
     display: flex;
-    justify-content: center;
-    gap: 20px; /* قلل المسافة بين الأعمدة */
     flex-wrap: wrap;
+    gap: 10px;
 }
 
-/* ضبط محاذاة النصوص في جزء التخصصات */
-.footer .specialties div {
-    text-align: center;
-    flex: 1;
-    min-width: 120px; /* يضمن أن الأعمدة لا تكون متباعدة جدًا */
-}
-/* تقليل المسافة بين أعمدة التخصصات */
-.footer .row .col-md-4 {
-    padding: 0 5px; /* تقليل المسافة بين الأعمدة */
-}
-
-/* ضبط عرض عمود التخصصات */
-.footer .col-lg-6 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.footer .specialty-column a {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #444444;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    transition: transform 0.3s ease; /* انتقال تأثير التكبير */
 }
 
-/* تقليل المسافات بين النصوص داخل التخصصات */
-.footer .col-md-4 p {
-    margin-bottom: 5px; /* تقليل المسافة بين العناصر */
-    text-align: center; /* ضبط المحاذاة */
+.footer .specialty-column a:hover {
+    color: #0042f7;
+    transform: scale(1.1); /* تكبير العنصر بنسبة 10% */
+}
+
+/* تخصيص الأعمدة في الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .footer .row {
+        flex-direction: column; /* جعل الأعمدة تكون عمودية على الشاشات الصغيرة */
+        align-items: flex-start;
+    }
+
+    /* تخصيص العمودين (المعلومات والروابط) */
+    .footer .col-info, .footer .col-links {
+        width: 100%; /* جعل الأعمدة تشغل العرض بالكامل */
+        margin-bottom: 20px;
+    }
+
+    /* تخصيص التخصصات بحيث تظل كما هي */
+    .footer .specialties {
+        width: 100%;
+    }
+}
+
+/* تخصيص الشاشات الصغيرة جدًا */
+@media (max-width: 480px) {
+    .footer h5 {
+        font-size: 18px;
+    }
+
+    .footer .btn {
+        font-size: 16px;
+    }
+
+    .footer .specialty-column a {
+        font-size: 16px;
+    }
+}
+.copyright{
+    background-color: #1B2C51;
+    color: white;
+}
+.copyright a{
+    text-decoration: none;
+    color: white;
 }
