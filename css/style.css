@@ -645,7 +645,11 @@ button:hover {
     color: white;
     font-size: 22px;
 }
-
+.time{
+    direction: rtl;  /* تأكد من أن المحتوى يظهر بشكل صحيح */
+    text-align: right; /* ضمان أن النص يظهر في المكان الصحيح */
+    padding-right: 10px; /* إضافة مسافة لمنع اختفاء النص */
+}
 .form-control, .form-select {
     border: 2px solid #dee2e6;
     border-radius: 6px;
@@ -653,6 +657,9 @@ button:hover {
     padding: 10px;
     transition: all 0.3s ease-in-out;
     text-align: right;
+    direction: rtl; /* تأكد أن النص يظل من اليمين لليسار */
+    text-align: right; /* ضبط محاذاة النص */
+    padding-right: 10px; /* إضافة مسافة داخلية لتحسين المظهر */
 }
 
 .form-control:focus, .form-select:focus {
@@ -721,6 +728,8 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: flex-end; /* محاذاة النص بالكامل لليمين */
+    position: relative;
+    right: -10%;
 }
 
 .text-section h2 {
