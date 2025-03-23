@@ -818,7 +818,7 @@ button:hover {
     position: relative;
     width: 100%;
     height: 30vh; /* ارتفاع السكشن */
-    background: url('https://github.com/Alfey28/1MillionDoctor/blob/main/img/reg.jpg?raw=true') center/cover no-repeat;
+    background: url('https://raw.githubusercontent.com/Alfey28/1MillionDoctor/main/img/reg.jpg') center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
