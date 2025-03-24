@@ -1,7 +1,7 @@
 [
     {
       "id": "cardiology",
-      "name": "أمراض القلب",
+      "name": "قلب",
       "image":"https://github.com/Alfey28/clinck/blob/main/img/download.jpg?raw=true",
       "procedures": [
         {
@@ -28,12 +28,13 @@
     ],
       "doctors": [
         {
-          "id": 1,
+          "id": "1card",
         "name": " أحمد علي",
         "specialty": "أمراض القلب",
         "clinic_address": "شارع التحرير، القاهرة",
         "phone": "01001234567",
         "rating": 4.8,
+        "price" : "180",
         "bio": "استشاري أمراض القلب والقسطرة القلبية، خبرة 15 عامًا.",
         "experience": [
             "دكتوراه في أمراض القلب",
@@ -54,11 +55,12 @@
         "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor1.jpg?raw=true"
         },
         {
-          "id": 2,
+          "id": "2card",
       "name": "محمد حسن",
       "specialty": " جراحة عامة",
       "clinic_address": "شارع النصر، الإسكندرية",
       "phone": "01002345678",
+      "price" : "280",
       "rating": 4.7,
       "bio": "أخصائي أمراض القلب والأوعية الدموية، خبرة 12 عامًا.",
       "experience": [
@@ -79,13 +81,13 @@
       },
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor2.jpg?raw=true"
         },
-
         {
-          "id": 3,
+          "id": "3card",
       "name": "ياسمين محمود",
       "specialty": " عيون",
       "clinic_address": "شارع الثورة، الجيزة",
       "phone": "01003456789",
+      "price" : "300",
       "rating": 4.9,
       "bio": "متخصصة في أمراض القلب للأطفال، خبرة 10 سنوات.",
       "experience": [
@@ -107,12 +109,13 @@
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor3.png?raw=true"
         },
         {
-          "id": 4,
+          "id": "4card",
       "name": "سامي عبد الله",
       "specialty": " جلدية",
       "clinic_address": "شارع الجيش، المنصورة",
       "phone": "01004567890",
       "rating": 4.6,
+      "price" : "250",
       "bio": "خبير في أمراض القلب التداخلية، خبرة 18 عامًا.",
       "experience": [
         "دكتوراه في القسطرة القلبية",
@@ -133,12 +136,13 @@
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor4.jpg?raw=true"
         },
         {
-          "id": 5,
+          "id": "5card",
       "name": "ليلى إبراهيم",
       "specialty": "أسنان ",
       "clinic_address": "شارع الوحدة، أسيوط",
       "phone": "01005678901",
       "rating": 4.8,
+      "price" : "330",
       "bio": "استشارية في علاج اضطرابات القلب، خبرة 14 عامًا.",
       "experience": [
         "ماجستير أمراض القلب",
@@ -159,12 +163,13 @@
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor5.jpg?raw=true"
         },
         {
-          "id": 6,
+          "id": "6card",
       "name": "كريم الشرقاوي",
       "specialty": " نساوتوليد",
       "clinic_address": "شارع النزهة، القاهرة",
       "phone": "01006789012",
       "rating": 4.5,
+      "price" : "400",
       "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
       "experience": [
         "ماجستير أمراض القلب",
@@ -185,12 +190,13 @@
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor6.jpg?raw=true"
         },
         {
-          "id": 7,
+          "id": "7card",
       "name": "عمرو شفيق",
       "specialty": " تجميل",
       "clinic_address": "شارع خليفة المأمون، القاهرة",
       "phone": "01006789012",
       "rating": 4.5,
+      "price" : "450",
       "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
       "experience": [
         "ماجستير أمراض القلب",
@@ -211,12 +217,13 @@
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor7.jpg?raw=true"
         },
         {
-          "id": 8,
+          "id": "8card",
       "name": "علي بيومي",
       "specialty": " أطفال",
       "clinic_address": "شارع النصر، القاهرة",
       "phone": "01006789012",
       "rating": 4.5,
+      "price" : "500",
       "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
       "experience": [
         "ماجستير أمراض القلب",
@@ -244,7 +251,7 @@
 
     {
       "id": "surgery",
-      "name": "أمراض القلب",
+      "name": "جراحة",
       "image":"https://github.com/Alfey28/clinck/blob/main/img/download.jpg?raw=true",
       "procedures": [
         {
@@ -271,12 +278,13 @@
     ],
       "doctors": [
         {
-          "id": 1,
+          "id": "1sur",
         "name": " أحمد علي",
         "specialty": "أمراض القلب",
         "clinic_address": "شارع التحرير، القاهرة",
         "phone": "01001234567",
         "rating": 4.8,
+        "price": "300",
         "bio": "استشاري أمراض القلب والقسطرة القلبية، خبرة 15 عامًا.",
         "experience": [
             "دكتوراه في أمراض القلب",
@@ -297,12 +305,13 @@
         "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor1.jpg?raw=true"
         },
         {
-          "id": 2,
+          "id": "2sur",
       "name": "محمد حسن",
       "specialty": " جراحة عامة",
       "clinic_address": "شارع النصر، الإسكندرية",
       "phone": "01002345678",
-      "rating": 4.7,
+      "rating": 4.7, 
+      "price": "300",
       "bio": "أخصائي أمراض القلب والأوعية الدموية، خبرة 12 عامًا.",
       "experience": [
         "ماجستير أمراض القلب",
@@ -324,12 +333,13 @@
         },
 
         {
-          "id": 3,
+          "id": "3sur",
       "name": "ياسمين محمود",
       "specialty": " عيون",
       "clinic_address": "شارع الثورة، الجيزة",
       "phone": "01003456789",
       "rating": 4.9,
+      "price": "300",
       "bio": "متخصصة في أمراض القلب للأطفال، خبرة 10 سنوات.",
       "experience": [
         "ماجستير طب الأطفال",
@@ -350,12 +360,13 @@
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor3.png?raw=true"
         },
         {
-          "id": 4,
+          "id": "4sur",
       "name": "سامي عبد الله",
       "specialty": " جلدية",
       "clinic_address": "شارع الجيش، المنصورة",
       "phone": "01004567890",
       "rating": 4.6,
+      "price": "300",
       "bio": "خبير في أمراض القلب التداخلية، خبرة 18 عامًا.",
       "experience": [
         "دكتوراه في القسطرة القلبية",
@@ -376,12 +387,13 @@
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor4.jpg?raw=true"
         },
         {
-          "id": 5,
+          "id": "5sur",
       "name": "ليلى إبراهيم",
       "specialty": "أسنان ",
       "clinic_address": "شارع الوحدة، أسيوط",
       "phone": "01005678901",
       "rating": 4.8,
+      "price": "300",
       "bio": "استشارية في علاج اضطرابات القلب، خبرة 14 عامًا.",
       "experience": [
         "ماجستير أمراض القلب",
@@ -402,12 +414,13 @@
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor5.jpg?raw=true"
         },
         {
-          "id": 6,
+          "id": "6sur",
       "name": "كريم الشرقاوي",
       "specialty": " نساوتوليد",
       "clinic_address": "شارع النزهة، القاهرة",
       "phone": "01006789012",
       "rating": 4.5,
+      "price": "300",
       "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
       "experience": [
         "ماجستير أمراض القلب",
@@ -428,12 +441,13 @@
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor6.jpg?raw=true"
         },
         {
-          "id": 7,
+          "id": "7sur",
       "name": "عمرو شفيق",
       "specialty": " تجميل",
       "clinic_address": "شارع خليفة المأمون، القاهرة",
       "phone": "01006789012",
       "rating": 4.5,
+      "price": "300",
       "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
       "experience": [
         "ماجستير أمراض القلب",
@@ -454,12 +468,13 @@
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor7.jpg?raw=true"
         },
         {
-          "id": 8,
+          "id": "8sur",
       "name": "علي بيومي",
       "specialty": " أطفال",
       "clinic_address": "شارع النصر، القاهرة",
       "phone": "01006789012",
       "rating": 4.5,
+      "price": "300",
       "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
       "experience": [
         "ماجستير أمراض القلب",
@@ -486,7 +501,7 @@
 
     {
       "id": "ophthalmology",
-      "name": "أمراض القلب",
+      "name": "عيون",
       "image":"https://github.com/Alfey28/clinck/blob/main/img/download.jpg?raw=true",
       "procedures": [
         {
@@ -513,12 +528,13 @@
     ],
       "doctors": [
         {
-          "id": 1,
+          "id": "1oph",
         "name": " أحمد علي",
         "specialty": "أمراض القلب",
         "clinic_address": "شارع التحرير، القاهرة",
         "phone": "01001234567",
         "rating": 4.8,
+        "price": "300",
         "bio": "استشاري أمراض القلب والقسطرة القلبية، خبرة 15 عامًا.",
         "experience": [
             "دكتوراه في أمراض القلب",
@@ -539,12 +555,13 @@
         "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor1.jpg?raw=true"
         },
         {
-          "id": 2,
+          "id": "2oph",
       "name": "محمد حسن",
       "specialty": " جراحة عامة",
       "clinic_address": "شارع النصر، الإسكندرية",
       "phone": "01002345678",
       "rating": 4.7,
+      "price": "300",
       "bio": "أخصائي أمراض القلب والأوعية الدموية، خبرة 12 عامًا.",
       "experience": [
         "ماجستير أمراض القلب",
@@ -566,12 +583,13 @@
         },
 
         {
-          "id": 3,
+          "id": "3oph",
       "name": "ياسمين محمود",
       "specialty": " عيون",
       "clinic_address": "شارع الثورة، الجيزة",
       "phone": "01003456789",
       "rating": 4.9,
+      "price": "300",
       "bio": "متخصصة في أمراض القلب للأطفال، خبرة 10 سنوات.",
       "experience": [
         "ماجستير طب الأطفال",
@@ -592,12 +610,13 @@
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor3.png?raw=true"
         },
         {
-          "id": 4,
+          "id": "4oph",
       "name": "سامي عبد الله",
       "specialty": " جلدية",
       "clinic_address": "شارع الجيش، المنصورة",
       "phone": "01004567890",
       "rating": 4.6,
+      "price": "300",
       "bio": "خبير في أمراض القلب التداخلية، خبرة 18 عامًا.",
       "experience": [
         "دكتوراه في القسطرة القلبية",
@@ -618,12 +637,13 @@
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor4.jpg?raw=true"
         },
         {
-          "id": 5,
+          "id": "5oph",
       "name": "ليلى إبراهيم",
       "specialty": "أسنان ",
       "clinic_address": "شارع الوحدة، أسيوط",
       "phone": "01005678901",
       "rating": 4.8,
+      "price": "300",
       "bio": "استشارية في علاج اضطرابات القلب، خبرة 14 عامًا.",
       "experience": [
         "ماجستير أمراض القلب",
@@ -644,12 +664,13 @@
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor5.jpg?raw=true"
         },
         {
-          "id": 6,
+          "id": "6oph",
       "name": "كريم الشرقاوي",
       "specialty": " نساوتوليد",
       "clinic_address": "شارع النزهة، القاهرة",
       "phone": "01006789012",
       "rating": 4.5,
+      "price": "300",
       "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
       "experience": [
         "ماجستير أمراض القلب",
@@ -670,12 +691,13 @@
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor6.jpg?raw=true"
         },
         {
-          "id": 7,
+          "id": "7oph",
       "name": "عمرو شفيق",
       "specialty": " تجميل",
       "clinic_address": "شارع خليفة المأمون، القاهرة",
       "phone": "01006789012",
       "rating": 4.5,
+      "price": "300",
       "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
       "experience": [
         "ماجستير أمراض القلب",
@@ -696,12 +718,13 @@
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor7.jpg?raw=true"
         },
         {
-          "id": 8,
+          "id": "8oph",
       "name": "علي بيومي",
       "specialty": " أطفال",
       "clinic_address": "شارع النصر، القاهرة",
       "phone": "01006789012",
       "rating": 4.5,
+      "price": "300",
       "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
       "experience": [
         "ماجستير أمراض القلب",
@@ -729,7 +752,7 @@
 
     {
       "id": "dermatology",
-      "name": "أمراض القلب",
+      "name": "جلدية",
       "image":"https://github.com/Alfey28/clinck/blob/main/img/download.jpg?raw=true",
       "procedures": [
         {
@@ -756,12 +779,13 @@
     ],
       "doctors": [
         {
-          "id": 1,
+          "id": "1der",
         "name": " أحمد علي",
         "specialty": "أمراض القلب",
         "clinic_address": "شارع التحرير، القاهرة",
         "phone": "01001234567",
         "rating": 4.8,
+        "price": "300",
         "bio": "استشاري أمراض القلب والقسطرة القلبية، خبرة 15 عامًا.",
         "experience": [
             "دكتوراه في أمراض القلب",
@@ -782,12 +806,13 @@
         "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor1.jpg?raw=true"
         },
         {
-          "id": 2,
+          "id": "2der",
       "name": "محمد حسن",
       "specialty": " جراحة عامة",
       "clinic_address": "شارع النصر، الإسكندرية",
       "phone": "01002345678",
       "rating": 4.7,
+      "price": "300",
       "bio": "أخصائي أمراض القلب والأوعية الدموية، خبرة 12 عامًا.",
       "experience": [
         "ماجستير أمراض القلب",
@@ -809,12 +834,13 @@
         },
 
         {
-          "id": 3,
+          "id": "3der",
       "name": "ياسمين محمود",
       "specialty": " عيون",
       "clinic_address": "شارع الثورة، الجيزة",
       "phone": "01003456789",
       "rating": 4.9,
+      "price": "300",
       "bio": "متخصصة في أمراض القلب للأطفال، خبرة 10 سنوات.",
       "experience": [
         "ماجستير طب الأطفال",
@@ -835,12 +861,13 @@
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor3.png?raw=true"
         },
         {
-          "id": 4,
+          "id": "4der",
       "name": "سامي عبد الله",
       "specialty": " جلدية",
       "clinic_address": "شارع الجيش، المنصورة",
       "phone": "01004567890",
       "rating": 4.6,
+      "price": "300",
       "bio": "خبير في أمراض القلب التداخلية، خبرة 18 عامًا.",
       "experience": [
         "دكتوراه في القسطرة القلبية",
@@ -861,12 +888,13 @@
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor4.jpg?raw=true"
         },
         {
-          "id": 5,
+          "id": "5der",
       "name": "ليلى إبراهيم",
       "specialty": "أسنان ",
       "clinic_address": "شارع الوحدة، أسيوط",
       "phone": "01005678901",
       "rating": 4.8,
+      "price": "300",
       "bio": "استشارية في علاج اضطرابات القلب، خبرة 14 عامًا.",
       "experience": [
         "ماجستير أمراض القلب",
@@ -885,84 +913,6 @@
         }
       },
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor5.jpg?raw=true"
-        },
-        {
-          "id": 6,
-      "name": "كريم الشرقاوي",
-      "specialty": " نساوتوليد",
-      "clinic_address": "شارع النزهة، القاهرة",
-      "phone": "01006789012",
-      "rating": 4.5,
-      "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "خبرة في زراعة القوقعة القلبية"
-      ],
-      "services": [
-        "علاج فشل القلب",
-        "تركيب الدعامات القلبية",
-        "تشخيص أمراض القلب الوراثية"
-      ],
-      "contact": {
-        "email": "karimsharkawy@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/karimsharkawy",
-          "twitter": "https://twitter.com/karimsharkawy"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor6.jpg?raw=true"
-        },
-        {
-          "id": 7,
-      "name": "عمرو شفيق",
-      "specialty": " تجميل",
-      "clinic_address": "شارع خليفة المأمون، القاهرة",
-      "phone": "01006789012",
-      "rating": 4.5,
-      "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "خبرة في زراعة القوقعة القلبية"
-      ],
-      "services": [
-        "علاج فشل القلب",
-        "تركيب الدعامات القلبية",
-        "تشخيص أمراض القلب الوراثية"
-      ],
-      "contact": {
-        "email": "karimsharkawy@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/karimsharkawy",
-          "twitter": "https://twitter.com/karimsharkawy"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor7.jpg?raw=true"
-        },
-        {
-          "id": 8,
-      "name": "علي بيومي",
-      "specialty": " أطفال",
-      "clinic_address": "شارع النصر، القاهرة",
-      "phone": "01006789012",
-      "rating": 4.5,
-      "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "خبرة في زراعة القوقعة القلبية"
-      ],
-      "services": [
-        "علاج فشل القلب",
-        "تركيب الدعامات القلبية",
-        "تشخيص أمراض القلب الوراثية"
-      ],
-      "contact": {
-        "email": "karimsharkawy@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/karimsharkawy",
-          "twitter": "https://twitter.com/karimsharkawy"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor8.jpeg?raw=true"
         }
       ]
     },
@@ -972,7 +922,7 @@
 
     {
       "id": "dentistry",
-      "name": "أمراض القلب",
+      "name": "أسنان",
       "image":"https://github.com/Alfey28/clinck/blob/main/img/download.jpg?raw=true",
       "procedures": [
         {
@@ -999,12 +949,13 @@
     ],
       "doctors": [
         {
-          "id": 1,
+          "id": "1den",
         "name": " أحمد علي",
         "specialty": "أمراض القلب",
         "clinic_address": "شارع التحرير، القاهرة",
         "phone": "01001234567",
         "rating": 4.8,
+        "price": "300",
         "bio": "استشاري أمراض القلب والقسطرة القلبية، خبرة 15 عامًا.",
         "experience": [
             "دكتوراه في أمراض القلب",
@@ -1025,12 +976,13 @@
         "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor1.jpg?raw=true"
         },
         {
-          "id": 2,
+          "id": "2den",
       "name": "محمد حسن",
       "specialty": " جراحة عامة",
       "clinic_address": "شارع النصر، الإسكندرية",
       "phone": "01002345678",
       "rating": 4.7,
+      "price": "300",
       "bio": "أخصائي أمراض القلب والأوعية الدموية، خبرة 12 عامًا.",
       "experience": [
         "ماجستير أمراض القلب",
@@ -1052,12 +1004,13 @@
         },
 
         {
-          "id": 3,
+          "id": "3den",
       "name": "ياسمين محمود",
       "specialty": " عيون",
       "clinic_address": "شارع الثورة، الجيزة",
       "phone": "01003456789",
       "rating": 4.9,
+      "price": "300",
       "bio": "متخصصة في أمراض القلب للأطفال، خبرة 10 سنوات.",
       "experience": [
         "ماجستير طب الأطفال",
@@ -1078,12 +1031,13 @@
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor3.png?raw=true"
         },
         {
-          "id": 4,
+          "id": "4den",
       "name": "سامي عبد الله",
       "specialty": " جلدية",
       "clinic_address": "شارع الجيش، المنصورة",
       "phone": "01004567890",
       "rating": 4.6,
+      "price": "300",
       "bio": "خبير في أمراض القلب التداخلية، خبرة 18 عامًا.",
       "experience": [
         "دكتوراه في القسطرة القلبية",
@@ -1102,110 +1056,6 @@
         }
       },
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor4.jpg?raw=true"
-        },
-        {
-          "id": 5,
-      "name": "ليلى إبراهيم",
-      "specialty": "أسنان ",
-      "clinic_address": "شارع الوحدة، أسيوط",
-      "phone": "01005678901",
-      "rating": 4.8,
-      "bio": "استشارية في علاج اضطرابات القلب، خبرة 14 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "زمالة في طب القلب الوقائي"
-      ],
-      "services": [
-        "علاج ارتفاع ضغط الدم",
-        "متابعة مرضى جلطات القلب",
-        "تشخيص أمراض الصمامات"
-      ],
-      "contact": {
-        "email": "leilaibrahim@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/leilaibrahim",
-          "twitter": "https://twitter.com/leilaibrahim"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor5.jpg?raw=true"
-        },
-        {
-          "id": 6,
-      "name": "كريم الشرقاوي",
-      "specialty": " نساوتوليد",
-      "clinic_address": "شارع النزهة، القاهرة",
-      "phone": "01006789012",
-      "rating": 4.5,
-      "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "خبرة في زراعة القوقعة القلبية"
-      ],
-      "services": [
-        "علاج فشل القلب",
-        "تركيب الدعامات القلبية",
-        "تشخيص أمراض القلب الوراثية"
-      ],
-      "contact": {
-        "email": "karimsharkawy@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/karimsharkawy",
-          "twitter": "https://twitter.com/karimsharkawy"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor6.jpg?raw=true"
-        },
-        {
-          "id": 7,
-      "name": "عمرو شفيق",
-      "specialty": " تجميل",
-      "clinic_address": "شارع خليفة المأمون، القاهرة",
-      "phone": "01006789012",
-      "rating": 4.5,
-      "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "خبرة في زراعة القوقعة القلبية"
-      ],
-      "services": [
-        "علاج فشل القلب",
-        "تركيب الدعامات القلبية",
-        "تشخيص أمراض القلب الوراثية"
-      ],
-      "contact": {
-        "email": "karimsharkawy@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/karimsharkawy",
-          "twitter": "https://twitter.com/karimsharkawy"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor7.jpg?raw=true"
-        },
-        {
-          "id": 8,
-      "name": "علي بيومي",
-      "specialty": " أطفال",
-      "clinic_address": "شارع النصر، القاهرة",
-      "phone": "01006789012",
-      "rating": 4.5,
-      "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "خبرة في زراعة القوقعة القلبية"
-      ],
-      "services": [
-        "علاج فشل القلب",
-        "تركيب الدعامات القلبية",
-        "تشخيص أمراض القلب الوراثية"
-      ],
-      "contact": {
-        "email": "karimsharkawy@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/karimsharkawy",
-          "twitter": "https://twitter.com/karimsharkawy"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor8.jpeg?raw=true"
         }
       ]
     },
@@ -1215,7 +1065,7 @@
 
     {
       "id": "gynecology",
-      "name": "أمراض القلب",
+      "name": "نساء و توليد ",
       "image":"https://github.com/Alfey28/clinck/blob/main/img/download.jpg?raw=true",
       "procedures": [
         {
@@ -1242,12 +1092,13 @@
     ],
       "doctors": [
         {
-          "id": 1,
+          "id": "1gyn",
         "name": " أحمد علي",
         "specialty": "أمراض القلب",
         "clinic_address": "شارع التحرير، القاهرة",
         "phone": "01001234567",
         "rating": 4.8,
+        "price": "300",
         "bio": "استشاري أمراض القلب والقسطرة القلبية، خبرة 15 عامًا.",
         "experience": [
             "دكتوراه في أمراض القلب",
@@ -1268,12 +1119,13 @@
         "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor1.jpg?raw=true"
         },
         {
-          "id": 2,
+          "id": "2gyn",
       "name": "محمد حسن",
       "specialty": " جراحة عامة",
       "clinic_address": "شارع النصر، الإسكندرية",
       "phone": "01002345678",
       "rating": 4.7,
+      "price": "300",
       "bio": "أخصائي أمراض القلب والأوعية الدموية، خبرة 12 عامًا.",
       "experience": [
         "ماجستير أمراض القلب",
@@ -1295,12 +1147,13 @@
         },
 
         {
-          "id": 3,
+          "id": "3gyn",
       "name": "ياسمين محمود",
       "specialty": " عيون",
       "clinic_address": "شارع الثورة، الجيزة",
       "phone": "01003456789",
       "rating": 4.9,
+      "price": "300",
       "bio": "متخصصة في أمراض القلب للأطفال، خبرة 10 سنوات.",
       "experience": [
         "ماجستير طب الأطفال",
@@ -1319,136 +1172,6 @@
         }
       },
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor3.png?raw=true"
-        },
-        {
-          "id": 4,
-      "name": "سامي عبد الله",
-      "specialty": " جلدية",
-      "clinic_address": "شارع الجيش، المنصورة",
-      "phone": "01004567890",
-      "rating": 4.6,
-      "bio": "خبير في أمراض القلب التداخلية، خبرة 18 عامًا.",
-      "experience": [
-        "دكتوراه في القسطرة القلبية",
-        "عضو الجمعية الأمريكية لأمراض القلب"
-      ],
-      "services": [
-        "علاج قصور الشرايين التاجية",
-        "تركيب أجهزة تنظيم ضربات القلب",
-        "علاج ضعف عضلة القلب"
-      ],
-      "contact": {
-        "email": "samiabdullah@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/samiabdullah",
-          "twitter": "https://twitter.com/samiabdullah"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor4.jpg?raw=true"
-        },
-        {
-          "id": 5,
-      "name": "ليلى إبراهيم",
-      "specialty": "أسنان ",
-      "clinic_address": "شارع الوحدة، أسيوط",
-      "phone": "01005678901",
-      "rating": 4.8,
-      "bio": "استشارية في علاج اضطرابات القلب، خبرة 14 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "زمالة في طب القلب الوقائي"
-      ],
-      "services": [
-        "علاج ارتفاع ضغط الدم",
-        "متابعة مرضى جلطات القلب",
-        "تشخيص أمراض الصمامات"
-      ],
-      "contact": {
-        "email": "leilaibrahim@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/leilaibrahim",
-          "twitter": "https://twitter.com/leilaibrahim"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor5.jpg?raw=true"
-        },
-        {
-          "id": 6,
-      "name": "كريم الشرقاوي",
-      "specialty": " نساوتوليد",
-      "clinic_address": "شارع النزهة، القاهرة",
-      "phone": "01006789012",
-      "rating": 4.5,
-      "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "خبرة في زراعة القوقعة القلبية"
-      ],
-      "services": [
-        "علاج فشل القلب",
-        "تركيب الدعامات القلبية",
-        "تشخيص أمراض القلب الوراثية"
-      ],
-      "contact": {
-        "email": "karimsharkawy@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/karimsharkawy",
-          "twitter": "https://twitter.com/karimsharkawy"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor6.jpg?raw=true"
-        },
-        {
-          "id": 7,
-      "name": "عمرو شفيق",
-      "specialty": " تجميل",
-      "clinic_address": "شارع خليفة المأمون، القاهرة",
-      "phone": "01006789012",
-      "rating": 4.5,
-      "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "خبرة في زراعة القوقعة القلبية"
-      ],
-      "services": [
-        "علاج فشل القلب",
-        "تركيب الدعامات القلبية",
-        "تشخيص أمراض القلب الوراثية"
-      ],
-      "contact": {
-        "email": "karimsharkawy@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/karimsharkawy",
-          "twitter": "https://twitter.com/karimsharkawy"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor7.jpg?raw=true"
-        },
-        {
-          "id": 8,
-      "name": "علي بيومي",
-      "specialty": " أطفال",
-      "clinic_address": "شارع النصر، القاهرة",
-      "phone": "01006789012",
-      "rating": 4.5,
-      "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "خبرة في زراعة القوقعة القلبية"
-      ],
-      "services": [
-        "علاج فشل القلب",
-        "تركيب الدعامات القلبية",
-        "تشخيص أمراض القلب الوراثية"
-      ],
-      "contact": {
-        "email": "karimsharkawy@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/karimsharkawy",
-          "twitter": "https://twitter.com/karimsharkawy"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor8.jpeg?raw=true"
         }
       ]
     },
@@ -1459,7 +1182,7 @@
 
     {
       "id": "cosmetic",
-      "name": "أمراض القلب",
+      "name": "تجميل",
       "image":"https://github.com/Alfey28/clinck/blob/main/img/download.jpg?raw=true",
       "procedures": [
         {
@@ -1486,12 +1209,13 @@
     ],
       "doctors": [
         {
-          "id": 1,
+          "id": "1cos",
         "name": " أحمد علي",
         "specialty": "أمراض القلب",
         "clinic_address": "شارع التحرير، القاهرة",
         "phone": "01001234567",
         "rating": 4.8,
+        "price": "300",
         "bio": "استشاري أمراض القلب والقسطرة القلبية، خبرة 15 عامًا.",
         "experience": [
             "دكتوراه في أمراض القلب",
@@ -1512,12 +1236,13 @@
         "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor1.jpg?raw=true"
         },
         {
-          "id": 2,
+          "id": "2cos",
       "name": "محمد حسن",
       "specialty": " جراحة عامة",
       "clinic_address": "شارع النصر، الإسكندرية",
       "phone": "01002345678",
       "rating": 4.7,
+      "price": "300",
       "bio": "أخصائي أمراض القلب والأوعية الدموية، خبرة 12 عامًا.",
       "experience": [
         "ماجستير أمراض القلب",
@@ -1539,12 +1264,13 @@
         },
 
         {
-          "id": 3,
+          "id": "3cos",
       "name": "ياسمين محمود",
       "specialty": " عيون",
       "clinic_address": "شارع الثورة، الجيزة",
       "phone": "01003456789",
       "rating": 4.9,
+      "price": "300",
       "bio": "متخصصة في أمراض القلب للأطفال، خبرة 10 سنوات.",
       "experience": [
         "ماجستير طب الأطفال",
@@ -1565,12 +1291,13 @@
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor3.png?raw=true"
         },
         {
-          "id": 4,
+          "id": "4cos",
       "name": "سامي عبد الله",
       "specialty": " جلدية",
       "clinic_address": "شارع الجيش، المنصورة",
       "phone": "01004567890",
       "rating": 4.6,
+      "price": "300",
       "bio": "خبير في أمراض القلب التداخلية، خبرة 18 عامًا.",
       "experience": [
         "دكتوراه في القسطرة القلبية",
@@ -1589,116 +1316,16 @@
         }
       },
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor4.jpg?raw=true"
-        },
-        {
-          "id": 5,
-      "name": "ليلى إبراهيم",
-      "specialty": "أسنان ",
-      "clinic_address": "شارع الوحدة، أسيوط",
-      "phone": "01005678901",
-      "rating": 4.8,
-      "bio": "استشارية في علاج اضطرابات القلب، خبرة 14 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "زمالة في طب القلب الوقائي"
-      ],
-      "services": [
-        "علاج ارتفاع ضغط الدم",
-        "متابعة مرضى جلطات القلب",
-        "تشخيص أمراض الصمامات"
-      ],
-      "contact": {
-        "email": "leilaibrahim@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/leilaibrahim",
-          "twitter": "https://twitter.com/leilaibrahim"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor5.jpg?raw=true"
-        },
-        {
-          "id": 6,
-      "name": "كريم الشرقاوي",
-      "specialty": " نساوتوليد",
-      "clinic_address": "شارع النزهة، القاهرة",
-      "phone": "01006789012",
-      "rating": 4.5,
-      "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "خبرة في زراعة القوقعة القلبية"
-      ],
-      "services": [
-        "علاج فشل القلب",
-        "تركيب الدعامات القلبية",
-        "تشخيص أمراض القلب الوراثية"
-      ],
-      "contact": {
-        "email": "karimsharkawy@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/karimsharkawy",
-          "twitter": "https://twitter.com/karimsharkawy"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor6.jpg?raw=true"
-        },
-        {
-          "id": 7,
-      "name": "عمرو شفيق",
-      "specialty": " تجميل",
-      "clinic_address": "شارع خليفة المأمون، القاهرة",
-      "phone": "01006789012",
-      "rating": 4.5,
-      "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "خبرة في زراعة القوقعة القلبية"
-      ],
-      "services": [
-        "علاج فشل القلب",
-        "تركيب الدعامات القلبية",
-        "تشخيص أمراض القلب الوراثية"
-      ],
-      "contact": {
-        "email": "karimsharkawy@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/karimsharkawy",
-          "twitter": "https://twitter.com/karimsharkawy"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor7.jpg?raw=true"
-        },
-        {
-          "id": 8,
-      "name": "علي بيومي",
-      "specialty": " أطفال",
-      "clinic_address": "شارع النصر، القاهرة",
-      "phone": "01006789012",
-      "rating": 4.5,
-      "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "خبرة في زراعة القوقعة القلبية"
-      ],
-      "services": [
-        "علاج فشل القلب",
-        "تركيب الدعامات القلبية",
-        "تشخيص أمراض القلب الوراثية"
-      ],
-      "contact": {
-        "email": "karimsharkawy@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/karimsharkawy",
-          "twitter": "https://twitter.com/karimsharkawy"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor8.jpeg?raw=true"
         }
       ]
     },
+
+
+
+
     {
       "id": "SLP",
-      "name": "أمراض القلب",
+      "name": "تخاطب",
       "image":"https://github.com/Alfey28/clinck/blob/main/img/download.jpg?raw=true",
       "procedures": [
         {
@@ -1725,12 +1352,13 @@
     ],
       "doctors": [
         {
-          "id": 1,
+          "id": "1slp",
         "name": " أحمد علي",
         "specialty": "أمراض القلب",
         "clinic_address": "شارع التحرير، القاهرة",
         "phone": "01001234567",
         "rating": 4.8,
+        "price": "300",
         "bio": "استشاري أمراض القلب والقسطرة القلبية، خبرة 15 عامًا.",
         "experience": [
             "دكتوراه في أمراض القلب",
@@ -1751,12 +1379,13 @@
         "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor1.jpg?raw=true"
         },
         {
-          "id": 2,
+          "id": "2slp",
       "name": "محمد حسن",
       "specialty": " جراحة عامة",
       "clinic_address": "شارع النصر، الإسكندرية",
       "phone": "01002345678",
       "rating": 4.7,
+      "price": "300",
       "bio": "أخصائي أمراض القلب والأوعية الدموية، خبرة 12 عامًا.",
       "experience": [
         "ماجستير أمراض القلب",
@@ -1778,12 +1407,13 @@
         },
 
         {
-          "id": 3,
+          "id": "3slp",
       "name": "ياسمين محمود",
       "specialty": " عيون",
       "clinic_address": "شارع الثورة، الجيزة",
       "phone": "01003456789",
       "rating": 4.9,
+      "price": "300",
       "bio": "متخصصة في أمراض القلب للأطفال، خبرة 10 سنوات.",
       "experience": [
         "ماجستير طب الأطفال",
@@ -1804,12 +1434,13 @@
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor3.png?raw=true"
         },
         {
-          "id": 4,
+          "id": "4slp",
       "name": "سامي عبد الله",
       "specialty": " جلدية",
       "clinic_address": "شارع الجيش، المنصورة",
       "phone": "01004567890",
       "rating": 4.6,
+      "price": "300",
       "bio": "خبير في أمراض القلب التداخلية، خبرة 18 عامًا.",
       "experience": [
         "دكتوراه في القسطرة القلبية",
@@ -1828,110 +1459,6 @@
         }
       },
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor4.jpg?raw=true"
-        },
-        {
-          "id": 5,
-      "name": "ليلى إبراهيم",
-      "specialty": "أسنان ",
-      "clinic_address": "شارع الوحدة، أسيوط",
-      "phone": "01005678901",
-      "rating": 4.8,
-      "bio": "استشارية في علاج اضطرابات القلب، خبرة 14 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "زمالة في طب القلب الوقائي"
-      ],
-      "services": [
-        "علاج ارتفاع ضغط الدم",
-        "متابعة مرضى جلطات القلب",
-        "تشخيص أمراض الصمامات"
-      ],
-      "contact": {
-        "email": "leilaibrahim@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/leilaibrahim",
-          "twitter": "https://twitter.com/leilaibrahim"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor5.jpg?raw=true"
-        },
-        {
-          "id": 6,
-      "name": "كريم الشرقاوي",
-      "specialty": " نساوتوليد",
-      "clinic_address": "شارع النزهة، القاهرة",
-      "phone": "01006789012",
-      "rating": 4.5,
-      "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "خبرة في زراعة القوقعة القلبية"
-      ],
-      "services": [
-        "علاج فشل القلب",
-        "تركيب الدعامات القلبية",
-        "تشخيص أمراض القلب الوراثية"
-      ],
-      "contact": {
-        "email": "karimsharkawy@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/karimsharkawy",
-          "twitter": "https://twitter.com/karimsharkawy"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor6.jpg?raw=true"
-        },
-        {
-          "id": 7,
-      "name": "عمرو شفيق",
-      "specialty": " تجميل",
-      "clinic_address": "شارع خليفة المأمون، القاهرة",
-      "phone": "01006789012",
-      "rating": 4.5,
-      "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "خبرة في زراعة القوقعة القلبية"
-      ],
-      "services": [
-        "علاج فشل القلب",
-        "تركيب الدعامات القلبية",
-        "تشخيص أمراض القلب الوراثية"
-      ],
-      "contact": {
-        "email": "karimsharkawy@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/karimsharkawy",
-          "twitter": "https://twitter.com/karimsharkawy"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor7.jpg?raw=true"
-        },
-        {
-          "id": 8,
-      "name": "علي بيومي",
-      "specialty": " أطفال",
-      "clinic_address": "شارع النصر، القاهرة",
-      "phone": "01006789012",
-      "rating": 4.5,
-      "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "خبرة في زراعة القوقعة القلبية"
-      ],
-      "services": [
-        "علاج فشل القلب",
-        "تركيب الدعامات القلبية",
-        "تشخيص أمراض القلب الوراثية"
-      ],
-      "contact": {
-        "email": "karimsharkawy@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/karimsharkawy",
-          "twitter": "https://twitter.com/karimsharkawy"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor8.jpeg?raw=true"
         }
       ]
     },
@@ -1942,7 +1469,7 @@
 
     {
       "id": "pediatrics",
-      "name": "أمراض القلب",
+      "name": "أطفال",
       "image":"https://github.com/Alfey28/clinck/blob/main/img/download.jpg?raw=true",
       "procedures": [
         {
@@ -1969,12 +1496,13 @@
     ],
       "doctors": [
         {
-          "id": 1,
+          "id": "1ped",
         "name": " أحمد علي",
         "specialty": "أمراض القلب",
         "clinic_address": "شارع التحرير، القاهرة",
         "phone": "01001234567",
         "rating": 4.8,
+        "price": "300",
         "bio": "استشاري أمراض القلب والقسطرة القلبية، خبرة 15 عامًا.",
         "experience": [
             "دكتوراه في أمراض القلب",
@@ -1995,12 +1523,13 @@
         "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor1.jpg?raw=true"
         },
         {
-          "id": 2,
+          "id": "2ped",
       "name": "محمد حسن",
       "specialty": " جراحة عامة",
       "clinic_address": "شارع النصر، الإسكندرية",
       "phone": "01002345678",
       "rating": 4.7,
+      "price": "300",
       "bio": "أخصائي أمراض القلب والأوعية الدموية، خبرة 12 عامًا.",
       "experience": [
         "ماجستير أمراض القلب",
@@ -2022,12 +1551,13 @@
         },
 
         {
-          "id": 3,
+          "id": "3ped",
       "name": "ياسمين محمود",
       "specialty": " عيون",
       "clinic_address": "شارع الثورة، الجيزة",
       "phone": "01003456789",
       "rating": 4.9,
+      "price": "300",
       "bio": "متخصصة في أمراض القلب للأطفال، خبرة 10 سنوات.",
       "experience": [
         "ماجستير طب الأطفال",
@@ -2048,12 +1578,13 @@
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor3.png?raw=true"
         },
         {
-          "id": 4,
+          "id": "4ped",
       "name": "سامي عبد الله",
       "specialty": " جلدية",
       "clinic_address": "شارع الجيش، المنصورة",
       "phone": "01004567890",
       "rating": 4.6,
+      "price": "300",
       "bio": "خبير في أمراض القلب التداخلية، خبرة 18 عامًا.",
       "experience": [
         "دكتوراه في القسطرة القلبية",
@@ -2074,12 +1605,13 @@
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor4.jpg?raw=true"
         },
         {
-          "id": 5,
+          "id": "5ped",
       "name": "ليلى إبراهيم",
       "specialty": "أسنان ",
       "clinic_address": "شارع الوحدة، أسيوط",
       "phone": "01005678901",
       "rating": 4.8,
+      "price": "300",
       "bio": "استشارية في علاج اضطرابات القلب، خبرة 14 عامًا.",
       "experience": [
         "ماجستير أمراض القلب",
@@ -2098,84 +1630,6 @@
         }
       },
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor5.jpg?raw=true"
-        },
-        {
-          "id": 6,
-      "name": "كريم الشرقاوي",
-      "specialty": " نساوتوليد",
-      "clinic_address": "شارع النزهة، القاهرة",
-      "phone": "01006789012",
-      "rating": 4.5,
-      "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "خبرة في زراعة القوقعة القلبية"
-      ],
-      "services": [
-        "علاج فشل القلب",
-        "تركيب الدعامات القلبية",
-        "تشخيص أمراض القلب الوراثية"
-      ],
-      "contact": {
-        "email": "karimsharkawy@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/karimsharkawy",
-          "twitter": "https://twitter.com/karimsharkawy"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor6.jpg?raw=true"
-        },
-        {
-          "id": 7,
-      "name": "عمرو شفيق",
-      "specialty": " تجميل",
-      "clinic_address": "شارع خليفة المأمون، القاهرة",
-      "phone": "01006789012",
-      "rating": 4.5,
-      "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "خبرة في زراعة القوقعة القلبية"
-      ],
-      "services": [
-        "علاج فشل القلب",
-        "تركيب الدعامات القلبية",
-        "تشخيص أمراض القلب الوراثية"
-      ],
-      "contact": {
-        "email": "karimsharkawy@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/karimsharkawy",
-          "twitter": "https://twitter.com/karimsharkawy"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor7.jpg?raw=true"
-        },
-        {
-          "id": 8,
-      "name": "علي بيومي",
-      "specialty": " أطفال",
-      "clinic_address": "شارع النصر، القاهرة",
-      "phone": "01006789012",
-      "rating": 4.5,
-      "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "خبرة في زراعة القوقعة القلبية"
-      ],
-      "services": [
-        "علاج فشل القلب",
-        "تركيب الدعامات القلبية",
-        "تشخيص أمراض القلب الوراثية"
-      ],
-      "contact": {
-        "email": "karimsharkawy@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/karimsharkawy",
-          "twitter": "https://twitter.com/karimsharkawy"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor8.jpeg?raw=true"
         }
       ]
     },
@@ -2186,7 +1640,7 @@
 
     {
       "id": "urology",
-      "name": "أمراض القلب",
+      "name": "ذكورة",
       "image":"https://github.com/Alfey28/clinck/blob/main/img/download.jpg?raw=true",
       "procedures": [
         {
@@ -2213,12 +1667,13 @@
     ],
       "doctors": [
         {
-          "id": 1,
+          "id": "1uro",
         "name": " أحمد علي",
         "specialty": "أمراض القلب",
         "clinic_address": "شارع التحرير، القاهرة",
         "phone": "01001234567",
         "rating": 4.8,
+        "price": "300",
         "bio": "استشاري أمراض القلب والقسطرة القلبية، خبرة 15 عامًا.",
         "experience": [
             "دكتوراه في أمراض القلب",
@@ -2239,12 +1694,13 @@
         "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor1.jpg?raw=true"
         },
         {
-          "id": 2,
+          "id": "2uro",
       "name": "محمد حسن",
       "specialty": " جراحة عامة",
       "clinic_address": "شارع النصر، الإسكندرية",
       "phone": "01002345678",
       "rating": 4.7,
+      "price": "300",
       "bio": "أخصائي أمراض القلب والأوعية الدموية، خبرة 12 عامًا.",
       "experience": [
         "ماجستير أمراض القلب",
@@ -2266,12 +1722,13 @@
         },
 
         {
-          "id": 3,
+          "id": "3uro",
       "name": "ياسمين محمود",
       "specialty": " عيون",
       "clinic_address": "شارع الثورة، الجيزة",
       "phone": "01003456789",
       "rating": 4.9,
+      "price": "300",
       "bio": "متخصصة في أمراض القلب للأطفال، خبرة 10 سنوات.",
       "experience": [
         "ماجستير طب الأطفال",
@@ -2290,136 +1747,6 @@
         }
       },
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor3.png?raw=true"
-        },
-        {
-          "id": 4,
-      "name": "سامي عبد الله",
-      "specialty": " جلدية",
-      "clinic_address": "شارع الجيش، المنصورة",
-      "phone": "01004567890",
-      "rating": 4.6,
-      "bio": "خبير في أمراض القلب التداخلية، خبرة 18 عامًا.",
-      "experience": [
-        "دكتوراه في القسطرة القلبية",
-        "عضو الجمعية الأمريكية لأمراض القلب"
-      ],
-      "services": [
-        "علاج قصور الشرايين التاجية",
-        "تركيب أجهزة تنظيم ضربات القلب",
-        "علاج ضعف عضلة القلب"
-      ],
-      "contact": {
-        "email": "samiabdullah@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/samiabdullah",
-          "twitter": "https://twitter.com/samiabdullah"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor4.jpg?raw=true"
-        },
-        {
-          "id": 5,
-      "name": "ليلى إبراهيم",
-      "specialty": "أسنان ",
-      "clinic_address": "شارع الوحدة، أسيوط",
-      "phone": "01005678901",
-      "rating": 4.8,
-      "bio": "استشارية في علاج اضطرابات القلب، خبرة 14 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "زمالة في طب القلب الوقائي"
-      ],
-      "services": [
-        "علاج ارتفاع ضغط الدم",
-        "متابعة مرضى جلطات القلب",
-        "تشخيص أمراض الصمامات"
-      ],
-      "contact": {
-        "email": "leilaibrahim@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/leilaibrahim",
-          "twitter": "https://twitter.com/leilaibrahim"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor5.jpg?raw=true"
-        },
-        {
-          "id": 6,
-      "name": "كريم الشرقاوي",
-      "specialty": " نساوتوليد",
-      "clinic_address": "شارع النزهة، القاهرة",
-      "phone": "01006789012",
-      "rating": 4.5,
-      "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "خبرة في زراعة القوقعة القلبية"
-      ],
-      "services": [
-        "علاج فشل القلب",
-        "تركيب الدعامات القلبية",
-        "تشخيص أمراض القلب الوراثية"
-      ],
-      "contact": {
-        "email": "karimsharkawy@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/karimsharkawy",
-          "twitter": "https://twitter.com/karimsharkawy"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor6.jpg?raw=true"
-        },
-        {
-          "id": 7,
-      "name": "عمرو شفيق",
-      "specialty": " تجميل",
-      "clinic_address": "شارع خليفة المأمون، القاهرة",
-      "phone": "01006789012",
-      "rating": 4.5,
-      "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "خبرة في زراعة القوقعة القلبية"
-      ],
-      "services": [
-        "علاج فشل القلب",
-        "تركيب الدعامات القلبية",
-        "تشخيص أمراض القلب الوراثية"
-      ],
-      "contact": {
-        "email": "karimsharkawy@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/karimsharkawy",
-          "twitter": "https://twitter.com/karimsharkawy"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor7.jpg?raw=true"
-        },
-        {
-          "id": 8,
-      "name": "علي بيومي",
-      "specialty": " أطفال",
-      "clinic_address": "شارع النصر، القاهرة",
-      "phone": "01006789012",
-      "rating": 4.5,
-      "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "خبرة في زراعة القوقعة القلبية"
-      ],
-      "services": [
-        "علاج فشل القلب",
-        "تركيب الدعامات القلبية",
-        "تشخيص أمراض القلب الوراثية"
-      ],
-      "contact": {
-        "email": "karimsharkawy@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/karimsharkawy",
-          "twitter": "https://twitter.com/karimsharkawy"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor8.jpeg?raw=true"
         }
       ]
     },
@@ -2429,7 +1756,7 @@
 
     {
       "id": "orthopedics",
-      "name": "أمراض القلب",
+      "name": "عظام",
       "image":"https://github.com/Alfey28/clinck/blob/main/img/download.jpg?raw=true",
       "procedures": [
         {
@@ -2456,12 +1783,13 @@
     ],
       "doctors": [
         {
-          "id": 1,
+          "id": "1ort",
         "name": " أحمد علي",
         "specialty": "أمراض القلب",
         "clinic_address": "شارع التحرير، القاهرة",
         "phone": "01001234567",
         "rating": 4.8,
+        "price": "300",
         "bio": "استشاري أمراض القلب والقسطرة القلبية، خبرة 15 عامًا.",
         "experience": [
             "دكتوراه في أمراض القلب",
@@ -2482,12 +1810,13 @@
         "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor1.jpg?raw=true"
         },
         {
-          "id": 2,
+          "id": "2ort",
       "name": "محمد حسن",
       "specialty": " جراحة عامة",
       "clinic_address": "شارع النصر، الإسكندرية",
       "phone": "01002345678",
       "rating": 4.7,
+      "price": "300",
       "bio": "أخصائي أمراض القلب والأوعية الدموية، خبرة 12 عامًا.",
       "experience": [
         "ماجستير أمراض القلب",
@@ -2509,12 +1838,13 @@
         },
 
         {
-          "id": 3,
+          "id": "3ort",
       "name": "ياسمين محمود",
       "specialty": " عيون",
       "clinic_address": "شارع الثورة، الجيزة",
       "phone": "01003456789",
       "rating": 4.9,
+      "price": "300",
       "bio": "متخصصة في أمراض القلب للأطفال، خبرة 10 سنوات.",
       "experience": [
         "ماجستير طب الأطفال",
@@ -2535,12 +1865,13 @@
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor3.png?raw=true"
         },
         {
-          "id": 4,
+          "id": "4ort",
       "name": "سامي عبد الله",
       "specialty": " جلدية",
       "clinic_address": "شارع الجيش، المنصورة",
       "phone": "01004567890",
       "rating": 4.6,
+      "price": "300",
       "bio": "خبير في أمراض القلب التداخلية، خبرة 18 عامًا.",
       "experience": [
         "دكتوراه في القسطرة القلبية",
@@ -2561,12 +1892,13 @@
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor4.jpg?raw=true"
         },
         {
-          "id": 5,
+          "id": "5ort",
       "name": "ليلى إبراهيم",
       "specialty": "أسنان ",
       "clinic_address": "شارع الوحدة، أسيوط",
       "phone": "01005678901",
       "rating": 4.8,
+      "price": "300",
       "bio": "استشارية في علاج اضطرابات القلب، خبرة 14 عامًا.",
       "experience": [
         "ماجستير أمراض القلب",
@@ -2585,84 +1917,6 @@
         }
       },
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor5.jpg?raw=true"
-        },
-        {
-          "id": 6,
-      "name": "كريم الشرقاوي",
-      "specialty": " نساوتوليد",
-      "clinic_address": "شارع النزهة، القاهرة",
-      "phone": "01006789012",
-      "rating": 4.5,
-      "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "خبرة في زراعة القوقعة القلبية"
-      ],
-      "services": [
-        "علاج فشل القلب",
-        "تركيب الدعامات القلبية",
-        "تشخيص أمراض القلب الوراثية"
-      ],
-      "contact": {
-        "email": "karimsharkawy@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/karimsharkawy",
-          "twitter": "https://twitter.com/karimsharkawy"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor6.jpg?raw=true"
-        },
-        {
-          "id": 7,
-      "name": "عمرو شفيق",
-      "specialty": " تجميل",
-      "clinic_address": "شارع خليفة المأمون، القاهرة",
-      "phone": "01006789012",
-      "rating": 4.5,
-      "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "خبرة في زراعة القوقعة القلبية"
-      ],
-      "services": [
-        "علاج فشل القلب",
-        "تركيب الدعامات القلبية",
-        "تشخيص أمراض القلب الوراثية"
-      ],
-      "contact": {
-        "email": "karimsharkawy@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/karimsharkawy",
-          "twitter": "https://twitter.com/karimsharkawy"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor7.jpg?raw=true"
-        },
-        {
-          "id": 8,
-      "name": "علي بيومي",
-      "specialty": " أطفال",
-      "clinic_address": "شارع النصر، القاهرة",
-      "phone": "01006789012",
-      "rating": 4.5,
-      "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "خبرة في زراعة القوقعة القلبية"
-      ],
-      "services": [
-        "علاج فشل القلب",
-        "تركيب الدعامات القلبية",
-        "تشخيص أمراض القلب الوراثية"
-      ],
-      "contact": {
-        "email": "karimsharkawy@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/karimsharkawy",
-          "twitter": "https://twitter.com/karimsharkawy"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor8.jpeg?raw=true"
         }
       ]
     },
@@ -2673,7 +1927,7 @@
 
     {
       "id": "internal",
-      "name": "أمراض القلب",
+      "name": "باطنة",
       "image":"https://github.com/Alfey28/clinck/blob/main/img/download.jpg?raw=true",
       "procedures": [
         {
@@ -2700,12 +1954,13 @@
     ],
       "doctors": [
         {
-          "id": 1,
+          "id": "1int",
         "name": " أحمد علي",
         "specialty": "أمراض القلب",
         "clinic_address": "شارع التحرير، القاهرة",
         "phone": "01001234567",
         "rating": 4.8,
+        "price": "300",
         "bio": "استشاري أمراض القلب والقسطرة القلبية، خبرة 15 عامًا.",
         "experience": [
             "دكتوراه في أمراض القلب",
@@ -2726,12 +1981,13 @@
         "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor1.jpg?raw=true"
         },
         {
-          "id": 2,
+          "id": "2int",
       "name": "محمد حسن",
       "specialty": " جراحة عامة",
       "clinic_address": "شارع النصر، الإسكندرية",
       "phone": "01002345678",
       "rating": 4.7,
+      "price": "300",
       "bio": "أخصائي أمراض القلب والأوعية الدموية، خبرة 12 عامًا.",
       "experience": [
         "ماجستير أمراض القلب",
@@ -2753,12 +2009,13 @@
         },
 
         {
-          "id": 3,
+          "id": "3int",
       "name": "ياسمين محمود",
       "specialty": " عيون",
       "clinic_address": "شارع الثورة، الجيزة",
       "phone": "01003456789",
       "rating": 4.9,
+      "price": "300",
       "bio": "متخصصة في أمراض القلب للأطفال، خبرة 10 سنوات.",
       "experience": [
         "ماجستير طب الأطفال",
@@ -2779,12 +2036,13 @@
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor3.png?raw=true"
         },
         {
-          "id": 4,
+          "id": "4int",
       "name": "سامي عبد الله",
       "specialty": " جلدية",
       "clinic_address": "شارع الجيش، المنصورة",
       "phone": "01004567890",
       "rating": 4.6,
+      "price": "300",
       "bio": "خبير في أمراض القلب التداخلية، خبرة 18 عامًا.",
       "experience": [
         "دكتوراه في القسطرة القلبية",
@@ -2805,12 +2063,13 @@
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor4.jpg?raw=true"
         },
         {
-          "id": 5,
+          "id": "5int",
       "name": "ليلى إبراهيم",
       "specialty": "أسنان ",
       "clinic_address": "شارع الوحدة، أسيوط",
       "phone": "01005678901",
       "rating": 4.8,
+      "price": "300",
       "bio": "استشارية في علاج اضطرابات القلب، خبرة 14 عامًا.",
       "experience": [
         "ماجستير أمراض القلب",
@@ -2831,12 +2090,13 @@
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor5.jpg?raw=true"
         },
         {
-          "id": 6,
+          "id": "6int",
       "name": "كريم الشرقاوي",
       "specialty": " نساوتوليد",
       "clinic_address": "شارع النزهة، القاهرة",
       "phone": "01006789012",
       "rating": 4.5,
+      "price": "300",
       "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
       "experience": [
         "ماجستير أمراض القلب",
@@ -2857,12 +2117,13 @@
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor6.jpg?raw=true"
         },
         {
-          "id": 7,
+          "id": "7int",
       "name": "عمرو شفيق",
       "specialty": " تجميل",
       "clinic_address": "شارع خليفة المأمون، القاهرة",
       "phone": "01006789012",
       "rating": 4.5,
+      "price": "300",
       "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
       "experience": [
         "ماجستير أمراض القلب",
@@ -2881,32 +2142,6 @@
         }
       },
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor7.jpg?raw=true"
-        },
-        {
-          "id": 8,
-      "name": "علي بيومي",
-      "specialty": " أطفال",
-      "clinic_address": "شارع النصر، القاهرة",
-      "phone": "01006789012",
-      "rating": 4.5,
-      "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "خبرة في زراعة القوقعة القلبية"
-      ],
-      "services": [
-        "علاج فشل القلب",
-        "تركيب الدعامات القلبية",
-        "تشخيص أمراض القلب الوراثية"
-      ],
-      "contact": {
-        "email": "karimsharkawy@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/karimsharkawy",
-          "twitter": "https://twitter.com/karimsharkawy"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor8.jpeg?raw=true"
         }
       ]
     },
@@ -2917,7 +2152,7 @@
 
     {
       "id": "ent",
-      "name": "أمراض القلب",
+      "name": "أنف وأذن وحنجرة",
       "image":"https://github.com/Alfey28/clinck/blob/main/img/download.jpg?raw=true",
       "procedures": [
         {
@@ -2944,12 +2179,13 @@
     ],
       "doctors": [
         {
-          "id": 1,
+          "id": "1ent",
         "name": " أحمد علي",
         "specialty": "أمراض القلب",
         "clinic_address": "شارع التحرير، القاهرة",
         "phone": "01001234567",
         "rating": 4.8,
+        "price": "300",
         "bio": "استشاري أمراض القلب والقسطرة القلبية، خبرة 15 عامًا.",
         "experience": [
             "دكتوراه في أمراض القلب",
@@ -2970,12 +2206,13 @@
         "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor1.jpg?raw=true"
         },
         {
-          "id": 2,
+          "id": "2ent",
       "name": "محمد حسن",
       "specialty": " جراحة عامة",
       "clinic_address": "شارع النصر، الإسكندرية",
       "phone": "01002345678",
       "rating": 4.7,
+      "price": "300",
       "bio": "أخصائي أمراض القلب والأوعية الدموية، خبرة 12 عامًا.",
       "experience": [
         "ماجستير أمراض القلب",
@@ -2997,12 +2234,13 @@
         },
 
         {
-          "id": 3,
+          "id": "3ent",
       "name": "ياسمين محمود",
       "specialty": " عيون",
       "clinic_address": "شارع الثورة، الجيزة",
       "phone": "01003456789",
       "rating": 4.9,
+      "price": "300",
       "bio": "متخصصة في أمراض القلب للأطفال، خبرة 10 سنوات.",
       "experience": [
         "ماجستير طب الأطفال",
@@ -3023,12 +2261,13 @@
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor3.png?raw=true"
         },
         {
-          "id": 4,
+          "id": "4ent",
       "name": "سامي عبد الله",
       "specialty": " جلدية",
       "clinic_address": "شارع الجيش، المنصورة",
       "phone": "01004567890",
       "rating": 4.6,
+      "price": "300",
       "bio": "خبير في أمراض القلب التداخلية، خبرة 18 عامًا.",
       "experience": [
         "دكتوراه في القسطرة القلبية",
@@ -3049,12 +2288,13 @@
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor4.jpg?raw=true"
         },
         {
-          "id": 5,
+          "id": "5ent",
       "name": "ليلى إبراهيم",
       "specialty": "أسنان ",
       "clinic_address": "شارع الوحدة، أسيوط",
       "phone": "01005678901",
       "rating": 4.8,
+      "price": "300",
       "bio": "استشارية في علاج اضطرابات القلب، خبرة 14 عامًا.",
       "experience": [
         "ماجستير أمراض القلب",
@@ -3075,12 +2315,13 @@
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor5.jpg?raw=true"
         },
         {
-          "id": 6,
+          "id": "6ent",
       "name": "كريم الشرقاوي",
       "specialty": " نساوتوليد",
       "clinic_address": "شارع النزهة، القاهرة",
       "phone": "01006789012",
       "rating": 4.5,
+      "price": "300",
       "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
       "experience": [
         "ماجستير أمراض القلب",
@@ -3099,58 +2340,6 @@
         }
       },
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor6.jpg?raw=true"
-        },
-        {
-          "id": 7,
-      "name": "عمرو شفيق",
-      "specialty": " تجميل",
-      "clinic_address": "شارع خليفة المأمون، القاهرة",
-      "phone": "01006789012",
-      "rating": 4.5,
-      "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "خبرة في زراعة القوقعة القلبية"
-      ],
-      "services": [
-        "علاج فشل القلب",
-        "تركيب الدعامات القلبية",
-        "تشخيص أمراض القلب الوراثية"
-      ],
-      "contact": {
-        "email": "karimsharkawy@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/karimsharkawy",
-          "twitter": "https://twitter.com/karimsharkawy"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor7.jpg?raw=true"
-        },
-        {
-          "id": 8,
-      "name": "علي بيومي",
-      "specialty": " أطفال",
-      "clinic_address": "شارع النصر، القاهرة",
-      "phone": "01006789012",
-      "rating": 4.5,
-      "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "خبرة في زراعة القوقعة القلبية"
-      ],
-      "services": [
-        "علاج فشل القلب",
-        "تركيب الدعامات القلبية",
-        "تشخيص أمراض القلب الوراثية"
-      ],
-      "contact": {
-        "email": "karimsharkawy@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/karimsharkawy",
-          "twitter": "https://twitter.com/karimsharkawy"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor8.jpeg?raw=true"
         }
       ]
     },
@@ -3162,7 +2351,7 @@
 
     {
       "id": "Kidney",
-      "name": "أمراض القلب",
+      "name": "كلى",
       "image":"https://github.com/Alfey28/clinck/blob/main/img/download.jpg?raw=true",
       "procedures": [
         {
@@ -3189,12 +2378,13 @@
     ],
       "doctors": [
         {
-          "id": 1,
+          "id": "1kid",
         "name": " أحمد علي",
         "specialty": "أمراض القلب",
         "clinic_address": "شارع التحرير، القاهرة",
         "phone": "01001234567",
         "rating": 4.8,
+        "price": "300",
         "bio": "استشاري أمراض القلب والقسطرة القلبية، خبرة 15 عامًا.",
         "experience": [
             "دكتوراه في أمراض القلب",
@@ -3215,12 +2405,13 @@
         "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor1.jpg?raw=true"
         },
         {
-          "id": 2,
+          "id": "2kid",
       "name": "محمد حسن",
       "specialty": " جراحة عامة",
       "clinic_address": "شارع النصر، الإسكندرية",
       "phone": "01002345678",
       "rating": 4.7,
+      "price": "300",
       "bio": "أخصائي أمراض القلب والأوعية الدموية، خبرة 12 عامًا.",
       "experience": [
         "ماجستير أمراض القلب",
@@ -3242,12 +2433,13 @@
         },
 
         {
-          "id": 3,
+          "id": "3kid",
       "name": "ياسمين محمود",
       "specialty": " عيون",
       "clinic_address": "شارع الثورة، الجيزة",
       "phone": "01003456789",
       "rating": 4.9,
+      "price": "300",
       "bio": "متخصصة في أمراض القلب للأطفال، خبرة 10 سنوات.",
       "experience": [
         "ماجستير طب الأطفال",
@@ -3268,12 +2460,13 @@
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor3.png?raw=true"
         },
         {
-          "id": 4,
+          "id": "4kid",
       "name": "سامي عبد الله",
       "specialty": " جلدية",
       "clinic_address": "شارع الجيش، المنصورة",
       "phone": "01004567890",
       "rating": 4.6,
+      "price": "300",
       "bio": "خبير في أمراض القلب التداخلية، خبرة 18 عامًا.",
       "experience": [
         "دكتوراه في القسطرة القلبية",
@@ -3292,110 +2485,6 @@
         }
       },
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor4.jpg?raw=true"
-        },
-        {
-          "id": 5,
-      "name": "ليلى إبراهيم",
-      "specialty": "أسنان ",
-      "clinic_address": "شارع الوحدة، أسيوط",
-      "phone": "01005678901",
-      "rating": 4.8,
-      "bio": "استشارية في علاج اضطرابات القلب، خبرة 14 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "زمالة في طب القلب الوقائي"
-      ],
-      "services": [
-        "علاج ارتفاع ضغط الدم",
-        "متابعة مرضى جلطات القلب",
-        "تشخيص أمراض الصمامات"
-      ],
-      "contact": {
-        "email": "leilaibrahim@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/leilaibrahim",
-          "twitter": "https://twitter.com/leilaibrahim"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor5.jpg?raw=true"
-        },
-        {
-          "id": 6,
-      "name": "كريم الشرقاوي",
-      "specialty": " نساوتوليد",
-      "clinic_address": "شارع النزهة، القاهرة",
-      "phone": "01006789012",
-      "rating": 4.5,
-      "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "خبرة في زراعة القوقعة القلبية"
-      ],
-      "services": [
-        "علاج فشل القلب",
-        "تركيب الدعامات القلبية",
-        "تشخيص أمراض القلب الوراثية"
-      ],
-      "contact": {
-        "email": "karimsharkawy@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/karimsharkawy",
-          "twitter": "https://twitter.com/karimsharkawy"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor6.jpg?raw=true"
-        },
-        {
-          "id": 7,
-      "name": "عمرو شفيق",
-      "specialty": " تجميل",
-      "clinic_address": "شارع خليفة المأمون، القاهرة",
-      "phone": "01006789012",
-      "rating": 4.5,
-      "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "خبرة في زراعة القوقعة القلبية"
-      ],
-      "services": [
-        "علاج فشل القلب",
-        "تركيب الدعامات القلبية",
-        "تشخيص أمراض القلب الوراثية"
-      ],
-      "contact": {
-        "email": "karimsharkawy@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/karimsharkawy",
-          "twitter": "https://twitter.com/karimsharkawy"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor7.jpg?raw=true"
-        },
-        {
-          "id": 8,
-      "name": "علي بيومي",
-      "specialty": " أطفال",
-      "clinic_address": "شارع النصر، القاهرة",
-      "phone": "01006789012",
-      "rating": 4.5,
-      "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "خبرة في زراعة القوقعة القلبية"
-      ],
-      "services": [
-        "علاج فشل القلب",
-        "تركيب الدعامات القلبية",
-        "تشخيص أمراض القلب الوراثية"
-      ],
-      "contact": {
-        "email": "karimsharkawy@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/karimsharkawy",
-          "twitter": "https://twitter.com/karimsharkawy"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor8.jpeg?raw=true"
         }
       ]
     },
@@ -3407,7 +2496,7 @@
 
     {
       "id": "Chest",
-      "name": "أمراض القلب",
+      "name": "صدر",
       "image":"https://github.com/Alfey28/clinck/blob/main/img/download.jpg?raw=true",
       "procedures": [
         {
@@ -3434,12 +2523,13 @@
     ],
       "doctors": [
         {
-          "id": 1,
+          "id": "1che",
         "name": " أحمد علي",
         "specialty": "أمراض القلب",
         "clinic_address": "شارع التحرير، القاهرة",
         "phone": "01001234567",
         "rating": 4.8,
+        "price": "300",
         "bio": "استشاري أمراض القلب والقسطرة القلبية، خبرة 15 عامًا.",
         "experience": [
             "دكتوراه في أمراض القلب",
@@ -3460,12 +2550,13 @@
         "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor1.jpg?raw=true"
         },
         {
-          "id": 2,
+          "id": "2che",
       "name": "محمد حسن",
       "specialty": " جراحة عامة",
       "clinic_address": "شارع النصر، الإسكندرية",
       "phone": "01002345678",
       "rating": 4.7,
+      "price": "300",
       "bio": "أخصائي أمراض القلب والأوعية الدموية، خبرة 12 عامًا.",
       "experience": [
         "ماجستير أمراض القلب",
@@ -3487,12 +2578,13 @@
         },
 
         {
-          "id": 3,
+          "id": "3che",
       "name": "ياسمين محمود",
       "specialty": " عيون",
       "clinic_address": "شارع الثورة، الجيزة",
       "phone": "01003456789",
       "rating": 4.9,
+      "price": "300",
       "bio": "متخصصة في أمراض القلب للأطفال، خبرة 10 سنوات.",
       "experience": [
         "ماجستير طب الأطفال",
@@ -3513,12 +2605,13 @@
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor3.png?raw=true"
         },
         {
-          "id": 4,
+          "id": "4che",
       "name": "سامي عبد الله",
       "specialty": " جلدية",
       "clinic_address": "شارع الجيش، المنصورة",
       "phone": "01004567890",
       "rating": 4.6,
+      "price": "300",
       "bio": "خبير في أمراض القلب التداخلية، خبرة 18 عامًا.",
       "experience": [
         "دكتوراه في القسطرة القلبية",
@@ -3537,110 +2630,93 @@
         }
       },
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor4.jpg?raw=true"
+        }
+      ]
+    },
+
+
+
+    {
+      "id": "Dietitian",
+      "name": "تغذية",
+      "image":"https://github.com/Alfey28/clinck/blob/main/img/download.jpg?raw=true",
+      "procedures": [
+        {
+            "title": "عملية قسطرة القلب",
+            "description": "قسطرة القلب هي اختبار أو علاج لبعض مشكلات القلب أو الأوعية الدموية، مثل انسداد الشرايين أو عدم انتظام ضربات القلب. وفيها يُستخدم أنبوب رفيع مجوف يُسمى أنبوب القسطرة. يوجَّه الأنبوب عبر أحد الأوعية الدموية إلى القلب. وتوفر قسطرة القلب تفاصيل مهمة عن عضلة القلب وصمامات القلب والأوعية الدموية في القلب"
         },
         {
-          "id": 5,
-      "name": "ليلى إبراهيم",
-      "specialty": "أسنان ",
-      "clinic_address": "شارع الوحدة، أسيوط",
-      "phone": "01005678901",
-      "rating": 4.8,
-      "bio": "استشارية في علاج اضطرابات القلب، خبرة 14 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "زمالة في طب القلب الوقائي"
-      ],
-      "services": [
-        "علاج ارتفاع ضغط الدم",
-        "متابعة مرضى جلطات القلب",
-        "تشخيص أمراض الصمامات"
-      ],
-      "contact": {
-        "email": "leilaibrahim@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/leilaibrahim",
-          "twitter": "https://twitter.com/leilaibrahim"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor5.jpg?raw=true"
+            "title": "جراحة القلب بالمنظار",
+            "description": "يُجري الأطباء جراحة القلب بالمنظار دون شق الصدر التي تُصنف أنها عملية جراحة القلب بالتدخل المحدود (أي التي تُجرى بأقل قدر من التدخل الجراحي)، وخلال تلك الجراحة يصنع الطبيب فتحات صغيرة في منطقة الصدر من أجل إدخال المنظار الجراحي والأدوات الجراحية عبرها، ومن ثم تنفيذ الخطوات اللازمة لعلاج المشكلة"
+            
         },
         {
-          "id": 6,
-      "name": "كريم الشرقاوي",
-      "specialty": " نساوتوليد",
-      "clinic_address": "شارع النزهة، القاهرة",
-      "phone": "01006789012",
-      "rating": 4.5,
-      "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "خبرة في زراعة القوقعة القلبية"
-      ],
-      "services": [
-        "علاج فشل القلب",
-        "تركيب الدعامات القلبية",
-        "تشخيص أمراض القلب الوراثية"
-      ],
-      "contact": {
-        "email": "karimsharkawy@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/karimsharkawy",
-          "twitter": "https://twitter.com/karimsharkawy"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor6.jpg?raw=true"
+          "title": "القلب المفتوح",
+          "description": "سُميت جراحة القلب المفتوح بهذا الاسم نسبةً إلى الشق الجراحي الكبير الذي يصنعه الطبيب بطول عظمة منتصف الصدر (عظمة القصّ التي تفصل بين ضلوع القفص الصدري)، ويهدف صُنع ذلك الشق إلى مساعدة الطبيب على الوصول إلى القلب من أجل تنفيذ الخطوات الجراحية اللازمة لعلاج المشكلة التي تعتريه، أو تعتري أحد الشرايين المتصّلة به"
         },
         {
-          "id": 7,
-      "name": "عمرو شفيق",
-      "specialty": " تجميل",
-      "clinic_address": "شارع خليفة المأمون، القاهرة",
-      "phone": "01006789012",
-      "rating": 4.5,
-      "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "خبرة في زراعة القوقعة القلبية"
-      ],
-      "services": [
-        "علاج فشل القلب",
-        "تركيب الدعامات القلبية",
-        "تشخيص أمراض القلب الوراثية"
-      ],
-      "contact": {
-        "email": "karimsharkawy@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/karimsharkawy",
-          "twitter": "https://twitter.com/karimsharkawy"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor7.jpg?raw=true"
+          "title": "ترقيع الشرايين التاجية",
+          "description": "تشمل هذه العملية الحصول على رُقعة من أحد الأوعية الموجودة في جسم المريض، ومن ثمّ توصيل طرفها الأول أعلى منطقة الانسداد، وتوصيل طرفها الآخر أسفل تلك المنطقة بهدف تحويل مسار الدم بعيدًا عن المنطقة المسدودة أو الضيّقة الموجودة في الشريان"
         },
         {
-          "id": 8,
-      "name": "علي بيومي",
-      "specialty": " أطفال",
-      "clinic_address": "شارع النصر، القاهرة",
-      "phone": "01006789012",
-      "rating": 4.5,
-      "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
+          "title": "عملية تركيب منظم ضربات القلب",
+          "description": "يُصاب بعض المرضى بمشكلة عدم انتظام ضربات القلب ما يجعلهم في حاجة إلى تناول بعض الأدوية، أو الخضوع لجراحات تتضمن زرع جهاز متطور لتنظيم معدل ضربات القلب، وهو جهاز صغير الحجم تخرج منه بعض الأسلاك يُوصلها الطبيب بعضلة القلب من أجل التحكم في نبضاتها"
+        }
+    ],
+      "doctors": [
+        {
+          "id": "1die",
+        "name": " أحمد علي",
+        "specialty": "أمراض القلب",
+        "clinic_address": "شارع التحرير، القاهرة",
+        "phone": "01001234567",
+        "rating": 4.8,
+        "price": "300",
+        "bio": "استشاري أمراض القلب والقسطرة القلبية، خبرة 15 عامًا.",
+        "experience": [
+            "دكتوراه في أمراض القلب",
+            "عضو الجمعية الأوروبية لأمراض القلب"
+        ],
+        "services": [
+            "تشخيص أمراض القلب",
+            "القسطرة القلبية",
+            "تركيب الدعامات"
+        ],
+        "contact": {
+            "email": "ahmedali@clinic.com",
+            "social": {
+                "facebook": "https://facebook.com/ahmedali",
+                "twitter": "https://twitter.com/ahmedali"
+            }
+        },
+        "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor1.jpg?raw=true"
+        },
+        {
+          "id": "2die",
+      "name": "محمد حسن",
+      "specialty": " جراحة عامة",
+      "clinic_address": "شارع النصر، الإسكندرية",
+      "phone": "01002345678",
+      "rating": 4.7,
+      "price": "300",
+      "bio": "أخصائي أمراض القلب والأوعية الدموية، خبرة 12 عامًا.",
       "experience": [
         "ماجستير أمراض القلب",
-        "خبرة في زراعة القوقعة القلبية"
+        "زمالة الكلية الملكية البريطانية"
       ],
       "services": [
-        "علاج فشل القلب",
-        "تركيب الدعامات القلبية",
-        "تشخيص أمراض القلب الوراثية"
+        "رسم القلب بالمجهود",
+        "علاج الذبحة الصدرية",
+        "تشخيص اضطرابات النبض"
       ],
       "contact": {
-        "email": "karimsharkawy@clinic.com",
+        "email": "mohamedhassan@clinic.com",
         "social": {
-          "facebook": "https://facebook.com/karimsharkawy",
-          "twitter": "https://twitter.com/karimsharkawy"
+          "facebook": "https://facebook.com/mohamedhassan",
+          "twitter": "https://twitter.com/mohamedhassan"
         }
       },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor8.jpeg?raw=true"
+      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor2.jpg?raw=true"
         }
       ]
     },
@@ -3651,7 +2727,7 @@
 
     {
       "id": "ban",
-      "name": "أمراض القلب",
+      "name": "مخ و اعصاب",
       "image":"https://github.com/Alfey28/clinck/blob/main/img/download.jpg?raw=true",
       "procedures": [
         {
@@ -3678,12 +2754,13 @@
     ],
       "doctors": [
         {
-          "id": 1,
+          "id": "1ban",
         "name": " أحمد علي",
         "specialty": "أمراض القلب",
         "clinic_address": "شارع التحرير، القاهرة",
         "phone": "01001234567",
         "rating": 4.8,
+        "price": "300",
         "bio": "استشاري أمراض القلب والقسطرة القلبية، خبرة 15 عامًا.",
         "experience": [
             "دكتوراه في أمراض القلب",
@@ -3704,12 +2781,13 @@
         "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor1.jpg?raw=true"
         },
         {
-          "id": 2,
+          "id": "2ban",
       "name": "محمد حسن",
       "specialty": " جراحة عامة",
       "clinic_address": "شارع النصر، الإسكندرية",
       "phone": "01002345678",
       "rating": 4.7,
+      "price": "300",
       "bio": "أخصائي أمراض القلب والأوعية الدموية، خبرة 12 عامًا.",
       "experience": [
         "ماجستير أمراض القلب",
@@ -3731,12 +2809,13 @@
         },
 
         {
-          "id": 3,
+          "id": "3ban",
       "name": "ياسمين محمود",
       "specialty": " عيون",
       "clinic_address": "شارع الثورة، الجيزة",
       "phone": "01003456789",
       "rating": 4.9,
+      "price": "300",
       "bio": "متخصصة في أمراض القلب للأطفال، خبرة 10 سنوات.",
       "experience": [
         "ماجستير طب الأطفال",
@@ -3755,136 +2834,121 @@
         }
       },
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor3.png?raw=true"
-        },
-        {
-          "id": 4,
-      "name": "سامي عبد الله",
-      "specialty": " جلدية",
-      "clinic_address": "شارع الجيش، المنصورة",
-      "phone": "01004567890",
-      "rating": 4.6,
-      "bio": "خبير في أمراض القلب التداخلية، خبرة 18 عامًا.",
-      "experience": [
-        "دكتوراه في القسطرة القلبية",
-        "عضو الجمعية الأمريكية لأمراض القلب"
-      ],
-      "services": [
-        "علاج قصور الشرايين التاجية",
-        "تركيب أجهزة تنظيم ضربات القلب",
-        "علاج ضعف عضلة القلب"
-      ],
-      "contact": {
-        "email": "samiabdullah@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/samiabdullah",
-          "twitter": "https://twitter.com/samiabdullah"
         }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor4.jpg?raw=true"
+      ]
+    },
+
+
+
+
+    {
+      "id": "PhysicalTherapy",
+      "name": "علاج طبيعي",
+      "image":"https://github.com/Alfey28/clinck/blob/main/img/download.jpg?raw=true",
+      "procedures": [
+        {
+            "title": "عملية قسطرة القلب",
+            "description": "قسطرة القلب هي اختبار أو علاج لبعض مشكلات القلب أو الأوعية الدموية، مثل انسداد الشرايين أو عدم انتظام ضربات القلب. وفيها يُستخدم أنبوب رفيع مجوف يُسمى أنبوب القسطرة. يوجَّه الأنبوب عبر أحد الأوعية الدموية إلى القلب. وتوفر قسطرة القلب تفاصيل مهمة عن عضلة القلب وصمامات القلب والأوعية الدموية في القلب"
         },
         {
-          "id": 5,
-      "name": "ليلى إبراهيم",
-      "specialty": "أسنان ",
-      "clinic_address": "شارع الوحدة، أسيوط",
-      "phone": "01005678901",
-      "rating": 4.8,
-      "bio": "استشارية في علاج اضطرابات القلب، خبرة 14 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "زمالة في طب القلب الوقائي"
-      ],
-      "services": [
-        "علاج ارتفاع ضغط الدم",
-        "متابعة مرضى جلطات القلب",
-        "تشخيص أمراض الصمامات"
-      ],
-      "contact": {
-        "email": "leilaibrahim@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/leilaibrahim",
-          "twitter": "https://twitter.com/leilaibrahim"
+            "title": "جراحة القلب بالمنظار",
+            "description": "يُجري الأطباء جراحة القلب بالمنظار دون شق الصدر التي تُصنف أنها عملية جراحة القلب بالتدخل المحدود (أي التي تُجرى بأقل قدر من التدخل الجراحي)، وخلال تلك الجراحة يصنع الطبيب فتحات صغيرة في منطقة الصدر من أجل إدخال المنظار الجراحي والأدوات الجراحية عبرها، ومن ثم تنفيذ الخطوات اللازمة لعلاج المشكلة"
+            
+        },
+        {
+          "title": "القلب المفتوح",
+          "description": "سُميت جراحة القلب المفتوح بهذا الاسم نسبةً إلى الشق الجراحي الكبير الذي يصنعه الطبيب بطول عظمة منتصف الصدر (عظمة القصّ التي تفصل بين ضلوع القفص الصدري)، ويهدف صُنع ذلك الشق إلى مساعدة الطبيب على الوصول إلى القلب من أجل تنفيذ الخطوات الجراحية اللازمة لعلاج المشكلة التي تعتريه، أو تعتري أحد الشرايين المتصّلة به"
+        },
+        {
+          "title": "ترقيع الشرايين التاجية",
+          "description": "تشمل هذه العملية الحصول على رُقعة من أحد الأوعية الموجودة في جسم المريض، ومن ثمّ توصيل طرفها الأول أعلى منطقة الانسداد، وتوصيل طرفها الآخر أسفل تلك المنطقة بهدف تحويل مسار الدم بعيدًا عن المنطقة المسدودة أو الضيّقة الموجودة في الشريان"
+        },
+        {
+          "title": "عملية تركيب منظم ضربات القلب",
+          "description": "يُصاب بعض المرضى بمشكلة عدم انتظام ضربات القلب ما يجعلهم في حاجة إلى تناول بعض الأدوية، أو الخضوع لجراحات تتضمن زرع جهاز متطور لتنظيم معدل ضربات القلب، وهو جهاز صغير الحجم تخرج منه بعض الأسلاك يُوصلها الطبيب بعضلة القلب من أجل التحكم في نبضاتها"
         }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor5.jpg?raw=true"
+    ],
+      "doctors": [
+        {
+          "id": "1phy",
+        "name": " أحمد علي",
+        "specialty": "أمراض القلب",
+        "clinic_address": "شارع التحرير، القاهرة",
+        "phone": "01001234567",
+        "rating": 4.8,
+        "price": "300",
+        "bio": "استشاري أمراض القلب والقسطرة القلبية، خبرة 15 عامًا.",
+        "experience": [
+            "دكتوراه في أمراض القلب",
+            "عضو الجمعية الأوروبية لأمراض القلب"
+        ],
+        "services": [
+            "تشخيص أمراض القلب",
+            "القسطرة القلبية",
+            "تركيب الدعامات"
+        ],
+        "contact": {
+            "email": "ahmedali@clinic.com",
+            "social": {
+                "facebook": "https://facebook.com/ahmedali",
+                "twitter": "https://twitter.com/ahmedali"
+            }
+        },
+        "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor1.jpg?raw=true"
         },
         {
-          "id": 6,
-      "name": "كريم الشرقاوي",
-      "specialty": " نساوتوليد",
-      "clinic_address": "شارع النزهة، القاهرة",
-      "phone": "01006789012",
-      "rating": 4.5,
-      "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "خبرة في زراعة القوقعة القلبية"
-      ],
-      "services": [
-        "علاج فشل القلب",
-        "تركيب الدعامات القلبية",
-        "تشخيص أمراض القلب الوراثية"
-      ],
-      "contact": {
-        "email": "karimsharkawy@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/karimsharkawy",
-          "twitter": "https://twitter.com/karimsharkawy"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor6.jpg?raw=true"
-        },
-        {
-          "id": 7,
-      "name": "عمرو شفيق",
-      "specialty": " تجميل",
-      "clinic_address": "شارع خليفة المأمون، القاهرة",
-      "phone": "01006789012",
-      "rating": 4.5,
-      "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
+          "id": "2phy",
+      "name": "محمد حسن",
+      "specialty": " جراحة عامة",
+      "clinic_address": "شارع النصر، الإسكندرية",
+      "phone": "01002345678",
+      "rating": 4.7,
+      "price": "300",
+      "bio": "أخصائي أمراض القلب والأوعية الدموية، خبرة 12 عامًا.",
       "experience": [
         "ماجستير أمراض القلب",
-        "خبرة في زراعة القوقعة القلبية"
+        "زمالة الكلية الملكية البريطانية"
       ],
       "services": [
-        "علاج فشل القلب",
-        "تركيب الدعامات القلبية",
-        "تشخيص أمراض القلب الوراثية"
+        "رسم القلب بالمجهود",
+        "علاج الذبحة الصدرية",
+        "تشخيص اضطرابات النبض"
       ],
       "contact": {
-        "email": "karimsharkawy@clinic.com",
+        "email": "mohamedhassan@clinic.com",
         "social": {
-          "facebook": "https://facebook.com/karimsharkawy",
-          "twitter": "https://twitter.com/karimsharkawy"
+          "facebook": "https://facebook.com/mohamedhassan",
+          "twitter": "https://twitter.com/mohamedhassan"
         }
       },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor7.jpg?raw=true"
+      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor2.jpg?raw=true"
         },
         {
-          "id": 8,
-      "name": "علي بيومي",
-      "specialty": " أطفال",
-      "clinic_address": "شارع النصر، القاهرة",
-      "phone": "01006789012",
-      "rating": 4.5,
-      "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
+          "id": "3phy",
+      "name": "ياسمين محمود",
+      "specialty": " عيون",
+      "clinic_address": "شارع الثورة، الجيزة",
+      "phone": "01003456789",
+      "rating": 4.9,
+      "price": "300",
+      "bio": "متخصصة في أمراض القلب للأطفال، خبرة 10 سنوات.",
       "experience": [
-        "ماجستير أمراض القلب",
-        "خبرة في زراعة القوقعة القلبية"
+        "ماجستير طب الأطفال",
+        "زمالة في أمراض القلب للأطفال"
       ],
       "services": [
-        "علاج فشل القلب",
-        "تركيب الدعامات القلبية",
-        "تشخيص أمراض القلب الوراثية"
+        "علاج العيوب الخلقية للقلب",
+        "متابعة حالات القلب الحرجة",
+        "تخطيط صدى القلب للأطفال"
       ],
       "contact": {
-        "email": "karimsharkawy@clinic.com",
+        "email": "yasminmahmoud@clinic.com",
         "social": {
-          "facebook": "https://facebook.com/karimsharkawy",
-          "twitter": "https://twitter.com/karimsharkawy"
+          "facebook": "https://facebook.com/yasminmahmoud",
+          "twitter": "https://twitter.com/yasminmahmoud"
         }
       },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor8.jpeg?raw=true"
+      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor3.png?raw=true"
         }
       ]
     },
@@ -3895,7 +2959,7 @@
 
     {
       "id": "psy",
-      "name": "أمراض القلب",
+      "name": "نفسية وعصبية",
       "image":"https://github.com/Alfey28/clinck/blob/main/img/download.jpg?raw=true",
       "procedures": [
         {
@@ -3922,12 +2986,13 @@
     ],
       "doctors": [
         {
-          "id": 1,
+          "id": "1psy",
         "name": " أحمد علي",
         "specialty": "أمراض القلب",
         "clinic_address": "شارع التحرير، القاهرة",
         "phone": "01001234567",
         "rating": 4.8,
+        "price": "300",
         "bio": "استشاري أمراض القلب والقسطرة القلبية، خبرة 15 عامًا.",
         "experience": [
             "دكتوراه في أمراض القلب",
@@ -3948,12 +3013,13 @@
         "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor1.jpg?raw=true"
         },
         {
-          "id": 2,
+          "id": "2psy",
       "name": "محمد حسن",
       "specialty": " جراحة عامة",
       "clinic_address": "شارع النصر، الإسكندرية",
       "phone": "01002345678",
       "rating": 4.7,
+      "price": "300",
       "bio": "أخصائي أمراض القلب والأوعية الدموية، خبرة 12 عامًا.",
       "experience": [
         "ماجستير أمراض القلب",
@@ -3973,14 +3039,14 @@
       },
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor2.jpg?raw=true"
         },
-
         {
-          "id": 3,
+          "id": "3psy",
       "name": "ياسمين محمود",
       "specialty": " عيون",
       "clinic_address": "شارع الثورة، الجيزة",
       "phone": "01003456789",
       "rating": 4.9,
+      "price": "300",
       "bio": "متخصصة في أمراض القلب للأطفال، خبرة 10 سنوات.",
       "experience": [
         "ماجستير طب الأطفال",
@@ -3999,136 +3065,6 @@
         }
       },
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor3.png?raw=true"
-        },
-        {
-          "id": 4,
-      "name": "سامي عبد الله",
-      "specialty": " جلدية",
-      "clinic_address": "شارع الجيش، المنصورة",
-      "phone": "01004567890",
-      "rating": 4.6,
-      "bio": "خبير في أمراض القلب التداخلية، خبرة 18 عامًا.",
-      "experience": [
-        "دكتوراه في القسطرة القلبية",
-        "عضو الجمعية الأمريكية لأمراض القلب"
-      ],
-      "services": [
-        "علاج قصور الشرايين التاجية",
-        "تركيب أجهزة تنظيم ضربات القلب",
-        "علاج ضعف عضلة القلب"
-      ],
-      "contact": {
-        "email": "samiabdullah@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/samiabdullah",
-          "twitter": "https://twitter.com/samiabdullah"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor4.jpg?raw=true"
-        },
-        {
-          "id": 5,
-      "name": "ليلى إبراهيم",
-      "specialty": "أسنان ",
-      "clinic_address": "شارع الوحدة، أسيوط",
-      "phone": "01005678901",
-      "rating": 4.8,
-      "bio": "استشارية في علاج اضطرابات القلب، خبرة 14 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "زمالة في طب القلب الوقائي"
-      ],
-      "services": [
-        "علاج ارتفاع ضغط الدم",
-        "متابعة مرضى جلطات القلب",
-        "تشخيص أمراض الصمامات"
-      ],
-      "contact": {
-        "email": "leilaibrahim@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/leilaibrahim",
-          "twitter": "https://twitter.com/leilaibrahim"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor5.jpg?raw=true"
-        },
-        {
-          "id": 6,
-      "name": "كريم الشرقاوي",
-      "specialty": " نساوتوليد",
-      "clinic_address": "شارع النزهة، القاهرة",
-      "phone": "01006789012",
-      "rating": 4.5,
-      "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "خبرة في زراعة القوقعة القلبية"
-      ],
-      "services": [
-        "علاج فشل القلب",
-        "تركيب الدعامات القلبية",
-        "تشخيص أمراض القلب الوراثية"
-      ],
-      "contact": {
-        "email": "karimsharkawy@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/karimsharkawy",
-          "twitter": "https://twitter.com/karimsharkawy"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor6.jpg?raw=true"
-        },
-        {
-          "id": 7,
-      "name": "عمرو شفيق",
-      "specialty": " تجميل",
-      "clinic_address": "شارع خليفة المأمون، القاهرة",
-      "phone": "01006789012",
-      "rating": 4.5,
-      "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "خبرة في زراعة القوقعة القلبية"
-      ],
-      "services": [
-        "علاج فشل القلب",
-        "تركيب الدعامات القلبية",
-        "تشخيص أمراض القلب الوراثية"
-      ],
-      "contact": {
-        "email": "karimsharkawy@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/karimsharkawy",
-          "twitter": "https://twitter.com/karimsharkawy"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor7.jpg?raw=true"
-        },
-        {
-          "id": 8,
-      "name": "علي بيومي",
-      "specialty": " أطفال",
-      "clinic_address": "شارع النصر، القاهرة",
-      "phone": "01006789012",
-      "rating": 4.5,
-      "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "خبرة في زراعة القوقعة القلبية"
-      ],
-      "services": [
-        "علاج فشل القلب",
-        "تركيب الدعامات القلبية",
-        "تشخيص أمراض القلب الوراثية"
-      ],
-      "contact": {
-        "email": "karimsharkawy@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/karimsharkawy",
-          "twitter": "https://twitter.com/karimsharkawy"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor8.jpeg?raw=true"
         }
       ]
     }

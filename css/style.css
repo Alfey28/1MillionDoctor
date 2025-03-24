@@ -598,6 +598,42 @@ button:hover {
 
 /*** Appointment ***/
 /* تحسين التصميم وجعله أكثر احترافية */
+/* إزالة أيقونات التاريخ والوقت */
+/* إخفاء أيقونات التاريخ والوقت */
+/* إخفاء أيقونات التاريخ والوقت */
+.price-container {
+    direction: rtl;
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 100%;
+    flex-direction: row;
+}
+
+/* التنسيق الخاص بعرض النص */
+#doctorPriceLabel {
+    font-style: oblique;
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+    margin-left: 15px;
+    position: relative;
+    top: 50%;
+}
+
+#doctorPrice {
+    font-style: oblique;
+    font-size: 25px;
+    color: #ff5722; /* لون أخضر للسعر */
+    font-weight: bold;
+}
+
+#currency-symbol {
+    font-size: 30px;
+}
+
+
+
 .date-picker {
     appearance: none;
     -webkit-appearance: none;

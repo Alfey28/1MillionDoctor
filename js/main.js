@@ -134,150 +134,181 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    
     /******************************************************************** */
+    // لإزالة النصوص داخل الـ input عندما يتم الضغط عليه
+// تحميل البيانات من ملف JSON
+fetch('js/specialties.json')
+    .then(response => response.json())
+    .then(data => {
 
-    //   اكواد form الحجز صفحة index  //
-    document.addEventListener("DOMContentLoaded", function () {
-        const form = document.getElementById("bookingForm");
-        const errorMessage = document.getElementById("error-message");
-        const fields = form.querySelectorAll("input, select"); // جلب جميع الحقول
-    
-        // إزالة الخطأ بمجرد أن يبدأ المستخدم في إدخال بيانات
+        // عرض التخصصات في الـ select
+        const specialtiesSelect = document.getElementById("specialty-input");
+        data.forEach(specialty => {
+            const option = document.createElement("option");
+            option.value = specialty.id;
+            option.textContent = specialty.name;
+            specialtiesSelect.appendChild(option);
+        });
+
+        // عندما يختار المستخدم تخصصًا
+        specialtiesSelect.addEventListener("change", function () {
+            const selectedSpecialty = data.find(specialty => specialty.id === this.value);
+            
+            // عرض الأطباء في الـ select الخاص بالأطباء
+            const doctorsSelect = document.getElementById("doctor");
+            doctorsSelect.innerHTML = "<option selected disabled>اختر الطبيب</option>"; // إعادة تعيين الأطباء
+            selectedSpecialty.doctors.forEach(doctor => {
+                const option = document.createElement("option");
+                option.value = doctor.id;
+                option.textContent = doctor.name;
+                doctorsSelect.appendChild(option);
+            });
+
+            // إخفاء حاوية السعر قبل اختيار الطبيب
+            document.getElementById("priceContainer").style.display = "none"; 
+
+            // إضافة سعر الكشف للطبيب المختار
+            doctorsSelect.addEventListener("change", function () {
+                const selectedDoctor = selectedSpecialty.doctors.find(doctor => doctor.id === this.value);
+                
+                // إظهار حاوية السعر بعد اختيار الطبيب
+                document.getElementById("priceContainer").style.display = "flex"; 
+
+                // تحديث السعر
+                document.getElementById("doctorPriceLabel").style.display = "inline";
+                document.getElementById("doctorPrice").style.display = "inline";
+                document.getElementById("currency-symbol").style.display = "inline";
+                document.getElementById("doctorPrice").textContent = selectedDoctor.price;
+            });
+        });
+    })
+    .catch(error => {
+        console.error("Error loading JSON:", error);
+    });
+
+
+
+
+
+
+
+// // // // // // // // رسالة الخطا لو حجز بدون بيانات // // // // // // // // // // // 
+    document.getElementById('bookingForm').addEventListener('submit', function (event) {
+        let isValid = true;
+        
+        // تحقق من الحقول
+        const fields = document.querySelectorAll('input[required], select[required]');
         fields.forEach(field => {
-            field.addEventListener("input", function () {
-                if (field.value.trim()) {
-                    field.classList.remove("error");
-                }
-            });
-    
-            // معالجة الحقول التي تعتمد على التحديد مثل الـ select
-            field.addEventListener("change", function () {
-                if (field.value.trim()) {
-                    field.classList.remove("error");
-                }
-            });
-        });
-    
-        form.addEventListener("submit", function (event) {
-            event.preventDefault(); // منع الإرسال الافتراضي
-    
-            let isValid = true;
-    
-            fields.forEach(field => {
-                if (!field.value.trim()) { // التحقق إذا كان الحقل فارغًا
-                    isValid = false;
-                    field.classList.add("error"); // إضافة كلاس لتلوين الحقل بالأحمر
-                } else {
-                    field.classList.remove("error"); // إزالة اللون الأحمر إذا تم ملء الحقل
-                }
-            });
-    
-            if (!isValid) {
-                setTimeout(() => errorMessage.style.display = "none", 3000);
+            if (field.value.trim() === '') {
+                field.style.borderColor = 'red';
+                field.style.backgroundColor = '#f8d7da';
+                isValid = false;
             } else {
-                errorMessage.style.display = "none";
-                sendToWhatsApp(); // تابع الإرسال إلى واتساب إذا كانت البيانات صحيحة
-            }
-        });
-    });
-    
-    
-    
-    document.addEventListener("DOMContentLoaded", function () {
-        const form = document.getElementById("bookingForm");
-        const phoneInput = document.getElementById("phone");
-        const phoneError = document.getElementById("phoneError");
-        const errorMessage = document.getElementById("error-message");
-        const dateInput = document.getElementById("dateInput");
-        const dayOfWeekSpan = document.getElementById("dayOfWeek");
-        const timeInput = document.getElementById("timeInput");
-        const timePeriodSpan = document.getElementById("timePeriod");
-    
-        // التحقق من رقم الهاتف
-        phoneInput.addEventListener("input", function () {
-            const phoneRegex = /^(010|011|012|015)\d{8}$/;
-            if (!phoneRegex.test(phoneInput.value)) {
-                phoneError.style.display = "block";
-            } else {
-                phoneError.style.display = "none";
+                field.style.borderColor = '';
+                field.style.backgroundColor = '';
             }
         });
     
-        // إظهار يوم الأسبوع بجانب التاريخ
-        dateInput.addEventListener("input", function () {
-            const days = ["الأحد", "الإثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة", "السبت"];
-            const dateValue = new Date(dateInput.value);
-            if (!isNaN(dateValue)) {
-                dayOfWeekSpan.innerText = days[dateValue.getDay()];
-            } else {
-                dayOfWeekSpan.innerText = "";
-            }
-        });
-    
-        // إضافة صباحًا أو مساءً بجانب الوقت
-        timeInput.addEventListener("input", function () {
-            const timeValue = timeInput.value;
-            if (timeValue) {
-                const hours = parseInt(timeValue.split(":")[0]);
-                timePeriodSpan.innerText = hours < 12 ? "صباحًا" : "مساءً";
-            } else {
-                timePeriodSpan.innerText = "";
-            }
-        });
-    
-        // التحقق من جميع البيانات قبل الإرسال
-        form.addEventListener("submit", function (event) {
-            event.preventDefault(); // منع الإرسال الافتراضي للفورم
-    
-            if (!form.checkValidity() || phoneError.style.display === "block") {
-                errorMessage.style.display = "block";
-                setTimeout(() => errorMessage.style.display = "none", 3000);
-            } else {
-                errorMessage.style.display = "none";
-                sendToWhatsApp(); // استدعاء وظيفة الإرسال لواتساب بعد التحقق
-            }
-        });
-    });
-    
-    /***************************************************************** */
-
-    //   ارسال حجز البيانات عبر الواتساب صفحة index  //
-    function sendToWhatsApp() {
-        var name = document.getElementById("name").value;
-        var age = document.getElementById("age").value;
-        var phone = document.getElementById("phone").value;
-        var date = document.getElementById("dateInput").value;
-        var doctorSelect = document.getElementById("doctor");
-        var doctor = doctorSelect.options[doctorSelect.selectedIndex].text; // ✅ جلب اسم الطبيب
-        var time = document.getElementById("timeInput").value;
-        var dayOfWeek = document.getElementById("dayOfWeek").innerText;
-        var period = document.getElementById("timePeriod").innerText;
-    
-        if (!name || !age || !phone || !date || !doctor || !time) {
-            alert("يرجى ملء جميع الحقول قبل الحجز.");
-            return;
+        // إذا كانت الحقول غير مكتملة، منع الإرسال
+        if (!isValid) {
+            event.preventDefault();
         }
+    });
+
+// // // // // // // // // رقم التلفون في فورم الحجز // // // // // // // // // // // 
+    document.getElementById('phone').addEventListener('input', function () {
+        const phone = document.getElementById('phone').value;
+        const phoneRegex = /^(010|011|012|015)[0-9]{8}$/;
+        
+        if (!phoneRegex.test(phone)) {
+            document.getElementById('phoneError').style.display = 'block';
+            document.getElementById('phoneError').innerText = 'رقم الهاتف خطأ';
+            document.getElementById('phone').style.borderColor = 'red';
+            document.getElementById('phone').style.backgroundColor = '#f8d7da';
+        } else {
+            document.getElementById('phoneError').style.display = 'none';
+            document.getElementById('phone').style.borderColor = '';
+            document.getElementById('phone').style.backgroundColor = '';
+        }
+    });
     
-        var whatsappNumber = "201201233396";
-    
-        var message = `مرحبا، أود حجز موعد:
-    👤 الاسم: ${name}
-    📅 العمر: ${age} سنة
-    📞 الهاتف: ${phone}
-    📆 اليوم: ${date} - (${dayOfWeek}) 
-    🩺 الطبيب: ${doctor}
-    ⏰ الوقت: ${time} ${period}`;
-    
-        var whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-    
-        window.open(whatsappUrl, "_blank");
+
+// // // // // // // // // // // دالة الارسال الى الواتساب // // // // // // //  //  // 
+
+// عند الضغط على زر "أحجز الآن"
+// عند الضغط على زر "أحجز الآن"
+// عند الضغط على زر "أحجز الآن"
+document.getElementById("bookingForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // لمنع إرسال النموذج بالطريقة المعتادة
+
+    // جمع البيانات من الحقول
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const date = document.getElementById("dateInput").value;
+    let time = document.getElementById("timeInput").value;
+    const doctor = document.getElementById("doctor").selectedOptions[0].textContent;
+    const specialty = document.getElementById("specialty-input").selectedOptions[0].textContent;
+    const doctorPrice = document.getElementById("doctorPrice").textContent || "غير محدد"; // في حالة عدم وجود سعر
+
+    // التحقق من أن جميع الحقول مملوءة
+    if (!name || !phone || !date || !time || !doctor || !specialty) {
+        return; // لا تفتح رابط WhatsApp إذا كانت الحقول غير مكتملة
     }
-    
-    
+
+    // تحويل الوقت إلى 12 ساعة مع AM/PM
+    let hours = parseInt(time.split(":")[0], 10);
+    let minutes = time.split(":")[1];
+    let period = "صباحاً"; // الإفتراضي سيكون صباحاً
+
+    if (hours >= 12) {
+        period = "مساءً";
+        if (hours > 12) {
+            hours -= 12; // تحويل إلى 12 ساعة
+        }
+    } else if (hours === 0) {
+        hours = 12; // 00:00 يتحول إلى 12:00 صباحاً
+    }
+
+    // تنسيق الوقت الجديد
+    const formattedTime = `${hours}:${minutes} ${period}`;
+
+    // حساب يوم الأسبوع من التاريخ
+    const dateObj = new Date(date);
+    const daysOfWeek = ["الأحد", "الاثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة", "السبت"];
+    const dayOfWeek = daysOfWeek[dateObj.getDay()];
+
+    // تنظيم البيانات مع الإيموجي
+    const message = `
+    👤 الاسم: ${name}
+    📞 رقم الهاتف: ${phone}
+    📅 اليوم: ${date} (${dayOfWeek})
+    🕓 الوقت: ${formattedTime} 
+    🩺 التخصص: ${specialty}
+    👨‍⚕️ الطبيب: ${doctor}
+    💰 سعر الكشف: ${doctorPrice}
+    `;
+
+    // إعداد رابط WhatsApp
+    const whatsappLink = `https://wa.me/201201233396?text=${encodeURIComponent(message)}`;
+
+    // فتح رابط WhatsApp
+    window.open(whatsappLink, "_blank");
+});
 
 
-    //******************************************************************** */
+
+
+
+
+
+
+
+
+
+
+
+
+//******************************************************************** */
 
     //   عرض الاطباء في صفحة index  // 
     fetch("js/doctors.json") // تأكد من المسار الصحيح للملف
@@ -391,5 +422,7 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(offerText);
     });    
     
-    
-    
+
+
+
+
