@@ -29,7 +29,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
 
                 // تحديث قائمة الأطباء
+                // تحديث قائمة الأطباء
+                // تحديث قائمة الأطباء
                 const doctorsList = document.getElementById("doctors-list");
+
                 specialty.doctors.forEach(doctor => {
                     let doctorDiv = document.createElement("div");
                     doctorDiv.classList.add("doctor-card");
@@ -41,8 +44,18 @@ document.addEventListener("DOMContentLoaded", function () {
                         <p>📞 <a href="tel:${doctor.phone}">${doctor.phone}</a></p>
                     `;
 
+                    // عند الضغط على الدكتور، انتقل لصفحة doctors.html مع تمرير اسم التخصص والـ ID في الـ URL
+                    doctorDiv.addEventListener("click", () => {
+                        window.location.href = `doctors.html?id=${doctor.id}&source=specialties`;
+                    });
+
                     doctorsList.appendChild(doctorDiv);
                 });
+
+
+
+
+
 
             } else {
                 document.body.innerHTML = "<h2>التخصص غير موجود</h2>";
