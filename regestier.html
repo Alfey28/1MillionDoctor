@@ -9,7 +9,7 @@
     <meta content="قالب موقع عيادة حديث ومتجاوب" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/faviconreg.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,6 +37,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- Template Stylesheet -->
+    <link href="css/stylereg.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
@@ -81,35 +82,18 @@
 
     <div class="form-container">
         <div class="container-reg">
-            <h2 style="text-align: center;" class="text-primary">تسجيل طبيب</h2>
-            <form>
-                <div class="form-group-reg">
-                    <label for="name">الاسم:</label>
-                    <input type="text" id="name" required>
-                </div>
-                <div class="form-group-reg">
-                    <label for="specialty">التخصص:</label>
-                    <input type="text" id="specialty" required>
-                </div>
-                <div class="form-group-reg">
-                    <label for="address">العنوان:</label>
-                    <input type="text" id="address" required>
-                </div>
-                <div class="form-group-reg">
-                    <label for="phone">رقم التليفون:</label>
-                    <input type="tel" id="phone" required>
-                </div>
-                <div class="form-group-reg">
-                    <label for="profile-image" class="custom-file-upload">اختر صورة</label>
-                    <input type="file" id="profile-image" name="profile-image" onchange="previewImage(event)">
-                    <img id="preview" class="profile-pic-reg" src="" alt="صورة الطبيب">
-                </div>
-                <button type="submit" >تسجيل الآن</button>
-            </form>
+            <h2 id="form-title" class="text-primary fs-2">سجل معنا في 1MillionDoctor</h2>
+            <select id="register-type" class="register-select">
+                <option value="doctor">طبيب</option>
+                <option value="pharmacy">صيدلية</option>
+            </select>
+            <div id="form-content">
+                <!-- هنا يتم تحميل النموذج ديناميكيًا -->
+            </div>
         </div>
     </div>
-
-
+    
+    
 
 
     <!-- Footer Start -->
@@ -194,5 +178,7 @@
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
     <!-- Template Javascript -->
+    <script src="js/register.js"></script>
     <script src="js/main.js"></script>
+
 </body>

@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="utf-8">
-    <title>1 MillionDoctor</title>
+    <title> 1 MillionDoctor</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="عيادة، مستشفى، طبيب، صحة" name="keywords">
     <meta content="قالب موقع عيادة حديث ومتجاوب" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/favicon.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -302,93 +302,92 @@
                     <h2 class="title-text">أحجز استشارتك الطبية بسهولة</h2>
                     <p class="about-pp">يمكنك حجز كشفك أو أستشارتك الطبية بسهولة من خلال ملئ النموذج وأختيار دكتورك المفضل والمكان المناسب أو يمكنك التواصل معنا من خلال الطرق الأتية</p>
                 </div>
+    
                 <div class="offer-section">
                     <p class="offer-text">أحجز الآن بخصم حتى <span>%20</span></p>
-                </div>                
+                </div>
+    
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="bg-light rounded h-100 d-flex a p-5">
-                        <!-- رسالة الخطأ -->
-                        <div id="error-message" style="display: none; color: red; text-align: center; font-weight: bold; margin-bottom: 10px;">
-                        </div>
-    
+                    <div class="bg-light rounded h-100 d-flex flex-column p-5 booking-section">
+                        <p id="error-message" style="display: none; color: red; text-align: center; font-weight: bold; margin-bottom: 10px;"></p>
+                        
                         <form id="bookingForm" novalidate>
-                            <p id="error-message" style="color: red; display: none;"></p>
-    
                             <div class="row g-3">
-                                <!-- رقم الهاتف -->
                                 <div class="col-12 col-sm-6">
                                     <input type="text" id="phone" class="form-control border-0" placeholder="رقم الهاتف" style="height: 55px;" required maxlength="11">
                                     <small id="phoneError" style="color: red; display: none; font-size: 15px; font-weight: bold;"></small>
                                 </div>
-    
-                                <!-- اسم المستخدم -->
+                                
                                 <div class="col-12 col-sm-6">
                                     <input type="text" id="name" class="form-control border-0" placeholder="الأسم" style="height: 55px;" required>
                                 </div>
                                 
-                                <!-- الوقت -->
-                                <div class="col-12 col-sm-6" style="position: relative;">
-                                    <input type="time" id="timeInput" class="form-control border-0" placeholder="الوقت" style="height: 55px;" required>
-                                    <span id="timeAMPM" style="position: absolute; bottom: 8%; left: 15%; transform: translateY(-50%); font-weight: bold; color: #333;"></span>
-                                </div>
-
-                                <!-- اليوم -->
-                                <div class="col-12 col-sm-6" style="position: relative;">
-                                    <input type="date" id="dateInput" class="form-control border-0" placeholder="اليوم" style="height: 55px;" required>
-                                    <span id="dayOfWeek" style="position: absolute; bottom: 8%; left: 15%; transform: translateY(-50%); font-weight: bold; color: #333;"></span>
-                                </div>
-
-    
-                                <!-- الطبيب -->
                                 <div class="col-12 col-sm-6">
-                                    <select id="doctor" class="form-select border-0" style="height: 55px;" required>
+                                    <select id="doctor" class="form-select border-0" required>
                                         <option selected disabled>اختر الطبيب</option>
                                     </select>
-                                    <div class="price-container" id="priceContainer" style="display: none;">
-                                        <span id="doctorPriceLabel">سعر الكشف : </span>
-                                        <span id="doctorPrice"></span>
-                                        <span id="currency-symbol">💰</span> <!-- إيموجي الفلوس -->
-                                    </div>
                                 </div>
-    
-                                <!-- التخصص -->
+                                
                                 <div class="col-12 col-sm-6">
-                                    <select id="specialty-input" class="form-select border-0" style="height: 55px;" required>
+                                    <select id="specialty-input" class="form-select border-0" required>
                                         <option selected disabled>اختر التخصص</option>
                                     </select>
                                 </div>
-    
+
+                                <div class="col-12 col-sm-6">
+                                    <select id="timeSelect" class="form-select border-0" required>
+                                        <option selected disabled>اختر الوقت</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12 col-sm-6">
+                                    <select id="daySelect" class="form-select border-0" required>
+                                        <option selected disabled>اختر اليوم</option>
+                                    </select>
+                                </div>
+
+                                <div class="price-container mt-2" id="priceContainer" style="display: none;">
+                                    <span id="doctorPriceLabel">سعر الكشف : </span>
+                                    <span id="doctorPrice"></span>
+                                    <span id="currency-symbol">💰</span>
+                                </div>
+                                
                                 <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3 mt-4" type="submit">أحجز الأن</button>
+                                    <button class="btn btn-primary w-100 py-3" type="submit">أحجز الأن</button>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
-    
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="bg-light rounded d-flex align-items-center p-5 mb-4">
-                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
+
+
+                <!-- قسم التواصل -->
+                <div class="col-lg-6 wow fadeInUp contact-section" data-wow-delay="0.1s">
+                    <div class="bg-light rounded d-flex align-items-center p-4 mb-3 gap-3" style="height: 20vh; font-size: 25px;">
+                        <div class="d-flex align-items-center justify-content-center rounded-circle bg-white text-center" style="width: 55px; height: 55px;">
                             <i class="fa fa-phone-alt text-primary"></i>
                         </div>
-                        <div class="ms-4">
-                            <p class="mb-2">تواصل معنا هاتفيا أو على الواتساب</p>
+                        <div>
+                            <p class="mb-1">تواصل معنا هاتفيا أو على الواتساب</p>
                             <h5 class="mb-0">+012 012 33396</h5>
                         </div>
                     </div>
-                    <div class="bg-light rounded d-flex align-items-center p-5">
-                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
+                    
+                    <div class="bg-light rounded d-flex align-items-center p-4 gap-3" style="height: 20vh; font-size: 25px;">
+                        <div class="d-flex align-items-center justify-content-center rounded-circle bg-white text-center" style="width: 55px; height: 55px;">
                             <i class="fa fa-envelope-open text-primary"></i>
                         </div>
-                        <div class="ms-4">
-                            <p class="mb-2">ارسل ايميل</p>
+                        <div>
+                            <p class="mb-1">ارسل ايميل</p>
                             <h5 class="mb-0">emereld-emarkting@gmail.com</h5>
                         </div>
                     </div>
                 </div>
+
+
             </div>
         </div>
-    </div>
+    </div>     
     <!-- Appointment End -->
 
 
@@ -510,26 +509,6 @@
     
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    <script>
-        // لتحديد يوم الأسبوع عند اختيار تاريخ
-        document.getElementById("dateInput").addEventListener("change", function() {
-            const selectedDate = new Date(this.value);
-            const options = { weekday: 'long' };
-            const dayOfWeek = selectedDate.toLocaleDateString('ar-EG', options); // تحديد اللغة العربية
-            document.getElementById("dayOfWeek").textContent = dayOfWeek; // عرض اليوم
-        });
-
-        // لتحديد صباحًا أو مساءً عند اختيار الوقت
-        document.getElementById("timeInput").addEventListener("change", function() {
-            const selectedTime = this.value;
-            const hour = parseInt(selectedTime.split(":")[0]); // استخراج الساعة
-
-            const timeOfDay = (hour >= 12) ? "مساءً" : "صباحًا"; // تحديد صباحًا أو مساءً
-            document.getElementById("timeAMPM").textContent = timeOfDay; // عرض صباحًا أو مساءً
-        });
-
-
-    </script>
 </body>
 
 </html>
