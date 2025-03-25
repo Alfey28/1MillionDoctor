@@ -10,23 +10,43 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (specialty) {
                 // تحديث معلومات التخصص
-                document.getElementById("specialty-name").textContent = specialty.name;
+                document.getElementById("operation-name").innerHTML = `عمليات`+ ` ال` + specialty.name;
 
                 // تحديث قائمة العمليات
                 const proceduresList = document.getElementById("procedures-list");
-                specialty.procedures.forEach(procedure => {
+
+                specialty.procedures.forEach((procedure, index) => {
                     let procedureItem = document.createElement("div");
                     procedureItem.classList.add("procedure-card");
 
-                    procedureItem.innerHTML = `
-                        <div class="procedure-content w-75 mb-5">
-                            <h3 class="text-color">${procedure.title}</h3>
-                            <p>${procedure.description}</p>
-                        </div>
-                    `;
+                    let contentHTML = `<div class="procedure-content w-75 mb-5">
+                                        <h3 class="text-color">${procedure.title}</h3>`;
 
+                    Object.keys(procedure).forEach(key => {
+                        if (key !== "title") {
+                            let className = "";
+                            if (["description", "reson", "surgery", "health"].includes(key)) {
+                                className = "special-text"; // تخصيص هذه العناصر بخط مختلف
+                            }
+                            contentHTML += `<p class="${className}">${procedure[key]}</p>`;
+                        }
+                    });
+
+                    contentHTML += `</div>`; 
+
+                    procedureItem.innerHTML = contentHTML;
                     proceduresList.appendChild(procedureItem);
+
+                    // إضافة خط فاصل بعد كل عملية ما عدا الأخيرة
+                    if (index < specialty.procedures.length - 1) {
+                        let divider = document.createElement("hr");
+                        divider.classList.add("procedure-divider");
+                        proceduresList.appendChild(divider);
+                    }
                 });
+
+
+
 
                 // تحديث قائمة الأطباء
                 // تحديث قائمة الأطباء

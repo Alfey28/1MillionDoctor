@@ -338,3 +338,18 @@ section h2 {
         height: 100px;
     }
 }
+
+.special-text {
+    font-weight: bold; /* جعل الخط عريض */
+    font-size: 15px; /* تكبير الخط قليلاً */
+    color: #000000dc; /* لون أزرق هادئ */
+    font-family: "Cairo", sans-serif; /* تغيير نوع الخط */
+}
+.procedure-divider {
+    border: none; /* إزالة الحدود الافتراضية */
+    width: 80%;
+    height: 2px; /* سماكة الخط */
+    background-color: #444; /* لون الخط (أسود رمادي) */
+    margin: 50px 0; /* مسافة فوق وتحت الخط */
+    opacity: 0.4; /* شفافية خفيفة */
+}

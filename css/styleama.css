@@ -1,5 +1,6 @@
 /* تحسين تنسيق القسم */
 .amastyle {
+    direction: rtl;
     max-width: 900px;
     margin: 40px auto;
     padding: 25px;
