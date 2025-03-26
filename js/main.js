@@ -430,16 +430,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // تحميل التخصصات عند فتح الصفحة
     fetchSpecialties();
 });
-
-
-
-
-
-
-
-
-
-
 //******************************************************************** */
     //   عرض الاطباء في صفحة index  // 
     fetch("js/doctors.json") // تأكد من المسار الصحيح للملف
@@ -468,9 +458,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     })
     .catch(error => console.error("خطأ أثناء تحميل بيانات الأطباء:", error));
-
-    
-
 
 
     document.addEventListener("DOMContentLoaded", function () {
