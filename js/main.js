@@ -196,6 +196,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 option.dataset.times = JSON.stringify(doctor.availableTimes);
                 option.dataset.price = doctor.price;
                 option.dataset.phone = doctor.phone;
+                option.dataset.whatsapp = doctor.whatsapp;
                 doctorsSelect.appendChild(option);
             });
         }
@@ -301,7 +302,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const selectedTime = timeSelect.value;
         const doctorPriceValue = doctorPrice.textContent || "غير محدد";
         const selectedDoctorOption = doctorsSelect.options[doctorsSelect.selectedIndex];
-        const doctorPhone = selectedDoctorOption ? selectedDoctorOption.dataset.phone : '';  
+        const doctorContact = selectedDoctorOption ? (selectedDoctorOption.dataset.whatsapp || selectedDoctorOption.dataset.phone) : '';
 
         let hasError = false;
 
@@ -374,7 +375,7 @@ document.addEventListener("DOMContentLoaded", function () {
         💰 سعر الكشف: ${doctorPriceValue}
         `;
 
-        const whatsappLink = `https://wa.me/${doctorPhone}?text=${encodeURIComponent(message)}`;
+        const whatsappLink = `https://wa.me/${doctorContact}?text=${encodeURIComponent(message)}`;
         window.open(whatsappLink, "_blank");
     });
 

@@ -83,9 +83,13 @@
 
 
     <div id="doctor-info" class="doctor-info">
-        <h1>الدكتور / <span id="doctor-name"></span></h1>
+        <h1><span id="doctor-name"></span></h1>
         <img id="doctor-image" src="" alt="صورة الدكتور" style="width: 200px; height: 200px; border-radius: 50%;">
     
+        <div id="specialty-container" class="special" style="display: none;">
+            <p  style="font-size: 25px;"><strong>التخصص:</strong> <span id="doctor-specialty" style="font-weight: bold;"></span></p>
+        </div> 
+
         <p>
             <a class="location" id="clinic-address" href="#" target="_blank"></a>
             <i class="fas fa-map-marker-alt zoom-effect" style="color: red;"></i>
@@ -105,22 +109,42 @@
             </p>
         </div>
     
-        <p><strong>السيرة الذاتية:</strong> <span id="doctor-bio"></span></p>
-        <p><strong>الخبرات:</strong> <span id="doctor-experience"></span></p>
-        <p><strong>الخدمات:</strong> <span id="doctor-services"></span></p>
-        <p><strong></strong> <span id="doctor-email"></span></p>
+               
+
+        <div id="bio-container" style="display: none;">
+            <p><strong>السيرة الذاتية:</strong> <span id="doctor-bio"></span></p>
+        </div>
+        
+        <div id="experience-container" style="display: none;">
+            <p><strong>الخبرات:</strong> <span id="doctor-experience"></span></p>
+        </div>
+        
+        <div id="services-container" style="display: none;">
+            <p><strong>الخدمات:</strong> <span id="doctor-services"></span></p>
+        </div>
+        
+        <div id="email-container" style="display: none;">
+            <p><strong>البريد الإلكتروني:</strong> <span id="doctor-email"></span></p>
+        </div>
+        
     
-        <p>
-            <a href="https://x.com/" id="doctor-twitter" target="_blank">
-                <i class="fab fa-twitter social-icon" style="color: #1877f2;"></i>
-            </a>
-            <a href="#" id="doctor-whatsapp" target="_blank">
-                <i class="fab fa-whatsapp social-icon" style="color: #25d366;"></i>
-            </a>
-            <a href="#" id="doctor-facebook" target="_blank">
-                <i class="fab fa-facebook social-icon" style="color: #1877f2;"></i>
-            </a>
-        </p>
+        <div id="social-container" style="display: none;">
+            <p>
+                <a href="#" id="doctor-instagram" target="_blank" style="display: none;">
+                    <i class="fab fa-instagram social-icon" style="color: #f33232;"></i>
+                </a>
+                <a href="#" id="doctor-twitter" target="_self" style="display: none;">
+                    <i class="fab fa-twitter social-icon" style="color: #1877f2;"></i>
+                </a>
+                <a href="#" id="doctor-whatsapp" target="_blank" style="display: none;">
+                    <i class="fab fa-whatsapp social-icon" style="color: #25d366;"></i>
+                </a>
+                <a href="#" id="doctor-facebook" target="_blank" style="display: none;">
+                    <i class="fab fa-facebook social-icon" style="color: #1877f2;"></i>
+                </a>
+            </p>
+        </div>
+        
     </div>
     
     
@@ -135,11 +159,11 @@
                 <div class="col-lg-3 col-md-6 col-links">
                     <h5 class="mb-4">روابط</h5>
                     <a href="index.html" class="btn btn-link">الرئيسية</a>
-                    <a href="#specialization" class="btn btn-link">تخصصات</a>
-                    <a href="#doctors" class="btn btn-link">أطباء</a>
+                    <a href="index.html#specialization" class="btn btn-link">تخصصات</a>
+                    <a href="index.html#doctors" class="btn btn-link">أطباء</a>
                     <a href="phar.html" class="btn btn-link">صيدليات</a>
                     <a href="info.html" class="btn btn-link">معلومات طبية</a>
-                    <a href="#amount" class="btn btn-link">أحجز كشفك الأن</a>
+                    <a href="index.html#amount" class="btn btn-link">أحجز كشفك الأن</a>
                 </div>
     
                 <!-- عمود المعلومات -->

@@ -30,6 +30,7 @@
       "name": "محمد حسن",
       "specialty": " جراحة عامة",
       "clinic_address": "شارع النصر، الإسكندرية",
+      "location":"",
       "phone": "01002345678",
       "rating": 4.7,
       "bio": "أخصائي أمراض القلب والأوعية الدموية، خبرة 12 عامًا.",
@@ -53,29 +54,24 @@
     },
     {
       "id": 3,
-      "name": "ياسمين محمود",
-      "specialty": " عيون",
-      "clinic_address": "شارع الثورة، الجيزة",
-      "phone": "01003456789",
+      "name": "الدكتور/ فرحة",
+      "specialty": " تجميل",
+      "clinic_address": " السراج مول, مدينة نصر",
+      "location":"https://www.google.com/maps/place/Zoal+Restaurant+-+%D9%85%D8%B7%D8%B9%D9%85+%D8%B2%D9%88%D9%84%E2%80%AD/@30.0508022,31.3506012,17z/data=!4m6!3m5!1s0x14583ffbcdba991f:0x9224a173cb231866!8m2!3d30.0509215!4d31.3506594!16s%2Fg%2F11rjrwr97w?hl=en&entry=ttu&g_ep=EgoyMDI1MDMyMy4wIKXMDSoJLDEwMjExNjQwSAFQAw%3D%3D",
+      "phone": "01157651377",
+      "whatsapp": "01008518823",
       "rating": 4.9,
-      "bio": "متخصصة في أمراض القلب للأطفال، خبرة 10 سنوات.",
-      "experience": [
-        "ماجستير طب الأطفال",
-        "زمالة في أمراض القلب للأطفال"
-      ],
+      "bio": "عيادات متخصصة في علاج الشعر والبشرة",
       "services": [
-        "علاج العيوب الخلقية للقلب",
-        "متابعة حالات القلب الحرجة",
-        "تخطيط صدى القلب للأطفال"
+        "علاج جميع الأمراض الجلدية",
+        "تجميل (الشعر - البشرة)"
       ],
       "contact": {
-        "email": "yasminmahmoud@clinic.com",
         "social": {
-          "facebook": "https://facebook.com/yasminmahmoud",
-          "twitter": "https://twitter.com/yasminmahmoud"
+          "facebook": "https://www.facebook.com/profile.php?id=61552216941838&mibextid=ZbWKwL"
         }
       },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor3.png?raw=true"
+      "image": "img/فرحة تجميل.jpeg"
     },
     {
       "id": 4,
@@ -105,29 +101,27 @@
     },
     {
       "id": 5,
-      "name": "ليلى إبراهيم",
-      "specialty": "أسنان ",
-      "clinic_address": "شارع الوحدة، أسيوط",
-      "phone": "01005678901",
+      "name": "الدكتور/ وفاء نصر الله",
+      "specialty": "نفسية ",
+      "clinic_address": "شارع النصر أمام بنك مصر بنزينة عويد",
+      "phone": "01080609963",
+      "whatsapp":"01276217871",
       "rating": 4.8,
-      "bio": "استشارية في علاج اضطرابات القلب، خبرة 14 عامًا.",
+      "bio": "دكتوراة صحة نفسية.",
       "experience": [
-        "ماجستير أمراض القلب",
-        "زمالة في طب القلب الوقائي"
+        " تخصص ارشاد نفسي وبرامج ارشادية",
+        "تخصص تعديل السلوكيات والسلوكيات الادمانية"
       ],
       "services": [
-        "علاج ارتفاع ضغط الدم",
-        "متابعة مرضى جلطات القلب",
-        "تشخيص أمراض الصمامات"
+        "ارشاد اسري وتربوي وتعديل سلوك"
       ],
       "contact": {
-        "email": "leilaibrahim@clinic.com",
         "social": {
-          "facebook": "https://facebook.com/leilaibrahim",
-          "twitter": "https://twitter.com/leilaibrahim"
+          "facebook": "https://www.facebook.com/profile.php?id=100092369215555&mibextid=wwXIfr&rdid=u3vWOL9tn37Frpyu&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F12Hcko1UMnV%2F%3Fmibextid%3DwwXIfr#",
+          "instagram":"https://www.instagram.com/dr.wafanasralla/?igsh=NjdhMnQ4c2t4bDV4&utm_source=qr#"
         }
       },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor5.jpg?raw=true"
+      "image": "img/وفاء نفسية.jpg"
     },
     {
       "id": 6,

@@ -1393,37 +1393,32 @@
     ],
       "doctors": [
         {
-          "id": "1card",
-        "name": " أحمد علي",
-        "specialty": "أمراض القلب",
-        "clinic_address": "شارع التحرير، القاهرة",
-        "phone": "01001234567",
-        "rating": 4.8,
+          "id": "1cos",
+        "name": "الدكتور/ فرحة",
+      "specialty": " تجميل",
+      "clinic_address": " السراج مول, مدينة نصر",
+      "location":"https://www.google.com/maps/place/Zoal+Restaurant+-+%D9%85%D8%B7%D8%B9%D9%85+%D8%B2%D9%88%D9%84%E2%80%AD/@30.0508022,31.3506012,17z/data=!4m6!3m5!1s0x14583ffbcdba991f:0x9224a173cb231866!8m2!3d30.0509215!4d31.3506594!16s%2Fg%2F11rjrwr97w?hl=en&entry=ttu&g_ep=EgoyMDI1MDMyMy4wIKXMDSoJLDEwMjExNjQwSAFQAw%3D%3D",
+      "phone": "01157651377",
+      "whatsapp": "01008518823",
+      "rating": 4.9,
+      "bio": "عيادات متخصصة في علاج الشعر والبشرة",
+      "services": [
+        "علاج جميع الأمراض الجلدية",
+        "تجميل (الشعر - البشرة)"
+      ],
+      "contact": {
+        "social": {
+          "facebook": "https://www.facebook.com/profile.php?id=61552216941838&mibextid=ZbWKwL"
+        }
+      },
+      "image": "img/فرحة تجميل.jpeg",
         "availableDays": ["الأحد", "الثلاثاء", "الخميس"],
         "availableTimes": {
           "الأحد": ["10:00 صباحًا", "12:00 مساءً"],
           "الثلاثاء": ["2:00 مساءً", "4:00 مساءً"],
           "الخميس": ["6:00 مساءً", "8:00 مساءً"]
         },
-        "price" : "180",
-        "bio": "استشاري أمراض القلب والقسطرة القلبية، خبرة 15 عامًا.",
-        "experience": [
-            "دكتوراه في أمراض القلب",
-            "عضو الجمعية الأوروبية لأمراض القلب"
-        ],
-        "services": [
-            "تشخيص أمراض القلب",
-            "القسطرة القلبية",
-            "تركيب الدعامات"
-        ],
-        "contact": {
-            "email": "ahmedali@clinic.com",
-            "social": {
-                "facebook": "https://facebook.com/ahmedali",
-                "twitter": "https://twitter.com/ahmedali"
-            }
-        },
-        "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor1.jpg?raw=true"
+        "price" : "180"
         },
         {
           "id": "2card",
@@ -3514,37 +3509,35 @@
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor3.png?raw=true"
         },
         {
-          "id": "4card",
-      "name": "سامي عبد الله",
-      "specialty": " جلدية",
-      "clinic_address": "شارع الجيش، المنصورة",
-      "phone": "01004567890",
-      "rating": 4.6,
+          "id": "4psy",
+      "name": "الدكتور/ وفاء نصر الله",
+      "specialty": "نفسية ",
+      "clinic_address": "شارع النصر أمام بنك مصر بنزينة عويد",
+      "phone": "01080609963",
+      "whatsapp":"01276217871",
+      "rating": 4.8,
+      "bio": "دكتوراة صحة نفسية.",
+      "experience": [
+        " تخصص ارشاد نفسي وبرامج ارشادية",
+        "تخصص تعديل السلوكيات والسلوكيات الادمانية"
+      ],
+      "services": [
+        "ارشاد اسري وتربوي وتعديل سلوك"
+      ],
+      "contact": {
+        "social": {
+          "facebook": "https://www.facebook.com/profile.php?id=100092369215555&mibextid=wwXIfr&rdid=u3vWOL9tn37Frpyu&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F12Hcko1UMnV%2F%3Fmibextid%3DwwXIfr#",
+          "instagram":"https://www.instagram.com/dr.wafanasralla/?igsh=NjdhMnQ4c2t4bDV4&utm_source=qr#"
+        }
+      },
+      "image": "img/وفاء نفسية.jpg",
       "price" : "250",
       "availableDays": ["الأحد", "الثلاثاء", "الخميس"],
         "availableTimes": {
           "الأحد": ["10:00 صباحًا", "12:00 مساءً"],
           "الثلاثاء": ["2:00 مساءً", "4:00 مساءً"],
           "الخميس": ["6:00 مساءً", "8:00 مساءً"]
-        },
-      "bio": "خبير في أمراض القلب التداخلية، خبرة 18 عامًا.",
-      "experience": [
-        "دكتوراه في القسطرة القلبية",
-        "عضو الجمعية الأمريكية لأمراض القلب"
-      ],
-      "services": [
-        "علاج قصور الشرايين التاجية",
-        "تركيب أجهزة تنظيم ضربات القلب",
-        "علاج ضعف عضلة القلب"
-      ],
-      "contact": {
-        "email": "samiabdullah@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/samiabdullah",
-          "twitter": "https://twitter.com/samiabdullah"
         }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor4.jpg?raw=true"
         }
       ]
     }
