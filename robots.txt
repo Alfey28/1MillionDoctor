@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://alfey28.github.io/1MillionDoctor/sitemap.xml
+
