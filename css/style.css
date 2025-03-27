@@ -609,10 +609,14 @@ select:focus {
     justify-content: center;
     align-items: center;
 }
+
+.register-section .overlay{
+    background: rgba(0, 0, 0, 0.4)
+}
 .overlay {
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.6);
     display: flex;
     justify-content: space-between;
     align-items: center;

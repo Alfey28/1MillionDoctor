@@ -79,6 +79,131 @@ button, select {
     margin: 5px;
     font-size: 16px;
 }
+.booking-section {
+    background-color: #EEECEC;
+    height: 77vh;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
+    padding: 20px;
+}
+
+#bookingForm {
+    background: #0042f7b2;
+
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.booking-form:hover {
+    transform: translateY(-3px);
+}
+
+.form-control, .custom-select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border 0.3s;
+    outline: none;
+    appearance: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.form-control:focus, .custom-select:focus {
+    border: 2px solid #007bff;
+}
+
+.select-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.select-wrapper select {
+    padding-right: 40px;
+}
+
+.select-wrapper i {
+    position: absolute;
+    right: 15px;
+    font-size: 18px;
+    color: #007bff;
+    pointer-events: none;
+}
+
+.btn-primary {
+    background: #F33232;
+    color: white;
+    justify-content: center;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background: #eb8383;
+}
+
+/*==================== MEDIA QUERIES ====================*/
+
+/* للأجهزة اللوحية (أقل من 1024px) */
+@media screen and (max-width: 1024px) {
+    #bookingForm {
+        left: 0;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+/* للهواتف المحمولة (أقل من 768px) */
+@media screen and (max-width: 768px) {
+    .container{
+        margin: 0;
+    }
+    .booking-section {
+        height: auto;
+        width: 100%;
+    }
+
+    #bookingForm {
+        max-width: 90%;
+        padding: 20px;
+        left: 0;
+    }
+
+    .form-control, .custom-select {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .btn-primary {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+
+/* للهواتف الصغيرة جدًا (أقل من 480px) */
+@media screen and (max-width: 480px) {
+    #bookingForm {
+        max-width: 95%;
+    }
+
+    .btn-primary {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
 
     </style>
 </head>
@@ -351,54 +476,51 @@ button, select {
                 </div>
     
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="bg-light rounded h-100 d-flex flex-column p-5 booking-section">
+                    <div class="rounded h-100 d-flex flex-column p-5 booking-section">
                         <p id="error-message" style="display: none; color: red; text-align: center; font-weight: bold; margin-bottom: 10px;"></p>
                         
                         <form id="bookingForm" novalidate>
-                            <div class="row g-3">
-                                <div class="col-12 col-sm-6">
-                                    <input type="text" id="phone" class="form-control border-0" placeholder="رقم الهاتف" style="height: 55px;" required maxlength="11">
-                                    <small id="phoneError" style="color: red; display: none; font-size: 15px; font-weight: bold;"></small>
-                                </div>
-                                
-                                <div class="col-12 col-sm-6">
-                                    <input type="text" id="name" class="form-control border-0" placeholder="الأسم" style="height: 55px;" required>
-                                </div>
-                                
-                                <div class="col-12 col-sm-6">
-                                    <select id="doctor" class="form-select border-0" required>
-                                        <option selected disabled>اختر الطبيب</option>
-                                    </select>
-                                </div>
-                                
-                                <div class="col-12 col-sm-6">
-                                    <select id="specialty-input" class="form-select border-0" required>
-                                        <option selected disabled>اختر التخصص</option>
-                                    </select>
-                                </div>
 
-                                <div class="col-12 col-sm-6">
-                                    <select id="timeSelect" class="form-select border-0" required>
-                                        <option selected disabled>اختر الوقت</option>
-                                    </select>
-                                </div>
-
-                                <div class="col-12 col-sm-6">
-                                    <select id="daySelect" class="form-select border-0" required>
-                                        <option selected disabled>اختر اليوم</option>
-                                    </select>
-                                </div>
-
-                                <div class="price-container mt-2" id="priceContainer" style="display: none;">
-                                    <span id="doctorPriceLabel">سعر الكشف : </span>
-                                    <span id="doctorPrice"></span>
-                                    <span id="currency-symbol">💰</span>
-                                </div>
-                                
-                                <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">أحجز الأن</button>
-                                </div>
+                            <input type="text" id="name" class="form-control" placeholder="👤 الاسم" required>
+        
+                            <input type="text" id="phone" class="form-control" placeholder="📞 رقم الهاتف" required maxlength="11">
+                    
+                            <div class="select-wrapper">
+                                <select id="specialty-input" class="custom-select" required>
+                                    <option selected disabled> اختر التخصص</option>
+                                </select>
+                                <i>🏥</i>
                             </div>
+        
+                            <div class="select-wrapper">
+                                <select id="doctor" class="custom-select" required>
+                                    <option selected disabled> اختر الطبيب</option>
+                                </select>
+                                <i>🩺</i>
+                            </div>
+                    
+                            <div class="select-wrapper">
+                                <select id="daySelect" class="custom-select" required>
+                                    <option selected disabled> اختر اليوم</option>
+                                </select>
+                                <i>📅</i>
+                            </div>
+        
+                            <div class="select-wrapper">
+                                <select id="timeSelect" class="custom-select" required>
+                                    <option selected disabled> اختر الوقت</option>
+                                </select>
+                                <i>⏰</i>
+                            </div>
+                    
+        
+                            <div class="price-container" id="priceContainer" style="display: none;">
+                                <span id="doctorPriceLabel">سعر الكشف : </span>
+                                <span id="doctorPrice" style="color: rgb(255, 227, 186);"></span>
+                                <span id="currency-symbol"></span>
+                            </div>
+                    
+                            <button class="btn-primary" type="submit">احجز الآن</button>
                         </form>
                     </div>
                 </div>
@@ -441,7 +563,7 @@ button, select {
                 <!-- النص في اليمين -->
                 <div class="text-section text-primary">
                     <h2>...سجل معنا في </h2>
-                    <h1 class="m-0" style="font-weight: bold; text-decoration: underline;"><i class="far fa-hospital me-2"></i><span class="me-2 ms-1" style="font-size: 50px;">1</span>MillionDoctor</h1>
+                    <img width="40%" src="img/O.png" alt="logo">
                 </div>
         
                 <!-- الخيارات وزر التسجيل في اليسار -->
