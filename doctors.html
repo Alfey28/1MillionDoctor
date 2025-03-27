@@ -40,6 +40,138 @@
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/style.css">
+
+        <style>
+            body {
+    background-color: #b6b8b9a8;
+}
+
+.booking-section {
+    background-color: #EEECEC;
+    height: 77vh;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
+    padding: 20px;
+}
+
+#bookingForm {
+    background: #0042f7b2;
+    position: relative;
+    left: 12%;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.booking-form:hover {
+    transform: translateY(-3px);
+}
+
+.form-control, .custom-select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border 0.3s;
+    outline: none;
+    appearance: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.form-control:focus, .custom-select:focus {
+    border: 2px solid #007bff;
+}
+
+.select-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.select-wrapper select {
+    padding-right: 40px;
+}
+
+.select-wrapper i {
+    position: absolute;
+    right: 15px;
+    font-size: 18px;
+    color: #007bff;
+    pointer-events: none;
+}
+
+.btn-primary {
+    background: #F33232;
+    color: white;
+    justify-content: center;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background: #eb8383;
+}
+
+/*==================== MEDIA QUERIES ====================*/
+
+/* للأجهزة اللوحية (أقل من 1024px) */
+@media screen and (max-width: 1024px) {
+    #bookingForm {
+        left: 0;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+/* للهواتف المحمولة (أقل من 768px) */
+@media screen and (max-width: 768px) {
+    .booking-section {
+        height: auto;
+        padding: 30px 10px;
+    }
+
+    #bookingForm {
+        max-width: 90%;
+        padding: 20px;
+        left: 0;
+    }
+
+    .form-control, .custom-select {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .btn-primary {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+
+/* للهواتف الصغيرة جدًا (أقل من 480px) */
+@media screen and (max-width: 480px) {
+    #bookingForm {
+        max-width: 95%;
+    }
+
+    .btn-primary {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+
+        </style>
     </head>
 <body>
 
@@ -61,7 +193,7 @@
     
                 <!-- اللوجو في المنتصف -->
                 <a href="index.html" class="navbar-brand mx-lg-auto d-none d-lg-block">
-                    <h1 class="m-0"><i class="far fa-hospital me-2"></i><span class="logo">1</span>MillionDoctor</h1>
+                    <img width="90%" src="img/O.png" alt="logo">
                 </a>
     
                 <!-- القائمة اليسرى -->
@@ -74,7 +206,7 @@
     
             <!-- اللوجو في الشاشات الصغيرة -->
             <a href="index.html" class="navbar-brand d-lg-none ms-auto">
-                <h1 class="m-0"><i class="far fa-hospital me-2"></i><span class="logo">1</span>MillionDoctor</h1>
+                <img width="100%" src="img/O.png" alt="logo">
             </a>
         </div>
     </nav>
@@ -82,71 +214,119 @@
 
 
 
-    <div id="doctor-info" class="doctor-info">
-        <h1><span id="doctor-name"></span></h1>
-        <img id="doctor-image" src="" alt="صورة الدكتور" style="width: 200px; height: 200px; border-radius: 50%;">
-    
-        <div id="specialty-container" class="special" style="display: none;">
-            <p  style="font-size: 25px;"><strong>التخصص:</strong> <span id="doctor-specialty" style="font-weight: bold;"></span></p>
-        </div> 
+    <div class="container">
 
-        <p>
-            <a class="location" id="clinic-address" href="#" target="_blank"></a>
-            <i class="fas fa-map-marker-alt zoom-effect" style="color: red;"></i>
-        </p>
-    
-        <p>
-            <span id="doctor-phone" class="phone-link d-inline"></span>
-            <i class="fas fa-phone zoom-effect" style="color: red;"></i>
-        </p>
-    
-        <!-- زر الحجز -->
-        <div>
-            <p>
-                <a href="index.html#amount" id="booking-button" class="booking-btn-doc">
-                    <i class="fas fa-calendar-alt"></i> احجز الآن
-                </a>
-            </p>
-        </div>
-    
-               
+        <div class="col-lg-6 wow fadeInUp mt-5" data-wow-delay="0.5s">
+            <div class="booking-section rounded d-flex flex-column">
+                <p id="error-message" style="display: none; color: red; text-align: center; font-weight: bold; margin-bottom: 10px;"></p>
+                
+                <h3 style="text-align: center; color: #1877f2; direction: rtl; font-size: 35px; font-weight: bold; margin-top: 3%;">أحجز الأن ... </h3>
 
-        <div id="bio-container" style="display: none;">
-            <p><strong>السيرة الذاتية:</strong> <span id="doctor-bio"></span></p>
+                <form id="bookingForm" novalidate>
+
+                    <input type="text" id="name" class="form-control" placeholder="👤 الاسم" required>
+
+                    <input type="text" id="phone" class="form-control" placeholder="📞 رقم الهاتف" required maxlength="11">
+            
+                    <div class="select-wrapper">
+                        <select id="specialty-input" class="custom-select" required>
+                            <option selected disabled> اختر التخصص</option>
+                        </select>
+                        <i>🏥</i>
+                    </div>
+
+                    <div class="select-wrapper">
+                        <select id="doctor" class="custom-select" required>
+                            <option selected disabled> اختر الطبيب</option>
+                        </select>
+                        <i>🩺</i>
+                    </div>
+            
+                    <div class="select-wrapper">
+                        <select id="daySelect" class="custom-select" required>
+                            <option selected disabled> اختر اليوم</option>
+                        </select>
+                        <i>📅</i>
+                    </div>
+
+                    <div class="select-wrapper">
+                        <select id="timeSelect" class="custom-select" required>
+                            <option selected disabled> اختر الوقت</option>
+                        </select>
+                        <i>⏰</i>
+                    </div>
+            
+
+                    <div class="price-container" id="priceContainer" style="display: none;">
+                        <span id="doctorPriceLabel">سعر الكشف : </span>
+                        <span id="doctorPrice" style="color: rgb(255, 227, 186);"></span>
+                        <span id="currency-symbol"></span>
+                    </div>
+            
+                    <button class="btn-primary" type="submit">احجز الآن</button>
+                </form>
+            </div>
         </div>
+
+
+
+        <div id="doctor-info" class="doctor-info">
+            <h1><span id="doctor-name"></span></h1>
+            <img id="doctor-image" src="" alt="صورة الدكتور" style="width: 200px; height: 200px; border-radius: 50%;">
         
-        <div id="experience-container" style="display: none;">
-            <p><strong>الخبرات:</strong> <span id="doctor-experience"></span></p>
-        </div>
+            <div id="specialty-container" class="special" style="display: none;">
+                <p  style="font-size: 25px;"><strong>التخصص:</strong> <span id="doctor-specialty" style="font-weight: bold;"></span></p>
+            </div> 
+    
+            <p>
+                <a class="location" id="clinic-address" href="#" target="_blank"></a>
+                <i class="fas fa-map-marker-alt zoom-effect" style="color: red;"></i>
+            </p>
         
-        <div id="services-container" style="display: none;">
-            <p><strong>الخدمات:</strong> <span id="doctor-services"></span></p>
-        </div>
-        
-        <div id="email-container" style="display: none;">
-            <p><strong>البريد الإلكتروني:</strong> <span id="doctor-email"></span></p>
-        </div>
+            <p>
+                <span id="doctor-phone" class="phone-link d-inline"></span>
+                <i class="fas fa-phone zoom-effect" style="color: red;"></i>
+            </p>
         
     
-        <div id="social-container" style="display: none;">
-            <p>
-                <a href="#" id="doctor-instagram" target="_blank" style="display: none;">
-                    <i class="fab fa-instagram social-icon" style="color: #f33232;"></i>
-                </a>
-                <a href="#" id="doctor-twitter" target="_self" style="display: none;">
-                    <i class="fab fa-twitter social-icon" style="color: #1877f2;"></i>
-                </a>
-                <a href="#" id="doctor-whatsapp" target="_blank" style="display: none;">
-                    <i class="fab fa-whatsapp social-icon" style="color: #25d366;"></i>
-                </a>
-                <a href="#" id="doctor-facebook" target="_blank" style="display: none;">
-                    <i class="fab fa-facebook social-icon" style="color: #1877f2;"></i>
-                </a>
-            </p>
+            <div id="bio-container" style="display: none;">
+                <p><strong>السيرة الذاتية:</strong> <span id="doctor-bio"></span></p>
+            </div>
+            
+            <div id="experience-container" style="display: none;">
+                <p><strong>الخبرات:</strong> <span id="doctor-experience"></span></p>
+            </div>
+            
+            <div id="services-container" style="display: none;">
+                <p><strong>الخدمات:</strong> <span id="doctor-services"></span></p>
+            </div>
+            
+            <div id="email-container" style="display: none;">
+                <p><strong>البريد الإلكتروني:</strong> <span id="doctor-email"></span></p>
+            </div>
+            
+        
+            <div id="social-container" style="display: none;">
+                <p>
+                    <a href="#" id="doctor-instagram" target="_blank" style="display: none;">
+                        <i class="fab fa-instagram social-icon" style="color: #f33232;"></i>
+                    </a>
+                    <a href="#" id="doctor-twitter" target="_self" style="display: none;">
+                        <i class="fab fa-twitter social-icon" style="color: #1877f2;"></i>
+                    </a>
+                    <a href="#" id="doctor-whatsapp" target="_blank" style="display: none;">
+                        <i class="fab fa-whatsapp social-icon" style="color: #25d366;"></i>
+                    </a>
+                    <a href="#" id="doctor-facebook" target="_blank" style="display: none;">
+                        <i class="fab fa-facebook social-icon" style="color: #1877f2;"></i>
+                    </a>
+                </p>
+            </div>
+            
         </div>
         
     </div>
-    
+
     
     
     
@@ -233,5 +413,186 @@
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
     <script src="js/docotors.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const specialtiesSelect = document.getElementById("specialty-input");
+    const doctorsSelect = document.getElementById("doctor");
+    const daySelect = document.getElementById("daySelect");
+    const timeSelect = document.getElementById("timeSelect");
+    const phoneInput = document.getElementById("phone");
+    const nameInput = document.getElementById("name");
+    const bookingForm = document.getElementById("bookingForm");
+    let specialtiesData = [];
+
+    // تحميل التخصصات والأطباء
+    async function fetchSpecialties() {
+        try {
+            const response = await fetch("js/specialties.json");
+            specialtiesData = await response.json();
+            populateSpecialties();
+        } catch (error) {
+            console.error("فشل تحميل بيانات التخصصات:", error);
+        }
+    }
+
+    // تعبئة قائمة التخصصات
+    function populateSpecialties() {
+        specialtiesSelect.innerHTML = "<option selected disabled>اختر التخصص</option>";
+        specialtiesData.forEach((specialty) => {
+            const option = document.createElement("option");
+            option.value = specialty.id;
+            option.textContent = specialty.name;
+            specialtiesSelect.appendChild(option);
+        });
+    }
+
+    // عند اختيار تخصص
+    specialtiesSelect.addEventListener("change", function () {
+        const selectedSpecialty = specialtiesData.find((s) => s.id === this.value);
+        updateDoctorsList(selectedSpecialty);
+    });
+
+    // تحديث قائمة الأطباء بناءً على التخصص
+    function updateDoctorsList(selectedSpecialty) {
+        doctorsSelect.innerHTML = "<option selected disabled>اختر الطبيب</option>";
+        resetSelection();
+
+        if (selectedSpecialty?.doctors) {
+            selectedSpecialty.doctors.forEach((doctor) => {
+                const option = document.createElement("option");
+                option.value = doctor.id;
+                option.textContent = doctor.name;
+                option.dataset.days = JSON.stringify(doctor.availableDays);
+                option.dataset.times = JSON.stringify(doctor.availableTimes);
+                option.dataset.price = doctor.price;
+                option.dataset.phone = doctor.phone;
+                option.dataset.whatsapp = doctor.whatsapp;
+                doctorsSelect.appendChild(option);
+            });
+        }
+    }
+
+    // عند اختيار طبيب
+    doctorsSelect.addEventListener("change", function () {
+        const selectedDoctor = doctorsSelect.options[doctorsSelect.selectedIndex];
+        const availableDays = JSON.parse(selectedDoctor.dataset.days || "[]");
+
+        daySelect.innerHTML = "<option selected disabled>اختر اليوم</option>";
+        timeSelect.innerHTML = "<option selected disabled>اختر الوقت</option>";
+
+        availableDays.forEach((day) => {
+            const dates = getNextDates(day);
+            dates.forEach(date => {
+                daySelect.innerHTML += `<option value="${day}">${day} - ${date}</option>`;
+            });
+        });
+    });
+
+    // حساب تواريخ الأيام القادمة
+    function getNextDates(dayName) {
+        const daysOfWeek = {
+            "الأحد": 0, "الإثنين": 1, "الثلاثاء": 2,
+            "الأربعاء": 3, "الخميس": 4, "الجمعة": 5, "السبت": 6
+        };
+
+        const today = new Date();
+        let targetDay = daysOfWeek[dayName];
+        let difference = targetDay - today.getDay();
+        if (difference < 0) difference += 7;
+
+        const firstDate = new Date();
+        firstDate.setDate(today.getDate() + difference);
+
+        const secondDate = new Date(firstDate);
+        secondDate.setDate(firstDate.getDate() + 7);
+
+        return [
+            firstDate.toLocaleDateString("ar-EG"),
+            secondDate.toLocaleDateString("ar-EG")
+        ];
+    }
+
+    // عند اختيار يوم
+    daySelect.addEventListener("change", function () {
+        const selectedDoctor = doctorsSelect.options[doctorsSelect.selectedIndex];
+        const availableTimes = JSON.parse(selectedDoctor.dataset.times || "{}");
+
+        timeSelect.innerHTML = "<option selected disabled>اختر الوقت</option>";
+
+        if (availableTimes[this.value]) {
+            availableTimes[this.value].forEach((time) => {
+                timeSelect.innerHTML += `<option value="${time}">${time}</option>`;
+            });
+        }
+    });
+
+    // التحقق من رقم الهاتف
+    phoneInput.addEventListener("input", function () {
+        const phoneRegex = /^(010|011|012|015)[0-9]{8}$/;
+        if (!phoneRegex.test(phoneInput.value)) {
+            phoneInput.style.borderColor = "red";
+        } else {
+            phoneInput.style.borderColor = "";
+        }
+    });
+
+    // عند إرسال النموذج
+    bookingForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        let hasError = false;
+
+        function validateField(input) {
+            if (!input.value.trim() || input.value.includes("اختر")) {
+                input.style.borderColor = "red";
+                hasError = true;
+            } else {
+                input.style.borderColor = "";
+            }
+        }
+
+        [nameInput, phoneInput, specialtiesSelect, doctorsSelect, daySelect, timeSelect].forEach(validateField);
+
+        if (hasError) return;
+
+        const selectedDoctor = doctorsSelect.options[doctorsSelect.selectedIndex];
+        const doctorContact = selectedDoctor.dataset.whatsapp || selectedDoctor.dataset.phone;
+        const selectedDayText = daySelect.options[daySelect.selectedIndex].text;
+        const formattedTime = formatTime(timeSelect.value);
+
+        const message = `
+        👤 الاسم: ${nameInput.value.trim()}
+        📞 رقم الهاتف: ${phoneInput.value.trim()}
+        📅 اليوم: ${selectedDayText} 
+        🕓 الوقت: ${formattedTime} 
+        🩺 التخصص: ${specialtiesSelect.options[specialtiesSelect.selectedIndex].text}
+        👨‍⚕️ الطبيب: ${selectedDoctor.textContent}
+        `;
+
+        window.open(`https://wa.me/${doctorContact}?text=${encodeURIComponent(message)}`, "_blank");
+    });
+
+    // تحويل الوقت إلى تنسيق 12 ساعة
+    function formatTime(time) {
+        if (!time.includes(":")) return "غير محدد";
+
+        let [hours, minutes] = time.split(":").map(Number);
+        let period = hours >= 12 ? "مساءً" : "صباحاً";
+
+        if (hours > 12) hours -= 12;
+        if (hours === 0) hours = 12;
+
+        return `${hours}:${minutes.toString().padStart(2, "0")} ${period}`;
+    }
+
+    function resetSelection() {
+        daySelect.innerHTML = "<option selected disabled>اختر اليوم</option>";
+        timeSelect.innerHTML = "<option selected disabled>اختر الوقت</option>";
+    }
+
+    fetchSpecialties();
+});
+
+
+    </script>
 </body>
 </html>

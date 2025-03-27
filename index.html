@@ -39,6 +39,48 @@
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <style>
+        .header-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.img-fluid {
+    object-fit: cover;
+    transition: opacity 1s ease-in-out; /* تأثير تغيير الصورة */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.filter-container {
+    margin-top: 20px;
+}
+
+button, select {
+    padding: 10px;
+    margin: 5px;
+    font-size: 16px;
+}
+
+    </style>
 </head>
 
 
@@ -53,7 +95,7 @@
 
 
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-2 shadow">
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-2 shadow"> 
         <div class="container-fluid d-flex align-items-center">
             <!-- زر القائمة عند تصغير الشاشة -->
             <button class="navbar-toggler order-1 " type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -70,7 +112,7 @@
     
                 <!-- اللوجو في المنتصف -->
                 <a href="index.html" class="navbar-brand mx-lg-auto d-none d-lg-block">
-                    <h1 class="m-0"><i class="far fa-hospital me-2"></i><span class="logo">1</span>MillionDoctor</h1>
+                    <img width="90%" src="img/O.png" alt="logo">
                 </a>
     
                 <!-- القائمة اليسرى -->
@@ -83,7 +125,7 @@
     
             <!-- اللوجو في الشاشات الصغيرة -->
             <a href="index.html" class="navbar-brand d-lg-none ms-auto">
-                <h1 class="m-0"><i class="far fa-hospital me-2"></i><span class="logo">1</span>MillionDoctor</h1>
+                <img width="100%" src="img/O.png" alt="logo">
             </a>
         </div>
     </nav>
@@ -93,29 +135,29 @@
     <!-- Header Start -->
     <div class="header-section">
         <div class="position-relative">
-            <img class="img-fluid full-height" src="img/carousel-1.jpg" alt="">
+            <!-- الصورة المتغيرة -->
+            <img id="carousel-image" class="img-fluid full-height" src="img/carousel-3.jpg" alt="">
     
             <!-- طبقة سوداء شفافة -->
             <div class="overlay"></div>
     
             <!-- النص والزر -->
             <div class="header-text">
-                <h1 class="display-1 header-text-h1 mb-4">أعرف أكتر عن العمليات الجراحية وأستفد من خبرات الأطباء </h1>
+                <h1 class="display-1 header-text-h1 mb-4">أعرف أكتر عن العمليات الجراحية وأستفد من خبرات الأطباء</h1>
                 <p class="text-white header-text-p mb-4">رعاية صحية لحياة أفضل</p>
                 <div class="filter-container">
                     <button id="show-button">عرض</button>
                     <select id="procedure-select">
                         <option value="">اختر العملية</option>
-                        <!-- الخيارات ستكون هنا -->
                     </select>
                     <select id="specialty-select">
                         <option value="">اختر التخصص</option>
-                        <!-- الخيارات ستكون هنا -->
                     </select>
                 </div>
             </div>
         </div>
     </div>
+    
     <!-- Header End -->
 
 
@@ -510,6 +552,36 @@
     
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // قائمة الصور المتاحة
+            const carouselImages = [
+                "img/carousel-2.jpg",
+                "img/carousel-1.jpg",
+                "img/carousel-3.jpg",
+                "img/carousel-4.jpg",  
+                "img/carousel-5.jpg",  
+                "img/carousel-6.jpg",  
+                "img/carousel-7.jpg",  
+                "img/carousel-8.jpg"  
+            ];
+        
+            let currentIndex = 0;
+            const imageElement = document.getElementById("carousel-image");
+        
+            function changeImage() {
+                currentIndex = (currentIndex + 1) % carouselImages.length;
+                imageElement.style.opacity = "0"; // إخفاء الصورة تدريجيًا
+                setTimeout(() => {
+                    imageElement.src = carouselImages[currentIndex];
+                    imageElement.style.opacity = "1"; // إظهار الصورة الجديدة تدريجيًا
+                }, 500);
+            }
+        
+            // تغيير الصورة كل 5 ثوانٍ
+            setInterval(changeImage, 3000);
+        });
+        </script>
 </body>
 
 </html>
