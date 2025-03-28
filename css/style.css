@@ -20,14 +20,33 @@ body {
     overflow-x: hidden;
 }
 .header-text-p {
-    font-size: 20px;
+    position: absolute;
+    font-size: 40px;
+    right: 3%; /* تحريكها ناحية اليمين */
+    top: 5%; /* تثبيتها للأعلى */
+    white-space: nowrap;
 }
-.header-text-h1 {
-    font-style: italic;
-    color: #ffffff;
-    font-size: 60px;
-    font-weight: 700;
+
+/* تحسينات للشاشات الصغيرة */
+@media screen and (max-width: 768px) {
+    .header-text-p {
+        font-size: 30px; /* تصغير الخط قليلاً */
+        top: 5%; /* تعديل الموضع */
+        right: 3%;
+    }
 }
+
+@media screen and (max-width: 480px) {
+    .header-text-p {
+        font-size: 45px; /* تصغير الخط أكثر */
+        top: 5%; /* تقليل المسافة من الأعلى */
+        right: 3%;
+    }
+}
+
+
+
+
 .filter-container {
     display: flex;
     gap: 20px;
@@ -52,6 +71,7 @@ body {
 }
 .title-text,
 .title-text-about {
+    font-size: 28px;
     text-align: center;
     color: #32bccb;
 }
@@ -734,12 +754,7 @@ select:focus {
     margin-bottom: 10px;
 }
 @media (max-width: 768px) {
-    .header-text h1 {
-        font-size: 1.8rem;
-    }
-    .header-text p {
-        font-size: 1rem;
-    }
+    
     .filter-container {
         flex-direction: column;
         gap: 10px;
@@ -851,4 +866,155 @@ select:focus {
 .copyright a {
     text-decoration: none;
     color: #fff;
+}
+
+.header-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+.header-text-h1 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-style: italic;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* للشاشات المتوسطة (التابلت) */
+@media screen and (max-width: 1024px) {
+    .header-text-h1 {
+        font-size: 35px;
+        top: 38%;
+    }
+}
+
+/* للشاشات الصغيرة (الموبايل) */
+/* للشاشات الصغيرة (الموبايل) */
+@media screen and (max-width: 768px) {
+    .header-text-h1 {
+        font-size: 28px;
+        top: 25%; /* رفعه لفوق شوية */
+        width: 80%; /* عشان يفضل مظبوط */
+    }
+}
+
+
+/* للشاشات الأصغر جدًا */
+@media screen and (max-width: 480px) {
+    .header-text-h1 {
+        position: absolute;
+        top: 40%;
+        left: 1%;
+        font-size: 24px;
+    }
+}
+
+.booking-section {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 25%;
+    width: 100%;
+}
+
+#bookingForm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: #164de46e;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
+    width: 100%;
+    text-align: center;
+}
+
+/* جعل الحقول تأخذ العرض الكامل على الشاشات الصغيرة، ونصف العرض على الشاشات الكبيرة */
+.form-control, .custom-select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* زر الحجز */
+.btn-primary {
+    width: 100%;
+    background: #F33232;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn-primary:hover{
+    background-color: #a30808;
+}
+/*==================== MEDIA QUERIES ====================*/
+
+@media screen and (max-width: 768px) {
+    .booking-section {
+        width: 100%;
+        position: absolute;
+        top: 5%;
+    }
+}
+@media screen and (max-width: 768px) {
+    #bookingForm {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .select-wrapper {
+        width: 48%;
+    }
+
+    /* ترتيب الحقول بالظبط */
+    #specialty-input {
+        order: -2; /* التخصص يطلع فوق */
+    }
+
+    #doctor {
+        order: -1; /* الطبيب بعد التخصص */
+    }
+
+    #daySelect {
+        order: 1; /* اليوم بعد الطبيب */
+    }
+
+    #timeSelect {
+        order: 2; /* الوقت بعد اليوم */
+    }
 }

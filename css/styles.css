@@ -96,6 +96,9 @@ header h1 {
     margin-bottom: 20px;
     color: #555;
 }
+.doc-section{
+    margin-bottom: 20%;
+}
 .h2-style {
     font-weight: 700;
     font-size: 30px;

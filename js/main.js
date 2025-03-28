@@ -380,50 +380,33 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // تحويل الوقت إلى تنسيق 12 ساعة
-    function formatTime(time) {
-    
-        // تحقق إذا كان الوقت فارغًا أو لا يحتوي على " : "
-        if (!time || typeof time !== "string" || !time.includes(":")) {
-            return "غير محدد";  
-        }
-    
-        // التحقق من إذا كان الوقت يحتوي على "صباحًا" أو "مساءً"
-        let period = "صباحاً";
-        if (time.includes("مساءً")) {
-            period = "مساءً";
-            time = time.replace("مساءً", "").trim();  // إزالة "مساءً" وحذف الفراغات
-        } else if (time.includes("صباحاً")) {
-            period = "صباحاً";
-            time = time.replace("صباحاً", "").trim();  // إزالة "صباحاً" وحذف الفراغات
-        }
-    
-        // طباعة الوقت بعد إزالة الفترة
-    
-        // فصل الساعات والدقائق
-        let [hours, minutes] = time.split(":").map(Number);
-    
-    
-        if (isNaN(hours)) {
-            return "غير محدد"; // في حالة كان الساعات غير صحيحة
-        }
-    
-        // إذا كانت الدقائق غير صحيحة أو فارغة، نقوم بتعيينها إلى 0
-        if (isNaN(minutes)) {
-            minutes = 0;
-        }
-    
-        // تحويل الساعة 12 صباحًا إلى 0
-        if (period === "صباحاً" && hours === 12) {
-            hours = 0;
-        }
-    
-        // تحويل الساعة المسائية (PM) إلى الوقت 24 ساعة
-        if (period === "مساءً" && hours !== 12) {
-            hours += 12;
-        }
-    
-        return `${hours}:${minutes.toString().padStart(2, "0")} ${period}`;
+    // تحويل الوقت إلى تنسيق 12 ساعة
+function formatTime(time) {
+    if (!time || typeof time !== "string" || !time.includes(":")) {
+        return "غير محدد";  
     }
+
+    let [hours, minutes] = time.split(":").map(Number);
+
+    if (isNaN(hours) || isNaN(minutes)) {
+        return "غير محدد";
+    }
+
+    let period = "صباحًا";
+
+    // تحويل إلى نظام 12 ساعة
+    if (hours >= 12) {
+        period = "مساءً";
+        if (hours > 12) {
+            hours -= 12;
+        }
+    } else if (hours === 0) {
+        hours = 12; // تحويل 00:00 إلى 12 صباحًا
+    }
+
+    return `${hours}:${minutes.toString().padStart(2, "0")} ${period}`;
+}
+
     
     
     
