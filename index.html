@@ -79,7 +79,6 @@
     }
 }
 
-
 #vertical-bookingForm {
     direction: rtl;
     display: flex;
@@ -92,7 +91,8 @@
     width: 100%;
     text-align: center;
 }
-.vertical-btn{
+
+.vertical-btn {
     width: 100%;
     background: #F33232;
     color: white;
@@ -101,8 +101,10 @@
     border-radius: 8px;
     font-size: 18px;
     font-weight: bold;
-    cursor: pointer;}
-.vertical-btn:hover{
+    cursor: pointer;
+}
+
+.vertical-btn:hover {
     background-color: rgb(194, 40, 40);
 }
 
@@ -127,71 +129,69 @@
 #vertical-timeSelect {
     order: 2; /* الوقت بعد اليوم */
 }
+
+/* جعل الاسم ورقم الهاتف في نفس الصف */
 /* جعل الاسم ورقم الهاتف في نفس الصف */
 .input-row {
     display: flex;
     gap: 10px;
     margin-bottom: 12px;
     justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 100%;
 }
 
 .input-row .form-control {
     width: 48%;
 }
 
-/* جعل جميع القوائم المنسدلة في نفس الصف */
-.select-row {
+/* جعل التخصص والطبيب في نفس الصف */
+.select-row-1 {
+    gap: 10px;
+    margin-bottom: 12px;
+
+}
+
+.select-row-1 .custom-select {
+    width: 1%;
+}
+
+/* جعل اليوم والوقت في نفس الصف */
+.select-row-2 {
     display: flex;
     gap: 10px;
     margin-bottom: 12px;
     justify-content: space-between;
+
 }
 
-.select-row .custom-select {
-    width: 24%;
+.select-row-2 .custom-select {
+    width: 48%;
 }
 
 /* تحسين استجابة التصميم على الشاشات الصغيرة */
 @media screen and (max-width: 768px) {
-    .input-row, .select-row {
-        flex-direction: column;
+    .input-row,
+    .select-row-1,
+    .select-row-2 {
+        flex-direction: row; /* التأكد من بقاء العناصر في نفس السطر */
+        flex-wrap: wrap; /* يسمح بتوزيعهم عند الحاجة */
         align-items: center;
     }
 
     .input-row .form-control,
-    .select-row .custom-select {
-        width: 100%;
+    .select-row-1 .custom-select,
+    .select-row-2 .custom-select {
+        width: 48%;
     }
 }
 
-/* تحسين استجابة التصميم على الشاشات الصغيرة */
-@media screen and (max-width: 768px) {
-    .input-row, .select-row {
-        flex-direction: column;
-    }
-
-    .input-row .form-control,
-    .select-row .custom-select {
-        width: 100%;
-    }
+/* ضمان عدم تمدد الحقول بشكل غير متوقع */
+.form-control, .custom-select {
+    min-width: 20%;
 }
 
-/* تحسين استجابة التصميم للشاشات الصغيرة */
-@media screen and (max-width: 768px) {
-    .vertical-booking-section {
-        width: 100%;
-        position: relative; /* عشان ما يطلعش لفوق */
-        top: unset;
-    }
 
-    .select-wrapper {
-        width: 40%; /* الحقول تأخذ العرض الكامل على الشاشات الصغيرة */
-    }
-
-    #vertical-bookingForm {
-        gap: 10px;
-    }
-}
 
 .Surgical-section {
     position: relative;
@@ -351,20 +351,20 @@
                         <!-- كل الـ select في سطر مستقل -->
                         <div class="select-row">
                             <select id="timeSelect" class="custom-select" required>
-                                <option selected disabled> اختر الوقت ⏰</option>
+                                <option selected disabled> اختر الوقت </option>
                             </select>
                 
                             <select id="daySelect" class="custom-select" required>
-                                <option selected disabled> اختر اليوم 📅</option>
+                                <option selected disabled> اختر اليوم </option>
                             </select>
 
                             
                             <select id="doctor" class="custom-select" required>
-                                <option selected disabled> اختر الطبيب 🩺</option>
+                                <option selected disabled> اختر الطبيب </option>
                             </select>
                             
                             <select id="specialty-input" class="custom-select" required>
-                                <option selected disabled> اختر التخصص 🏥</option>
+                                <option selected disabled> اختر التخصص </option>
                             </select>
                         </div>
 
@@ -592,25 +592,25 @@
                 
                         <div class="select-wrapper">
                             <select id="vertical-specialty-input" class="vertical-select" required>
-                                <option selected disabled> اختر التخصص 🏥</option>
+                                <option selected disabled> اختر التخصص </option>
                             </select>
                         </div>
                 
                         <div class="select-wrapper">
                             <select id="vertical-doctor" class="vertical-select" required>
-                                <option selected disabled> اختر الطبيب 🩺</option>
+                                <option selected disabled> اختر الطبيب </option>
                             </select>
                         </div>
 
                         <div class="select-wrapper">
                             <select id="vertical-daySelect" class="vertical-select" required>
-                                <option selected disabled> اختر اليوم 📅</option>
+                                <option selected disabled> اختر اليوم </option>
                             </select>
                         </div>
                         
                         <div class="select-wrapper">
                             <select id="vertical-timeSelect" class="vertical-select" required>
-                                <option selected disabled> اختر الوقت ⏰</option>
+                                <option selected disabled> اختر الوقت </option>
                             </select>
                         </div>
 
@@ -819,7 +819,7 @@
             }
         
             // تغيير الصورة كل 5 ثوانٍ
-            setInterval(changeImage, 3000);
+            setInterval(changeImage, 5000);
         });
 
         document.addEventListener("DOMContentLoaded", function () {
