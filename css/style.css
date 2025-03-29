@@ -21,7 +21,8 @@ body {
 }
 .header-text-p {
     position: absolute;
-    font-size: 40px;
+    font-size: 30px;
+    font-weight: bold;
     right: 3%; /* تحريكها ناحية اليمين */
     top: 5%; /* تثبيتها للأعلى */
     white-space: nowrap;
@@ -454,7 +455,6 @@ select:focus {
     background: var(--primary);
 }
 .price-container {
-    margin-top: 20px;
     border-radius: 10px;
     width: 100%;
     display: flex;
@@ -462,7 +462,7 @@ select:focus {
     justify-content: center;
     gap: 10px;
     flex-wrap: nowrap;
-    padding: 10px;
+    padding: 5px;
     flex-wrap: nowrap;
 }
 .option h4,
@@ -472,19 +472,18 @@ select:focus {
 #doctorPriceLabel {
     font-style: oblique;
     font-weight: 700;
-    font-size: 16px;
-    color: #333;
+    font-size: 20px;
+    color: #ffffff;
     text-align: center;
-    margin-left: 10px;
 }
 #doctorPrice,
 .offer-text span {
-    color: #ff5722;
+    color: #ffd493;
     font-weight: 700;
 }
 #doctorPrice {
     font-style: oblique;
-    font-size: 22px;
+    font-size: 25px;
 }
 .date-picker,
 .time-picker {
@@ -895,13 +894,13 @@ select:focus {
 }
 .header-text-h1 {
     position: absolute;
-    top: 30%;
+    top: 45%;
     left: 50%;
     transform: translateX(-50%);
     font-style: italic;
     color: #ffffff;
-    font-size: 40px;
-    font-weight: 700;
+    font-size: 25px;
+    font-weight: bold;
     text-align: center;
 }
 
@@ -991,30 +990,35 @@ select:focus {
 }
 @media screen and (max-width: 768px) {
     #bookingForm {
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 10px;
     }
 
-    .select-wrapper {
+    /* تنسيق الاسم ورقم الهاتف في نفس الصف */
+    .input-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .input-row .form-control {
         width: 48%;
     }
 
-    /* ترتيب الحقول بالظبط */
-    #specialty-input {
-        order: -2; /* التخصص يطلع فوق */
+    /* جعل جميع الـ select في نفس الصف */
+    .select-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        width: 100%;
     }
 
-    #doctor {
-        order: -1; /* الطبيب بعد التخصص */
-    }
-
-    #daySelect {
-        order: 1; /* اليوم بعد الطبيب */
-    }
-
-    #timeSelect {
-        order: 2; /* الوقت بعد اليوم */
+    .select-row .custom-select {
+        width: 24%; /* جعل كل اختيار يأخذ ربع المساحة */
     }
 }
+

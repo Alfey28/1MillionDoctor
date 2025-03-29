@@ -41,170 +41,192 @@
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/style.css">
         <style>
-            .header-section {
-        position: relative;
+            .vertical-input, .vertical-select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+/* ضبط الفورم داخل القسم وعدم انتقاله للأعلى */
+.vertical-booking-section {
+    display: inline-block;
+    padding: 20px;
+    border-radius: 15px;
+    vertical-align: top;
+    width: 100%;
+    position: relative;
+    margin: auto;
+}
+.booking-p{
+    direction: rtl;
+    font-size: 35px;
+    font-weight: bold;
+    color: #1877f2;
+    text-align: center;
+}
+.contact-section {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+}
+
+/* تحسين استجابة التصميم على الشاشات الصغيرة */
+@media screen and (max-width: 768px) {
+    .vertical-booking-section, .contact-section {
         width: 100%;
-        height: 100vh;
-        overflow: hidden;
+        display: block; /* يخلي كل واحد ياخد سطر كامل */
+        text-align: center; /* يخلي العناصر متنسقة كويس */
     }
     
-    .img-fluid {
-        object-fit: fill;
-        transition: opacity 1s ease-in-out; /* تأثير تغيير الصورة */
+    .contact-section div {
+        margin: 0 auto; /* يضمن أن المحتوى يبقى في المنتصف */
+        max-width: 400px; /* تحديد عرض أقصى لتحسين المظهر */
     }
-    
-    .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
+}
+
+
+#vertical-bookingForm {
+    direction: rtl;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: #34559B;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
+    width: 100%;
+    text-align: center;
+}
+.vertical-btn{
+    width: 100%;
+    background: #F33232;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;}
+.vertical-btn:hover{
+    background-color: rgb(194, 40, 40);
+}
+
+/* جعل كل حقلين Select يظهران بجانب بعض */
+.select-wrapper {
+    width: 48%;
+}
+
+/* ترتيب الحقول بالظبط */
+#vertical-specialty-input {
+    order: -2; /* التخصص يطلع فوق */
+}
+
+#vertical-doctor {
+    order: -1; /* الطبيب بعد التخصص */
+}
+
+#vertical-daySelect {
+    order: 1; /* اليوم بعد الطبيب */
+}
+
+#vertical-timeSelect {
+    order: 2; /* الوقت بعد اليوم */
+}
+
+/* تحسين استجابة التصميم للشاشات الصغيرة */
+@media screen and (max-width: 768px) {
+    .vertical-booking-section {
         width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
+        position: relative; /* عشان ما يطلعش لفوق */
+        top: unset;
     }
-    
-    .header-text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        color: white;
+
+
+    #vertical-bookingForm {
+        gap: 10px;
     }
-    
+}
+.Surgical-section {
+    position: relative;
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/surgi.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    height: 30vh;
+    margin-bottom: 5%;
+}
+.Surgical-section h3{
+    color: rgb(255, 255, 255);
+    font: 40px bold ;
+}
+
+/* توسيط الفلتر */
+.filter-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    width: 80%; /* يمكن تعديله حسب الحاجة */
+    margin-top: 3%;
+}
+
+/* زر العرض */
+#show-button {
+    background: #F33232;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#show-button:hover {
+    background: #a30808;
+}
+
+/* تنسيق القوائم المنسدلة */
+#procedure-select, #specialty-select {
+    width: 48%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background: white;
+    cursor: pointer;
+}
+
+/* استجابة للشاشات الصغيرة */
+@media screen and (max-width: 768px) {
+    .Surgical-section {
+        padding: 40px 15px;
+        height: 450px; /* زيادة الارتفاع لتناسب المحتوى */
+    }
+
     .filter-container {
-        margin-top: 20px;
-    }
-    
-    button, select {
-        padding: 10px;
-        margin: 5px;
-        font-size: 16px;
-    }
-    .booking-section {
-        background-color: #EEECEC;
-        height: 77vh;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
-        padding: 20px;
+        flex-direction: column;
+        align-items: center;
         width: 90%;
     }
-    
-    #bookingForm {
-        background: #0042f7b2;
-        padding: 25px;
-        border-radius: 15px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
+
+    #procedure-select, #specialty-select {
         width: 100%;
-        text-align: center;
-        transition: transform 0.3s ease-in-out;
     }
-    
-    .booking-form:hover {
-        transform: translateY(-3px);
-    }
-    
-    .form-control, .custom-select {
-        width: 100%;
-        padding: 12px;
-        margin-bottom: 12px;
-        border: 2px solid #ddd;
-        border-radius: 8px;
-        font-size: 16px;
-        transition: border 0.3s;
-        outline: none;
-        appearance: none;
-        background-color: white;
-        cursor: pointer;
-    }
-    
-    .form-control:focus, .custom-select:focus {
-        border: 2px solid #007bff;
-    }
-    
-    .select-wrapper {
-        position: relative;
-        display: flex;
-        align-items: center;
-    }
-    
-    .select-wrapper select {
-        padding-right: 40px;
-    }
-    
-    .select-wrapper i {
-        position: absolute;
-        right: 15px;
-        font-size: 18px;
-        color: #007bff;
-        pointer-events: none;
-    }
-    
-    .btn-primary {
-        background: #F33232;
-        color: white;
-        justify-content: center;
-        padding: 12px;
-        border: none;
-        border-radius: 8px;
-        font-size: 18px;
-        font-weight: bold;
-        cursor: pointer;
-        transition: background 0.3s;
-    }
-    
-    .btn-primary:hover {
-        background: #eb8383;
-    }
-    
-    /*==================== MEDIA QUERIES ====================*/
-    
-    /* للأجهزة اللوحية (أقل من 1024px) */
-    @media screen and (max-width: 1024px) {
-        #bookingForm {
-            left: 0;
-            max-width: 80%;
-            margin: 0 auto;
-        }
-    }
-    
-    /* للهواتف المحمولة (أقل من 768px) */
-    @media screen and (max-width: 768px) {
-        .container{
-            margin: 0;
-        }
-        .booking-section {
-            height: auto;
-            width: 100%;
-        }
-    
-        #bookingForm {
-            max-width: 90%;
-            padding: 20px;
-            left: 0;
-        }
-    
-        .form-control, .custom-select {
-            font-size: 14px;
-            padding: 10px;
-        }
-    
-        .btn-primary {
-            font-size: 16px;
-            padding: 10px;
-        }
-    }
-    
-    /* للهواتف الصغيرة جدًا (أقل من 480px) */
-    @media screen and (max-width: 480px) {
-        #bookingForm {
-            max-width: 95%;
-        }
-    
-        .btn-primary {
-            font-size: 14px;
-            padding: 8px;
-        }
-    }
-    
+}
         </style>
     </head>
 <body>
@@ -247,62 +269,50 @@
     <!-- Navbar End -->
 
 
-
     <div class="container">
-
-        <div class="col-lg-6 wow fadeInUp mt-5" data-wow-delay="0.5s">
-            <div class="booking-section rounded d-flex flex-column">
-                <p id="error-message" style="display: none; color: red; text-align: center; font-weight: bold; margin-bottom: 10px;"></p>
-                
-                <h3 style="text-align: center; color: #1877f2; direction: rtl; font-size: 35px; font-weight: bold; margin-top: 3%;">أحجز الأن ... </h3>
-
-                <form id="bookingForm" novalidate>
-
-                    <input type="text" id="name" class="form-control" placeholder="👤 الاسم" required>
-
-                    <input type="text" id="phone" class="form-control" placeholder="📞 رقم الهاتف" required maxlength="11">
+        <div id="book-info">
+            <p class="booking-p">أحجز الأن ...</p>
+            <div class="vertical-booking-section">
+                <p id="vertical-error-message" style="display: none; color: red; text-align: center; font-weight: bold; margin-bottom: 10px;"></p>
+                <form id="vertical-bookingForm" class="vertical-form" novalidate>
+            
+                    <input type="text" id="vertical-name" class="vertical-input" placeholder="👤 الاسم" required>
+            
+                    <input type="text" id="vertical-phone" class="vertical-input" placeholder="📞 رقم الهاتف" required maxlength="11">
             
                     <div class="select-wrapper">
-                        <select id="specialty-input" class="custom-select" required>
-                            <option selected disabled> اختر التخصص</option>
+                        <select id="vertical-specialty-input" class="vertical-select" required>
+                            <option selected disabled> اختر التخصص 🏥</option>
                         </select>
-                        <i>🏥</i>
-                    </div>
-
-                    <div class="select-wrapper">
-                        <select id="doctor" class="custom-select" required>
-                            <option selected disabled> اختر الطبيب</option>
-                        </select>
-                        <i>🩺</i>
                     </div>
             
                     <div class="select-wrapper">
-                        <select id="daySelect" class="custom-select" required>
-                            <option selected disabled> اختر اليوم</option>
+                        <select id="vertical-doctor" class="vertical-select" required>
+                            <option selected disabled> اختر الطبيب 🩺</option>
                         </select>
-                        <i>📅</i>
                     </div>
-
+    
                     <div class="select-wrapper">
-                        <select id="timeSelect" class="custom-select" required>
-                            <option selected disabled> اختر الوقت</option>
+                        <select id="vertical-daySelect" class="vertical-select" required>
+                            <option selected disabled> اختر اليوم 📅</option>
                         </select>
-                        <i>⏰</i>
+                    </div>
+                    
+                    <div class="select-wrapper">
+                        <select id="vertical-timeSelect" class="vertical-select" required>
+                            <option selected disabled> اختر الوقت ⏰</option>
+                        </select>
                     </div>
             
-
-                    <div class="price-container" id="priceContainer" style="display: none;">
-                        <span id="doctorPriceLabel">سعر الكشف : </span>
-                        <span id="doctorPrice" style="color: rgb(255, 227, 186);"></span>
-                        <span id="currency-symbol"></span>
+                    <div class="price-container" id="vertical-priceContainer" style="display: none;">
+                        <span id="vertical-doctorPriceLabel" style="color: rgb(245, 207, 152); font-weight: bold; font-size: 25px;">سعر الكشف : </span>
+                        <span id="vertical-doctorPrice" style="color: rgb(245, 207, 152); font-weight: bold; font-size: 25px;"></span>
+                        <span id="vertical-currency-symbol"></span>
                     </div>
-            
-                    <button class="btn-primary" type="submit">احجز الآن</button>
+                    <button class="vertical-btn" type="submit">احجز الآن</button>
                 </form>
             </div>
         </div>
-
-
 
         <div id="doctor-info" class="doctor-info">
             <h1><span id="doctor-name"></span></h1>
@@ -358,12 +368,8 @@
             </div>
             
         </div>
-        
     </div>
 
-    
-    
-    
 
     <!-- Footer Start -->
     <div class="container-fluid footer wow fadeIn" data-wow-delay="0.1s">
@@ -449,16 +455,18 @@
     <script src="js/main.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-    const specialtiesSelect = document.getElementById("specialty-input");
-    const doctorsSelect = document.getElementById("doctor");
-    const daySelect = document.getElementById("daySelect");
-    const timeSelect = document.getElementById("timeSelect");
-    const phoneInput = document.getElementById("phone");
-    const nameInput = document.getElementById("name");
-    const bookingForm = document.getElementById("bookingForm");
+    const specialtiesSelect = document.getElementById("vertical-specialty-input");
+    const doctorsSelect = document.getElementById("vertical-doctor");
+    const daySelect = document.getElementById("vertical-daySelect");
+    const timeSelect = document.getElementById("vertical-timeSelect");
+    const priceContainer = document.getElementById("vertical-priceContainer");
+    const doctorPrice = document.getElementById("vertical-doctorPrice");
+    const phoneInput = document.getElementById("vertical-phone");
+    const phoneError = document.getElementById("phoneError");
+    const bookingForm = document.getElementById("vertical-bookingForm");
+
     let specialtiesData = [];
 
-    // تحميل التخصصات والأطباء
     async function fetchSpecialties() {
         try {
             const response = await fetch("js/specialties.json");
@@ -469,9 +477,8 @@
         }
     }
 
-    // تعبئة قائمة التخصصات
     function populateSpecialties() {
-        specialtiesSelect.innerHTML = "<option selected disabled>اختر التخصص</option>";
+        specialtiesSelect.innerHTML = "<option selected disabled>اختر التخصص 🏥</option>";
         specialtiesData.forEach((specialty) => {
             const option = document.createElement("option");
             option.value = specialty.id;
@@ -480,18 +487,18 @@
         });
     }
 
-    // عند اختيار تخصص
     specialtiesSelect.addEventListener("change", function () {
         const selectedSpecialty = specialtiesData.find((s) => s.id === this.value);
         updateDoctorsList(selectedSpecialty);
     });
 
-    // تحديث قائمة الأطباء بناءً على التخصص
     function updateDoctorsList(selectedSpecialty) {
-        doctorsSelect.innerHTML = "<option selected disabled>اختر الطبيب</option>";
-        resetSelection();
+        doctorsSelect.innerHTML = "<option selected disabled>اختر الطبيب 🩺</option>";
+        daySelect.innerHTML = "<option selected disabled>اختر اليوم 📅</option>";
+        timeSelect.innerHTML = "<option selected disabled>اختر الوقت ⏰</option>";
+        priceContainer.style.display = "none";
 
-        if (selectedSpecialty?.doctors) {
+        if (selectedSpecialty && selectedSpecialty.doctors) {
             selectedSpecialty.doctors.forEach((doctor) => {
                 const option = document.createElement("option");
                 option.value = doctor.id;
@@ -506,13 +513,13 @@
         }
     }
 
-    // عند اختيار طبيب
     doctorsSelect.addEventListener("change", function () {
         const selectedDoctor = doctorsSelect.options[doctorsSelect.selectedIndex];
         const availableDays = JSON.parse(selectedDoctor.dataset.days || "[]");
+        const price = selectedDoctor.dataset.price;
 
-        daySelect.innerHTML = "<option selected disabled>اختر اليوم</option>";
-        timeSelect.innerHTML = "<option selected disabled>اختر الوقت</option>";
+        daySelect.innerHTML = "<option selected disabled>اختر اليوم 📅</option>";
+        timeSelect.innerHTML = "<option selected disabled>اختر الوقت ⏰</option>";
 
         availableDays.forEach((day) => {
             const dates = getNextDates(day);
@@ -520,18 +527,31 @@
                 daySelect.innerHTML += `<option value="${day}">${day} - ${date}</option>`;
             });
         });
+
+        if (price) {
+            doctorPrice.textContent = `${price} جنيه`;
+            priceContainer.style.display = "flex";
+        } else {
+            priceContainer.style.display = "none";
+        }
     });
 
-    // حساب تواريخ الأيام القادمة
     function getNextDates(dayName) {
         const daysOfWeek = {
-            "الأحد": 0, "الإثنين": 1, "الثلاثاء": 2,
-            "الأربعاء": 3, "الخميس": 4, "الجمعة": 5, "السبت": 6
+            "الأحد": 0,
+            "الإثنين": 1,
+            "الثلاثاء": 2,
+            "الأربعاء": 3,
+            "الخميس": 4,
+            "الجمعة": 5,
+            "السبت": 6
         };
 
         const today = new Date();
+        let currentDay = today.getDay();
         let targetDay = daysOfWeek[dayName];
-        let difference = targetDay - today.getDay();
+
+        let difference = targetDay - currentDay;
         if (difference < 0) difference += 7;
 
         const firstDate = new Date();
@@ -546,12 +566,11 @@
         ];
     }
 
-    // عند اختيار يوم
     daySelect.addEventListener("change", function () {
         const selectedDoctor = doctorsSelect.options[doctorsSelect.selectedIndex];
         const availableTimes = JSON.parse(selectedDoctor.dataset.times || "{}");
 
-        timeSelect.innerHTML = "<option selected disabled>اختر الوقت</option>";
+        timeSelect.innerHTML = "<option selected disabled>اختر الوقت ⏰</option>";
 
         if (availableTimes[this.value]) {
             availableTimes[this.value].forEach((time) => {
@@ -560,72 +579,105 @@
         }
     });
 
-    // التحقق من رقم الهاتف
     phoneInput.addEventListener("input", function () {
         const phoneRegex = /^(010|011|012|015)[0-9]{8}$/;
         if (!phoneRegex.test(phoneInput.value)) {
+            phoneError.style.display = "block";
+            phoneError.textContent = "رقم الهاتف غير صحيح";
             phoneInput.style.borderColor = "red";
+            phoneInput.style.backgroundColor = "#f8d7da";
         } else {
+            phoneError.style.display = "none";
             phoneInput.style.borderColor = "";
+            phoneInput.style.backgroundColor = "";
         }
     });
 
-    // عند إرسال النموذج
     bookingForm.addEventListener("submit", function (event) {
         event.preventDefault();
+
+        const nameInput = document.getElementById("vertical-name");
+        const phone = phoneInput.value.trim();
+        const selectedSpecialty = specialtiesSelect.value;
+        const selectedDoctor = doctorsSelect.value;
+        const selectedDay = daySelect.value;
+        const selectedTime = timeSelect.value;
+        const doctorPriceValue = doctorPrice.textContent || "غير محدد";
+        const selectedDoctorOption = doctorsSelect.options[doctorsSelect.selectedIndex];
+        const doctorContact = selectedDoctorOption ? (selectedDoctorOption.dataset.whatsapp || selectedDoctorOption.dataset.phone) : '';
+
         let hasError = false;
 
-        function validateField(input) {
-            if (!input.value.trim() || input.value.includes("اختر")) {
-                input.style.borderColor = "red";
-                hasError = true;
-            } else {
-                input.style.borderColor = "";
-            }
+        function setError(inputElement) {
+            inputElement.style.borderColor = "red";
+            inputElement.style.backgroundColor = "#f8d7da";
+            hasError = true;
         }
 
-        [nameInput, phoneInput, specialtiesSelect, doctorsSelect, daySelect, timeSelect].forEach(validateField);
+        function clearError(inputElement) {
+            inputElement.style.borderColor = "";
+            inputElement.style.backgroundColor = "";
+        }
 
-        if (hasError) return;
+        if (!nameInput.value.trim()) {
+            setError(nameInput);
+        } else {
+            clearError(nameInput);
+        }
 
-        const selectedDoctor = doctorsSelect.options[doctorsSelect.selectedIndex];
-        const doctorContact = selectedDoctor.dataset.whatsapp || selectedDoctor.dataset.phone;
+        if (!phone) {
+            setError(phoneInput);
+        } else {
+            clearError(phoneInput);
+        }
+
+        if (!selectedSpecialty || selectedSpecialty === "اختر التخصص 🏥") {
+            setError(specialtiesSelect);
+        } else {
+            clearError(specialtiesSelect);
+        }
+
+        if (!selectedDoctor || selectedDoctor === "اختر الطبيب 🩺") {
+            setError(doctorsSelect);
+        } else {
+            clearError(doctorsSelect);
+        }
+
+        if (!selectedDay || selectedDay === "اختر اليوم 📅") {
+            setError(daySelect);
+        } else {
+            clearError(daySelect);
+        }
+
+        if (!selectedTime || selectedTime === "اختر الوقت ⏰") {
+            setError(timeSelect);
+        } else {
+            clearError(timeSelect);
+        }
+
+        if (hasError) {
+            return;
+        }
+
         const selectedDayText = daySelect.options[daySelect.selectedIndex].text;
-        const formattedTime = formatTime(timeSelect.value);
+        const formattedTime = formatTime(selectedTime);
 
         const message = `
         👤 الاسم: ${nameInput.value.trim()}
-        📞 رقم الهاتف: ${phoneInput.value.trim()}
+        📞 رقم الهاتف: ${phone}
         📅 اليوم: ${selectedDayText} 
         🕓 الوقت: ${formattedTime} 
         🩺 التخصص: ${specialtiesSelect.options[specialtiesSelect.selectedIndex].text}
-        👨‍⚕️ الطبيب: ${selectedDoctor.textContent}
+        👨‍⚕️ الطبيب: ${doctorsSelect.options[doctorsSelect.selectedIndex].text}
+        💰 سعر الكشف: ${doctorPriceValue}
         `;
 
-        window.open(`https://wa.me/${doctorContact}?text=${encodeURIComponent(message)}`, "_blank");
+        const whatsappLink = `https://wa.me/${doctorContact}?text=${encodeURIComponent(message)}`;
+        window.open(whatsappLink, "_blank");
     });
-
-    // تحويل الوقت إلى تنسيق 12 ساعة
-    function formatTime(time) {
-        if (!time.includes(":")) return "غير محدد";
-
-        let [hours, minutes] = time.split(":").map(Number);
-        let period = hours >= 12 ? "مساءً" : "صباحاً";
-
-        if (hours > 12) hours -= 12;
-        if (hours === 0) hours = 12;
-
-        return `${hours}:${minutes.toString().padStart(2, "0")} ${period}`;
-    }
-
-    function resetSelection() {
-        daySelect.innerHTML = "<option selected disabled>اختر اليوم</option>";
-        timeSelect.innerHTML = "<option selected disabled>اختر الوقت</option>";
-    }
 
     fetchSpecialties();
 });
-
 
     </script>
 </body>

@@ -6,7 +6,22 @@
     max-width: 1200px;
     margin: auto;
 }
-
+#book-info{
+    background-color: #eeecec;
+    margin-top: 5%;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+@media screen and (max-width: 768px) {
+    #book-info{
+        width: 100%;
+    }
+    #book-info select{
+        width: 100%;
+    }
+}
 #doctor-info, #booking-form {
     flex: 1;
     background-color: #eeecec;

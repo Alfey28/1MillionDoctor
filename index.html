@@ -127,6 +127,54 @@
 #vertical-timeSelect {
     order: 2; /* الوقت بعد اليوم */
 }
+/* جعل الاسم ورقم الهاتف في نفس الصف */
+.input-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+    justify-content: space-between;
+}
+
+.input-row .form-control {
+    width: 48%;
+}
+
+/* جعل جميع القوائم المنسدلة في نفس الصف */
+.select-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+    justify-content: space-between;
+}
+
+.select-row .custom-select {
+    width: 24%;
+}
+
+/* تحسين استجابة التصميم على الشاشات الصغيرة */
+@media screen and (max-width: 768px) {
+    .input-row, .select-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input-row .form-control,
+    .select-row .custom-select {
+        width: 100%;
+    }
+}
+
+/* تحسين استجابة التصميم على الشاشات الصغيرة */
+@media screen and (max-width: 768px) {
+    .input-row, .select-row {
+        flex-direction: column;
+    }
+
+    .input-row .form-control,
+    .select-row .custom-select {
+        width: 100%;
+    }
+}
 
 /* تحسين استجابة التصميم للشاشات الصغيرة */
 @media screen and (max-width: 768px) {
@@ -144,6 +192,7 @@
         gap: 10px;
     }
 }
+
 .Surgical-section {
     position: relative;
     padding: 60px 20px;
@@ -296,47 +345,46 @@
                 
                 <div class="rounded h-100 d-flex flex-column p-5 booking-section">
                     <p id="error-message" style="display: none; color: red; text-align: center; font-weight: bold; margin-bottom: 10px;"></p>
-                    
-                    <form id="bookingForm" novalidate>
-
-                        <input type="text" id="name" class="form-control" placeholder="👤 الاسم" required>
-    
-                        <input type="text" id="phone" class="form-control" placeholder="📞 رقم الهاتف" required maxlength="11">
                 
-                        <div class="select-wrapper">
+                    <form id="bookingForm" novalidate>
+                
+                        <!-- كل الـ select في سطر مستقل -->
+                        <div class="select-row">
+                            <select id="timeSelect" class="custom-select" required>
+                                <option selected disabled> اختر الوقت ⏰</option>
+                            </select>
+                
+                            <select id="daySelect" class="custom-select" required>
+                                <option selected disabled> اختر اليوم 📅</option>
+                            </select>
+
+                            
                             <select id="doctor" class="custom-select" required>
                                 <option selected disabled> اختر الطبيب 🩺</option>
                             </select>
-                        </div>
-                    
-                        <div class="select-wrapper">
+                            
                             <select id="specialty-input" class="custom-select" required>
                                 <option selected disabled> اختر التخصص 🏥</option>
                             </select>
                         </div>
 
-                        <div class="select-wrapper">
-                            <select id="timeSelect" class="custom-select" required>
-                                <option selected disabled> اختر الوقت ⏰</option>
-                            </select>
-                        </div>
-
-                        <div class="select-wrapper">
-                            <select id="daySelect" class="custom-select" required>
-                                <option selected disabled> اختر اليوم 📅</option>
-                            </select>
+                        <!-- الاسم ورقم الهاتف في سطر مستقل -->
+                        <div class="input-row">
+                            <input type="text" id="phone" class="form-control" placeholder="📞 رقم الهاتف" required maxlength="11">
+                            <input type="text" id="name" class="form-control" placeholder="👤 الاسم" required>
                         </div>
                 
-    
                         <div class="price-container" id="priceContainer" style="display: none;">
-                            <span id="doctorPriceLabel" style="color: rgb(245, 207, 152); font-weight: bold; font-size: 25px;">سعر الكشف : </span>
-                            <span id="doctorPrice" style="color: rgb(245, 207, 152); font-weight: bold; font-size: 25px;"></span>
+                            <span id="doctorPriceLabel">سعر الكشف :</span>
+                            <span id="doctorPrice"></span>
                             <span id="currency-symbol"></span>
                         </div>
                 
                         <button class="btn-primary" type="submit">احجز الآن</button>
                     </form>
                 </div>
+                
+                
             
             </div>
         </div>
