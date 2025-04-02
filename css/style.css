@@ -187,12 +187,6 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    z-index: 2;
-    padding: 2rem;
-}
-.header-text h1 p {
-    text-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-    font-size: 3rem;
 }
 .custom-btn {
     border: none;
@@ -483,7 +477,7 @@ select:focus {
     letter-spacing: 0.8px;
     transition: transform 0.5s ease-in-out, text-shadow 0.3s ease-in-out;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-    transform: scale(0.8);
+    transform: scale(0.6);
     opacity: 0;
 }
 .offer-text span {
@@ -762,26 +756,22 @@ select:focus {
 @media (max-width: 768px) {
     .header-text-h1 {
         font-size: 1.8rem; /* تصغير حجم h1 للشاشات الصغيرة */
-        top: 35%; /* تحديد مكان h1 في منتصف الشاشة */
     }
 
     .header-text-p {
         font-size: 1rem; /* تصغير حجم النص p */
-        top: 3%; /* مساحة أكبر من أعلى الشاشة */
-        right: 5%; /* مسافة معقولة من اليمين */
+
     }
 }
 
 @media (max-width: 480px) {
     .header-text-h1 {
         font-size: 1.5rem; /* تصغير حجم h1 أكثر للشاشات الصغيرة جدًا */
-        top: 20%; /* تقليل المسافة بين h1 وأعلى السكشن */
     }
 
     .header-text-p {
         font-size: 0.9rem; /* تصغير حجم p بشكل أكبر */
-        top: 15%; /* تعديل المسافة من أعلى السكشن */
-        right: 10%;
+
     }
 }
 
@@ -796,7 +786,6 @@ select:focus {
     text-align: center;
     gap: 15px; /* مسافة بين الصفوف */
 }
-
 
 /* ✅ الصف الأول: الاسم ورقم الهاتف */
 .input-row {
@@ -1056,15 +1045,13 @@ select:focus {
 .form-control, .custom-select {
     min-width: 20%;
 }
-
-
-
 .Surgical-section {
+    direction: rtl;
     position: relative;
     padding: 60px 20px;
     text-align: center;
     color: white;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/img/surgi.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://github.com/Alfey28/1MillionDoctor/blob/main/img/surgi.jpg?raw=true');
     background-size: cover;
     background-position: center;
     border-radius: 15px;
