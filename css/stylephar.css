@@ -1,18 +1,119 @@
 .pharmacies{
     direction: rtl;
-    width: 100%;
-    background-color: rgb(212, 212, 211);
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    cursor: pointer;
 }
-.pharmacies h1{
-    color: #007BFF;
-    margin: 0;
+.pharmacy{
+    color: #043FF9;
+    font-weight: bold;
+    font-size: 35px;
+    margin: 3%;
 }
-.pharmacies img{
-    max-width: 100%;
+.pharmacy-item {
+    background-color: #d1d1d191;
+    display: flex;
+    border: 2px solid #afafaf;
+    padding: 20px;
+    margin: 20px;
     border-radius: 8px;
-    margin-top: 10px;
+  }
+  
+  .pharmacy-info {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .pharmacy-images {
+    direction: ltr;
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .pharmacy-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 3%;
+    margin-bottom: 10px;
+    transition: transform 0.5s ease;
+  }
+  
+  .pharmacy-image:hover {
+    transform: scale(2.2); /* تأثير التكبير عند التمرير */
+  }
+  
+  .pharmacy-item h2 {
+    color: rgb(44, 47, 196);
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 30px;
+  }
+  
+  .pharmacy-info p {
+    margin: 5px 0;
+  }
+  
+  .pharmacy-info a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .pharmacy-info a:hover {
+    text-decoration: underline;
+  }
+  /* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .pharmacy-item {
+        flex-direction: column; /* تغيير الاتجاه إلى عمودي */
+        align-items: center; /* توسيط المحتوى */
+    }
+
+    .pharmacy-info {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .pharmacy-images {
+        margin-left: 0;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .pharmacy-image {
+        width: 80px; /* تقليص حجم الصورة */
+        height: 80px;
+        margin-right: 0;
+        margin-bottom: 10px;
+        margin-right: 10px;
+    }
+
+    .pharmacy {
+        font-size: 28px; /* تصغير حجم النص */
+    }
+
+    h2 {
+        font-size: 24px; /* تصغير حجم عنوان الصيدلية */
+    }
+}
+
+@media (max-width: 480px) {
+    .pharmacy-item {
+        padding: 15px; /* تقليص المسافة بين المحتويات */
+    }
+
+    .pharmacy-info {
+        padding: 0;
+    }
+
+    .pharmacy-image {
+        width: 70px; /* تقليص حجم الصورة أكثر */
+        height: 70px;
+    }
+
+    .pharmacy {
+        font-size: 22px; /* تصغير حجم النص أكثر */
+    }
+
+    h2 {
+        font-size: 20px; /* تصغير حجم عنوان الصيدلية */
+    }
 }

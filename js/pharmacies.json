@@ -2,48 +2,46 @@
     {
       "اسم الصيدلية": "صيدلية الأمل",
       "صور": [
-        "https://example.com/image1.jpg",
-        "https://example.com/image2.jpg",
-        "https://example.com/image3.jpg"
+        "img/phar1.jpg",
+        "img/phar2.jpg",
+        "img/phar3.jpg"
       ],
       "رقم الخط الساخن": "16888",
-      "الفرع": "الفرع الرئيسي",
+      "الفرع": " المقطم",
       "موقع": "https://maps.google.com/?q=30.0444,31.2357",
       "رقم الهاتف": "0221234567"
     },
     {
       "اسم الصيدلية": "صيدلية الحياة",
       "صور": [
-        "https://example.com/image1.jpg",
-        "https://example.com/image2.jpg",
-        "https://example.com/image3.jpg"
+        "img/phar4.jpg",
+        "img/phar5.jpg"
       ],
       "رقم الخط الساخن": "16128",
-      "الفرع": "فرع الزمالك",
+      "الفرع": " الزمالك",
       "موقع": "https://maps.google.com/?q=30.0460,31.2200",
       "رقم الهاتف": "0227890123"
     },
     {
       "اسم الصيدلية": "صيدلية الشفاء",
       "صور": [
-        "https://example.com/image1.jpg",
-        "https://example.com/image2.jpg"
+        "img/phar6.jpg",
+        "img/phar7.jpg",
+        "img/phar8.jpg"
       ],
       "رقم الخط الساخن": "16777",
-      "الفرع": "فرع المعادي",
+      "الفرع": " المعادي",
       "موقع": "https://maps.google.com/?q=29.9765,31.2305",
       "رقم الهاتف": "0231234567"
     },
     {
       "اسم الصيدلية": "صيدلية الفاروق",
       "صور": [
-        "https://example.com/image1.jpg",
-        "https://example.com/image2.jpg",
-        "https://example.com/image3.jpg",
-        "https://example.com/image4.jpg"
+        "img/phar9.jpg",
+        "img/phar10.jpg"
       ],
       "رقم الخط الساخن": "16555",
-      "الفرع": "فرع مدينة نصر",
+      "الفرع": " مدينة نصر",
       "موقع": "https://maps.google.com/?q=30.0625,31.3200",
       "رقم الهاتف": "0225678901"
     }

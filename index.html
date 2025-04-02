@@ -39,244 +39,6 @@
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <style>
-/* جعل الحقول تأخذ العرض الكامل على الشاشات الصغيرة، ونصف العرض على الشاشات الكبيرة */
-.vertical-input, .vertical-select {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 12px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    font-size: 16px;
-}
-/* ضبط الفورم داخل القسم وعدم انتقاله للأعلى */
-.vertical-booking-section {
-    display: inline-block;
-    padding: 20px;
-    border-radius: 15px;
-    vertical-align: top;
-    width: 50%;
-    position: relative;
-}
-
-.contact-section {
-    display: inline-block;
-    vertical-align: top;
-    width: 50%;
-}
-
-/* تحسين استجابة التصميم على الشاشات الصغيرة */
-@media screen and (max-width: 768px) {
-    .vertical-booking-section, .contact-section {
-        width: 100%;
-        display: block; /* يخلي كل واحد ياخد سطر كامل */
-        text-align: center; /* يخلي العناصر متنسقة كويس */
-    }
-    
-    .contact-section div {
-        margin: 0 auto; /* يضمن أن المحتوى يبقى في المنتصف */
-        max-width: 400px; /* تحديد عرض أقصى لتحسين المظهر */
-    }
-}
-
-#vertical-bookingForm {
-    direction: rtl;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background: #34559B;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
-    width: 100%;
-    text-align: center;
-}
-
-.vertical-btn {
-    width: 100%;
-    background: #F33232;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.vertical-btn:hover {
-    background-color: rgb(194, 40, 40);
-}
-
-/* جعل كل حقلين Select يظهران بجانب بعض */
-.select-wrapper {
-    width: 48%;
-}
-
-/* ترتيب الحقول بالظبط */
-#vertical-specialty-input {
-    order: -2; /* التخصص يطلع فوق */
-}
-
-#vertical-doctor {
-    order: -1; /* الطبيب بعد التخصص */
-}
-
-#vertical-daySelect {
-    order: 1; /* اليوم بعد الطبيب */
-}
-
-#vertical-timeSelect {
-    order: 2; /* الوقت بعد اليوم */
-}
-
-/* جعل الاسم ورقم الهاتف في نفس الصف */
-/* جعل الاسم ورقم الهاتف في نفس الصف */
-.input-row {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 12px;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    width: 100%;
-}
-
-.input-row .form-control {
-    width: 48%;
-}
-
-/* جعل التخصص والطبيب في نفس الصف */
-.select-row-1 {
-    gap: 10px;
-    margin-bottom: 12px;
-
-}
-
-.select-row-1 .custom-select {
-    width: 1%;
-}
-
-/* جعل اليوم والوقت في نفس الصف */
-.select-row-2 {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 12px;
-    justify-content: space-between;
-
-}
-
-.select-row-2 .custom-select {
-    width: 48%;
-}
-
-/* تحسين استجابة التصميم على الشاشات الصغيرة */
-@media screen and (max-width: 768px) {
-    .input-row,
-    .select-row-1,
-    .select-row-2 {
-        flex-direction: row; /* التأكد من بقاء العناصر في نفس السطر */
-        flex-wrap: wrap; /* يسمح بتوزيعهم عند الحاجة */
-        align-items: center;
-    }
-
-    .input-row .form-control,
-    .select-row-1 .custom-select,
-    .select-row-2 .custom-select {
-        width: 48%;
-    }
-}
-
-/* ضمان عدم تمدد الحقول بشكل غير متوقع */
-.form-control, .custom-select {
-    min-width: 20%;
-}
-
-
-
-.Surgical-section {
-    position: relative;
-    padding: 60px 20px;
-    text-align: center;
-    color: white;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/surgi.jpg');
-    background-size: cover;
-    background-position: center;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    height: 30vh;
-    margin-bottom: 5%;
-}
-.Surgical-section h3{
-    color: rgb(255, 255, 255);
-    font: 40px bold ;
-}
-
-/* توسيط الفلتر */
-.filter-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 15px;
-    border-radius: 10px;
-    width: 80%; /* يمكن تعديله حسب الحاجة */
-    margin-top: 3%;
-}
-
-/* زر العرض */
-#show-button {
-    background: #F33232;
-    color: white;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-#show-button:hover {
-    background: #a30808;
-}
-
-/* تنسيق القوائم المنسدلة */
-#procedure-select, #specialty-select {
-    width: 48%;
-    padding: 12px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    font-size: 16px;
-    background: white;
-    cursor: pointer;
-}
-
-/* استجابة للشاشات الصغيرة */
-@media screen and (max-width: 768px) {
-    .Surgical-section {
-        padding: 40px 15px;
-        height: 450px; /* زيادة الارتفاع لتناسب المحتوى */
-    }
-
-    .filter-container {
-        flex-direction: column;
-        align-items: center;
-        width: 90%;
-    }
-
-    #procedure-select, #specialty-select {
-        width: 100%;
-    }
-}
-
-
-
-
-    </style>
 </head>
 
 
@@ -343,11 +105,17 @@
                 <p class="text-white header-text-p mb-4">رعاية صحية لحياة أفضل</p>
                 
                 
-                <div class="rounded h-100 d-flex flex-column p-5 booking-section">
+                <div class="rounded d-flex flex-column p-5 booking-section">
                     <p id="error-message" style="display: none; color: red; text-align: center; font-weight: bold; margin-bottom: 10px;"></p>
                 
                     <form id="bookingForm" novalidate>
                 
+                        <!-- الاسم ورقم الهاتف في سطر مستقل -->
+                        <div class="input-row">
+                            <input type="text" id="phone" class="form-control" placeholder="📞 رقم الهاتف" required maxlength="11">
+                            <input type="text" id="name" class="form-control" placeholder="👤 الاسم" required>
+                        </div>
+
                         <!-- كل الـ select في سطر مستقل -->
                         <div class="select-row">
                             <select id="timeSelect" class="custom-select" required>
@@ -367,13 +135,7 @@
                                 <option selected disabled> اختر التخصص </option>
                             </select>
                         </div>
-
-                        <!-- الاسم ورقم الهاتف في سطر مستقل -->
-                        <div class="input-row">
-                            <input type="text" id="phone" class="form-control" placeholder="📞 رقم الهاتف" required maxlength="11">
-                            <input type="text" id="name" class="form-control" placeholder="👤 الاسم" required>
-                        </div>
-                
+               
                         <div class="price-container" id="priceContainer" style="display: none;">
                             <span id="doctorPriceLabel">سعر الكشف :</span>
                             <span id="doctorPrice"></span>

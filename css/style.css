@@ -19,35 +19,6 @@ body {
     width: 100%;
     overflow-x: hidden;
 }
-.header-text-p {
-    position: absolute;
-    font-size: 30px;
-    font-weight: bold;
-    right: 3%; /* تحريكها ناحية اليمين */
-    top: 5%; /* تثبيتها للأعلى */
-    white-space: nowrap;
-}
-
-/* تحسينات للشاشات الصغيرة */
-@media screen and (max-width: 768px) {
-    .header-text-p {
-        font-size: 30px; /* تصغير الخط قليلاً */
-        top: 5%; /* تعديل الموضع */
-        right: 3%;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .header-text-p {
-        font-size: 45px; /* تصغير الخط أكثر */
-        top: 5%; /* تقليل المسافة من الأعلى */
-        right: 3%;
-    }
-}
-
-
-
-
 .filter-container {
     display: flex;
     gap: 20px;
@@ -752,112 +723,7 @@ select:focus {
 .footer .specialty-column a {
     margin-bottom: 10px;
 }
-@media (max-width: 768px) {
-    
-    .filter-container {
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-        align-items: center;
-    }
-    .filter-container button,
-    .filter-container select {
-        width: 80%;
-    }
-    #specialty-select {
-        order: 1;
-    }
-    #procedure-select {
-        order: 2;
-    }
-    #show-button {
-        order: 3;
-    }
-    .price-container {
-        text-align: center;
-    }
-    #doctorPriceLabel {
-        font-size: 14px;
-        margin-left: 0;
-    }
-    #doctorPrice {
-        font-size: 20px;
-    }
-    #currency-symbol {
-        font-size: 22px;
-    }
-    .offer-text {
-        font-size: 22px;
-        width: 90%;
-        letter-spacing: 0.5px;
-        white-space: normal;
-        text-align: center;
-    }
-    .offer-text span {
-        font-size: 24px;
-    }
-    .container {
-        padding: 20px;
-    }
-    .title-text {
-        text-align: center;
-        font-size: 24px;
-    }
-    .form-control,
-    .form-select {
-        font-size: 14px;
-    }
-    .options {
-        position: relative;
-        left: -10%;
-        width: 20%;
-    }
-    .btn-register {
-        position: relative;
-        left: -13%;
-        width: 70%;
-    }
-    .footer .row {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .footer .col-info,
-    .footer .col-links {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-    .footer .specialties {
-        width: 100%;
-    }
-}
-@media (max-width: 480px) {
-    .header-text h1 {
-        font-size: 1.5rem;
-    }
-    .filter-container button,
-    .filter-container select {
-        width: 90%;
-    }
-    #doctorPriceLabel {
-        font-size: 12px;
-    }
-    #doctorPrice,
-    .footer h5 {
-        font-size: 18px;
-    }
-    #currency-symbol,
-    .offer-text span {
-        font-size: 20px;
-    }
-    .offer-text {
-        font-size: 18px;
-        width: 100%;
-    }
-    .footer .btn,
-    .footer .specialty-column a {
-        font-size: 16px;
-    }
-}
+
 .copyright {
     background-color: #1b2c51;
     color: #fff;
@@ -866,96 +732,182 @@ select:focus {
     text-decoration: none;
     color: #fff;
 }
-
-.header-section {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.header-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    width: 100%;
+.header-section{
+    margin-bottom: 5%;
 }
 .header-text-h1 {
     position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-style: italic;
-    color: #ffffff;
-    font-size: 25px;
+    top: 40%; /* لتوسيط العنصر عموديًا */
+    left: 50%; /* لتوسيط العنصر أفقيًا */
+    transform: translate(-50%, -50%); /* لتحسين التوسيط التام */
+    font-size: 40px; /* حجم الخط أكبر في الشاشات الكبيرة */
     font-weight: bold;
+    color: white;
     text-align: center;
+    z-index: 2;
 }
 
-/* للشاشات المتوسطة (التابلت) */
-@media screen and (max-width: 1024px) {
+/* النص الذي تحت h1 (الـ p) */
+.header-text-p {
+    position: absolute;
+    top: 5%; /* في أعلى السكشن */
+    right: 2%; /* في الجهة اليمنى */
+    font-size: 20px; /* حجم الخط مناسب */
+    font-weight: bold;
+    color: white;
+    z-index: 2;
+}
+
+/* تحسين العرض على الشاشات الصغيرة */
+@media (max-width: 768px) {
     .header-text-h1 {
-        font-size: 35px;
-        top: 38%;
+        font-size: 1.8rem; /* تصغير حجم h1 للشاشات الصغيرة */
+        top: 35%; /* تحديد مكان h1 في منتصف الشاشة */
+    }
+
+    .header-text-p {
+        font-size: 1rem; /* تصغير حجم النص p */
+        top: 3%; /* مساحة أكبر من أعلى الشاشة */
+        right: 5%; /* مسافة معقولة من اليمين */
     }
 }
 
-/* للشاشات الصغيرة (الموبايل) */
-/* للشاشات الصغيرة (الموبايل) */
-@media screen and (max-width: 768px) {
+@media (max-width: 480px) {
     .header-text-h1 {
-        font-size: 28px;
-        top: 25%; /* رفعه لفوق شوية */
-        width: 80%; /* عشان يفضل مظبوط */
+        font-size: 1.5rem; /* تصغير حجم h1 أكثر للشاشات الصغيرة جدًا */
+        top: 20%; /* تقليل المسافة بين h1 وأعلى السكشن */
+    }
+
+    .header-text-p {
+        font-size: 0.9rem; /* تصغير حجم p بشكل أكبر */
+        top: 15%; /* تعديل المسافة من أعلى السكشن */
+        right: 10%;
     }
 }
 
 
-/* للشاشات الأصغر جدًا */
-@media screen and (max-width: 480px) {
-    .header-text-h1 {
-        position: absolute;
-        top: 40%;
-        left: 1%;
-        font-size: 24px;
-    }
-}
-
+/* *********************************************************************************** */
 .booking-section {
+    position: relative;
+    margin-top: 25%;
+    background-color: rgba(52, 85, 155, 0.582);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    text-align: center;
+    gap: 15px; /* مسافة بين الصفوف */
+}
+
+
+/* ✅ الصف الأول: الاسم ورقم الهاتف */
+.input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+/* ✅ الصف الثاني: التخصص - الطبيب - اليوم - الوقت */
+.select-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 2%;
+}
+
+/* ✅ الصف الثالث: زر الحجز يأخذ العرض كاملاً */
+.btn-container {
     display: flex;
     justify-content: center;
-    padding: 20px;
-    border-radius: 15px;
-    margin-top: 25%;
-    width: 100%;
 }
 
-#bookingForm {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background: #164de46e;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
-    width: 100%;
-    text-align: center;
+.btn-primary {
+    margin-top: 2%;
+    width: 90%;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    background: #fc3939;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
 }
+
+.btn-primary:hover {
+    background: #f82525;
+    box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+/* 📱 تحسين استجابة التصميم للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .booking-section {
+        margin-top: 65%;
+    }
+
+    .input-row {
+        grid-template-columns: 1fr; /* الاسم والتلفون في عمود واحد */
+    }
+
+    .select-row {
+        grid-template-columns: 1fr 1fr; /* التخصص والطبيب في سطر واحد، اليوم والوقت في سطر واحد */
+    }
+
+    /* تبديل ترتيب التخصص مع اليوم */
+    .select-row select:nth-child(1) {
+        order: 3; /* اليوم يأتي أولًا */
+    }
+
+    .select-row select:nth-child(2) {
+        order: 4; /* الوقت يأتي ثانيًا */
+    }
+
+    .select-row select:nth-child(3) {
+        order: 1; /* التخصص يأتي ثالثًا */
+    }
+
+    .select-row select:nth-child(4) {
+        order: 2; /* الطبيب يأتي رابعًا */
+    }
+}
+
+@media (max-width: 480px) {
+    .booking-section {
+        margin-top: 25%;
+    }
+
+    .select-row {
+        grid-template-columns: 1fr; /* كل عنصر في سطر مستقل */
+    }
+
+    /* تبديل ترتيب التخصص مع اليوم */
+    .select-row select:nth-child(1) {
+        order: 3; /* اختر الوقت يأتي أولًا */
+    }
+
+    .select-row select:nth-child(2) {
+        order: 4; /* اختر التخصص يأتي ثانيًا */
+    }
+
+    .select-row select:nth-child(3) {
+        order: 1; /* اختر الطبيب يأتي ثالثًا */
+    }
+
+    .select-row select:nth-child(4) {
+        order: 2; /* اختر اليوم يأتي رابعًا */
+    }
+
+    .btn-primary {
+        width: 100%; /* الزر يأخذ العرض بالكامل على الشاشات الصغيرة */
+    }
+}
+
+
+
+
+/* *********************************************************************************** */
 
 /* جعل الحقول تأخذ العرض الكامل على الشاشات الصغيرة، ونصف العرض على الشاشات الكبيرة */
-.form-control, .custom-select {
+.vertical-input, .vertical-select {
     width: 100%;
     padding: 12px;
     margin-bottom: 12px;
@@ -963,9 +915,50 @@ select:focus {
     border-radius: 8px;
     font-size: 16px;
 }
+/* ضبط الفورم داخل القسم وعدم انتقاله للأعلى */
+.vertical-booking-section {
+    display: inline-block;
+    padding: 20px;
+    border-radius: 15px;
+    vertical-align: top;
+    width: 50%;
+    position: relative;
+}
 
-/* زر الحجز */
-.btn-primary {
+.contact-section {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+}
+
+/* تحسين استجابة التصميم على الشاشات الصغيرة */
+@media screen and (max-width: 768px) {
+    .vertical-booking-section, .contact-section {
+        width: 100%;
+        display: block; /* يخلي كل واحد ياخد سطر كامل */
+        text-align: center; /* يخلي العناصر متنسقة كويس */
+    }
+    
+    .contact-section div {
+        margin: 0 auto; /* يضمن أن المحتوى يبقى في المنتصف */
+        max-width: 400px; /* تحديد عرض أقصى لتحسين المظهر */
+    }
+}
+
+#vertical-bookingForm {
+    direction: rtl;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: #34559B;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
+    width: 100%;
+    text-align: center;
+}
+
+.vertical-btn {
     width: 100%;
     background: #F33232;
     color: white;
@@ -976,49 +969,172 @@ select:focus {
     font-weight: bold;
     cursor: pointer;
 }
-.btn-primary:hover{
-    background-color: #a30808;
+
+.vertical-btn:hover {
+    background-color: rgb(194, 40, 40);
 }
-/*==================== MEDIA QUERIES ====================*/
 
-@media screen and (max-width: 768px) {
-    .booking-section {
-        width: 100%;
-        position: absolute;
-        top: 5%;
-    }
+/* جعل كل حقلين Select يظهران بجانب بعض */
+.select-wrapper {
+    width: 48%;
 }
+
+/* ترتيب الحقول بالظبط */
+#vertical-specialty-input {
+    order: -2; /* التخصص يطلع فوق */
+}
+
+#vertical-doctor {
+    order: -1; /* الطبيب بعد التخصص */
+}
+
+#vertical-daySelect {
+    order: 1; /* اليوم بعد الطبيب */
+}
+
+#vertical-timeSelect {
+    order: 2; /* الوقت بعد اليوم */
+}
+
+/* جعل الاسم ورقم الهاتف في نفس الصف */
+/* جعل الاسم ورقم الهاتف في نفس الصف */
+.input-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.input-row .form-control {
+    width: 48%;
+}
+
+/* جعل التخصص والطبيب في نفس الصف */
+.select-row-1 {
+    gap: 10px;
+    margin-bottom: 12px;
+
+}
+
+.select-row-1 .custom-select {
+    width: 1%;
+}
+
+/* جعل اليوم والوقت في نفس الصف */
+.select-row-2 {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+    justify-content: space-between;
+
+}
+
+.select-row-2 .custom-select {
+    width: 48%;
+}
+
+/* تحسين استجابة التصميم على الشاشات الصغيرة */
 @media screen and (max-width: 768px) {
-    #bookingForm {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
+    .input-row,
+    .select-row-1,
+    .select-row-2 {
+        flex-direction: row; /* التأكد من بقاء العناصر في نفس السطر */
+        flex-wrap: wrap; /* يسمح بتوزيعهم عند الحاجة */
+        align-items: center;
     }
 
-    /* تنسيق الاسم ورقم الهاتف في نفس الصف */
-    .input-row {
-        display: flex;
-        justify-content: space-between;
-        gap: 10px;
-        width: 100%;
-    }
-
-    .input-row .form-control {
+    .input-row .form-control,
+    .select-row-1 .custom-select,
+    .select-row-2 .custom-select {
         width: 48%;
     }
-
-    /* جعل جميع الـ select في نفس الصف */
-    .select-row {
-        display: flex;
-        justify-content: space-between;
-        gap: 10px;
-        width: 100%;
-    }
-
-    .select-row .custom-select {
-        width: 24%; /* جعل كل اختيار يأخذ ربع المساحة */
-    }
 }
 
+/* ضمان عدم تمدد الحقول بشكل غير متوقع */
+.form-control, .custom-select {
+    min-width: 20%;
+}
+
+
+
+.Surgical-section {
+    position: relative;
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/surgi.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    height: 30vh;
+    margin-bottom: 5%;
+}
+.Surgical-section h3{
+    color: rgb(255, 255, 255);
+    font: 40px bold ;
+}
+
+/* توسيط الفلتر */
+.filter-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    width: 80%; /* يمكن تعديله حسب الحاجة */
+    margin-top: 3%;
+}
+
+/* زر العرض */
+#show-button {
+    background: #F33232;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#show-button:hover {
+    background: #a30808;
+}
+
+/* تنسيق القوائم المنسدلة */
+#procedure-select, #specialty-select {
+    width: 48%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background: white;
+    cursor: pointer;
+}
+
+/* استجابة للشاشات الصغيرة */
+@media screen and (max-width: 768px) {
+    .Surgical-section {
+        padding: 40px 15px;
+        height: 450px; /* زيادة الارتفاع لتناسب المحتوى */
+    }
+
+    .filter-container {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+
+    #procedure-select, #specialty-select {
+        width: 100%;
+    }
+}
