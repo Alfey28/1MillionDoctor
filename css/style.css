@@ -1064,7 +1064,7 @@ select:focus {
     padding: 60px 20px;
     text-align: center;
     color: white;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/surgi.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/img/surgi.jpg');
     background-size: cover;
     background-position: center;
     border-radius: 15px;
