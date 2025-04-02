@@ -648,7 +648,7 @@ select:focus {
     padding: 10px;
     border-radius: 10px;
     text-align: center;
-    width: 100px;
+    width: 60%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
 }
 .btn-register,
@@ -739,6 +739,7 @@ select:focus {
     color: white;
     text-align: center;
     z-index: 2;
+    margin-bottom: 15%;
 }
 
 /* النص الذي تحت h1 (الـ p) */
@@ -756,6 +757,7 @@ select:focus {
 @media (max-width: 768px) {
     .header-text-h1 {
         font-size: 1.8rem; /* تصغير حجم h1 للشاشات الصغيرة */
+        margin-bottom: 15%;
     }
 
     .header-text-p {
@@ -767,6 +769,7 @@ select:focus {
 @media (max-width: 480px) {
     .header-text-h1 {
         font-size: 1.5rem; /* تصغير حجم h1 أكثر للشاشات الصغيرة جدًا */
+        margin-bottom: 15%;
     }
 
     .header-text-p {
@@ -838,7 +841,7 @@ select:focus {
     }
 
     .select-row {
-        grid-template-columns: 1fr 1fr; /* التخصص والطبيب في سطر واحد */
+        grid-template-columns: 1fr 1fr; /* اليوم والوقت في سطر واحد، التخصص والطبيب في سطر واحد */
         display: grid;
         gap: 10px; /* مسافة بين العناصر */
     }
@@ -863,7 +866,7 @@ select:focus {
 
 @media (max-width: 480px) {
     .booking-section {
-        margin-top: 70%; /* تغيير المسافة العلوية إلى 25% */
+        margin-top: 70%; /* تغيير المسافة العلوية إلى 20% */
     }
 
     .input-row {
@@ -871,32 +874,34 @@ select:focus {
     }
 
     .select-row {
-        grid-template-columns: 1fr; /* كل عنصر في سطر مستقل */
+        grid-template-columns: 1fr 1fr; /* اليوم والوقت في سطر، التخصص والطبيب في سطر تحتهم */
         display: grid;
         gap: 10px; /* مسافة بين العناصر */
     }
 
     /* تخصيص ترتيب العناصر في select-row */
     .select-row select:nth-child(1) {
-        order: 3; /* اختر الوقت يأتي أولًا */
+        order: 3; /* اليوم يأتي أولًا */
     }
 
     .select-row select:nth-child(2) {
-        order: 4; /* اختر التخصص يأتي ثانيًا */
+        order: 4; /* الوقت يأتي ثانيًا */
     }
 
     .select-row select:nth-child(3) {
-        order: 1; /* اختر الطبيب يأتي ثالثًا */
+        order: 1; /* التخصص يأتي ثالثًا */
     }
 
     .select-row select:nth-child(4) {
-        order: 2; /* اختر اليوم يأتي رابعًا */
+        order: 2; /* الطبيب يأتي رابعًا */
     }
 
     .btn-primary {
         width: 100%; /* الزر يأخذ العرض بالكامل على الشاشات الصغيرة */
     }
 }
+
+
 
 
 
