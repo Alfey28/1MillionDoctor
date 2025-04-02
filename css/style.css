@@ -637,6 +637,10 @@ select:focus {
     top: 50%;
     transform: translateY(-50%);
 }
+.bg-img{
+    margin-top: 3%;
+    background-color: rgba(255, 255, 255, 0.699);
+}
 .options {
     display: flex;
     gap: 15px;
@@ -648,7 +652,7 @@ select:focus {
     padding: 10px;
     border-radius: 10px;
     text-align: center;
-    width: 60%;
+    width: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
 }
 .btn-register,
