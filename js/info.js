@@ -99,7 +99,7 @@ function updateSlider() {
         if (i >= diseases.length) break;
         const disease = diseases[i];
         const li = document.createElement('li');
-        li.innerHTML = `<a href="#">${disease.title}</a>
+        li.innerHTML = `<h4 style= "color:#024791;">${disease.title}</h4>
                         <p class="hidden-answer">${disease.answer}</p>`;
         list.appendChild(li);
     }
