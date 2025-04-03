@@ -3,10 +3,11 @@
 
 <head>
     <meta charset="utf-8">
-    <title>المقالات الطبية</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="عيادة، مستشفى، طبيب، صحة" name="keywords">
-    <meta content="قالب موقع عيادة حديث ومتجاوب" name="description">
+    <title>المعلومات الطبية - أفضل مصدر للصحة والعلاج والاستشارات الطبية</title>  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <meta name="keywords" content="طبيب، أطباء، عيادة، مستشفى، رعاية صحية، استشارة طبية، علاج، جراحة، طب، صيدلية، أدوية، تحاليل طبية، أشعة، أسنان، تجميل، أمراض مزمنة، تغذية، صحة الطفل، صحة المرأة، رعاية طبية، طوارئ، وقاية، نصائح طبية">  
+    <meta name="description" content="اكتشف أحدث المعلومات الطبية الموثوقة، واستشارات الأطباء، وأفضل العيادات والمستشفيات، وخدمات الرعاية الصحية المتكاملة في مختلف التخصصات الطبية.">  
+
 
     <!-- Favicon -->
     <link href="img/faviconinfo.png" rel="icon">
@@ -30,6 +31,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
     <!-- Template Stylesheet -->
+     <link rel="stylesheet" href="css/styleinfo.css">
     <link href="css/style.css" rel="stylesheet">
 
     <!-- Swiper CSS -->
@@ -85,6 +87,83 @@
         </div>
     </nav>
     <!-- Navbar End -->
+
+
+
+    <main>
+        <!-- مقدمة الصفحة -->
+        <section id="intro">
+            <h1>مرحبًا بك في موسوعتك الطبية الشاملة!</h1>
+            <p>اكتشف أحدث المعلومات الطبية الموثوقة، واستشارات الأطباء، وأفضل العيادات والمستشفيات، وخدمات الرعاية الصحية المتكاملة.</p>
+        </section>
+    
+        <!-- مقالات طبية مميزة -->
+        <section id="articles-container">
+            <h2 id="article-title">عنوان المقال هنا</h2>
+            <p id="article-answer">إجابة المقال هنا...</p>
+            <div id="article-images"></div>
+        </section>
+    
+        <!-- نصائح طبية يومية -->
+        <section id="daily-tips">
+            <h2>💡 نصيحة طبية يومية</h2>
+            <p id="daily-tip">نصيحة طبية هنا...</p>
+            <div id="tip-images"></div>
+        </section>
+    
+        <!-- حساب مؤشر الجسم -->
+        <section id="bmi-calculator">
+            <h2>📏 حاسبة مؤشر كتلة الجسم (BMI)</h2>
+            <form id="bmi-form">
+                <label for="weight">الوزن (بالكيلوجرام):</label>
+                <input type="number" id="weight" required min="1" placeholder="مثال: 70">
+                
+                <label for="height">الطول (بالمتر):</label>
+                <input type="number" id="height" step="0.01" required min="0.50" max="3.00" placeholder="مثال: 1.75">
+                
+                <button type="submit">حساب BMI</button>
+            </form>
+            <div id="bmi-result">
+                <h3>نتيجتك:</h3>
+                <p id="bmi-value"></p>
+                <p id="bmi-category"></p>
+            </div>
+        </section>
+               
+
+        <!-- موسوعة الأمراض -->
+        <section id="diseases-slider">
+            <h2>📚 موسوعة الأمراض</h2>
+            <div class="slider-container">
+                <button id="prevBtn">◀</button>
+                <div class="diseases-wrapper">
+                    <ul id="diseases-list"></ul>
+                </div>
+                <button id="nextBtn">▶</button>
+            </div>
+        </section>
+    
+        <!-- استشارة طبيبك -->
+        <section id="ask-doctor">
+            <h2>🩺 حجز كشف طبي</h2>
+            <p>يمكنك من خلال موقع 1MillionDoctor حجز كشفك مع دكتورك المفضل في مختلف التخصصات وجميع الأماكن بسهولة.</p>
+            <a href="index.html#amount"><button> أحجز كشفك الآن</button></a>
+        </section>
+    
+        <!-- أسئلة شائعة -->
+        <!-- <section id="faq">
+            <h2>❓ أسئلة شائعة</h2>
+            <ul>
+                <li><strong>ما الفرق بين نزلات البرد والإنفلونزا؟</strong></li>
+                <li><strong>ما هي الفحوصات الدورية التي يجب القيام بها؟</strong></li>
+            </ul>
+        </section> -->
+    </main>
+    
+
+
+
+
 
 
 
@@ -159,10 +238,6 @@
     <!-- Footer End -->
 
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
-
-
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -177,6 +252,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/info.js"></script>
 </body>
 
 </html>
