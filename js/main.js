@@ -145,26 +145,23 @@ document.addEventListener("DOMContentLoaded", function () {
     const priceContainer = document.getElementById("priceContainer");
     const doctorPrice = document.getElementById("doctorPrice");
     const phoneInput = document.getElementById("phone");
-    const phoneError = document.getElementById("phoneError");
+    const phoneError = document.getElementById("error-message");
     const bookingForm = document.getElementById("bookingForm");
 
     let specialtiesData = [];
 
-    // تحميل التخصصات والأطباء
     async function fetchSpecialties() {
         try {
             const response = await fetch("js/specialties.json");
             specialtiesData = await response.json();
-            console.log("تم تحميل التخصصات بنجاح:", specialtiesData); // طباعة التخصصات
             populateSpecialties();
         } catch (error) {
             console.error("فشل تحميل بيانات التخصصات:", error);
         }
     }
 
-    // تعبئة قائمة التخصصات
     function populateSpecialties() {
-        specialtiesSelect.innerHTML = "<option selected disabled>اختر التخصص</option>";
+        specialtiesSelect.innerHTML = "<option selected disabled>اختر التخصص </option>";
         specialtiesData.forEach((specialty) => {
             const option = document.createElement("option");
             option.value = specialty.id;
@@ -173,18 +170,15 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // عند اختيار تخصص
     specialtiesSelect.addEventListener("change", function () {
-        console.log("تم اختيار التخصص:", this.value); // طباعة التخصص المختار
         const selectedSpecialty = specialtiesData.find((s) => s.id === this.value);
         updateDoctorsList(selectedSpecialty);
     });
 
-    // تحديث قائمة الأطباء بناءً على التخصص
     function updateDoctorsList(selectedSpecialty) {
-        doctorsSelect.innerHTML = "<option selected disabled>اختر الطبيب</option>";
-        daySelect.innerHTML = "<option selected disabled>اختر اليوم</option>";
-        timeSelect.innerHTML = "<option selected disabled>اختر الوقت</option>";
+        doctorsSelect.innerHTML = "<option selected disabled>اختر الطبيب </option>";
+        daySelect.innerHTML = "<option selected disabled>اختر اليوم </option>";
+        timeSelect.innerHTML = "<option selected disabled>اختر الوقت </option>";
         priceContainer.style.display = "none";
 
         if (selectedSpecialty && selectedSpecialty.doctors) {
@@ -202,17 +196,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // عند اختيار طبيب
     doctorsSelect.addEventListener("change", function () {
         const selectedDoctor = doctorsSelect.options[doctorsSelect.selectedIndex];
         const availableDays = JSON.parse(selectedDoctor.dataset.days || "[]");
         const price = selectedDoctor.dataset.price;
 
-        console.log("تم اختيار الطبيب:", selectedDoctor.textContent); // طباعة الطبيب المختار
-        console.log("الأيام المتاحة:", availableDays); // طباعة الأيام المتاحة
-
-        daySelect.innerHTML = "<option selected disabled>اختر اليوم</option>";
-        timeSelect.innerHTML = "<option selected disabled>اختر الوقت</option>";
+        daySelect.innerHTML = "<option selected disabled>اختر اليوم </option>";
+        timeSelect.innerHTML = "<option selected disabled>اختر الوقت </option>";
 
         availableDays.forEach((day) => {
             const dates = getNextDates(day);
@@ -259,14 +249,11 @@ document.addEventListener("DOMContentLoaded", function () {
         ];
     }
 
-    // عند اختيار يوم
     daySelect.addEventListener("change", function () {
-        console.log("تم اختيار اليوم:", this.value); // طباعة اليوم المختار
-
         const selectedDoctor = doctorsSelect.options[doctorsSelect.selectedIndex];
         const availableTimes = JSON.parse(selectedDoctor.dataset.times || "{}");
 
-        timeSelect.innerHTML = "<option selected disabled>اختر الوقت</option>";
+        timeSelect.innerHTML = "<option selected disabled>اختر الوقت </option>";
 
         if (availableTimes[this.value]) {
             availableTimes[this.value].forEach((time) => {
@@ -275,22 +262,29 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // التحقق من رقم الهاتف
-    phoneInput.addEventListener("input", function () {
-        const phoneRegex = /^(010|011|012|015)[0-9]{8}$/;
-        if (!phoneRegex.test(phoneInput.value)) {
-            phoneError.style.display = "block";
-            phoneError.textContent = "رقم الهاتف غير صحيح";
-            phoneInput.style.borderColor = "red";
-            phoneInput.style.backgroundColor = "#f8d7da";
-        } else {
-            phoneError.style.display = "none";
-            phoneInput.style.borderColor = "";
-            phoneInput.style.backgroundColor = "";
-        }
-    });
+    // إضافة التحقق من صحة رقم الهاتف
+    if (phoneError) {
+        phoneInput.addEventListener("input", function () {
+            const phoneRegex = /^(010|011|012|015)[0-9]{8}$/; // التحقق من رقم الهاتف
+            if (!phoneRegex.test(phoneInput.value)) {
+                phoneError.style.display = "block";
+                phoneInput.style.borderColor = "red";  // تغيير لون الحدود للون الأحمر
+                phoneInput.style.backgroundColor = "#f8d7da";  // تغيير لون الخلفية للون الأحمر الفاتح
+                phoneInput.style.color = "red";  // تغيير لون النص للون الأحمر
+            } else {
+                phoneError.style.display = "none";
+                phoneInput.style.borderColor = "";  // إلغاء تلوين الحدود
+                phoneInput.style.backgroundColor = "";  // إلغاء تلوين الخلفية
+                phoneInput.style.color = "";  // إلغاء تلوين النص
+            }
+        });
+    }
 
-    // التحقق من صحة الحجز قبل الإرسال
+    // إضافة دالة formatTime
+    function formatTime(time) {
+        return time;  // يمكنك تعديل التنسيق بناءً على الحاجة
+    }
+
     bookingForm.addEventListener("submit", function (event) {
         event.preventDefault();
 
@@ -302,37 +296,37 @@ document.addEventListener("DOMContentLoaded", function () {
         const selectedTime = timeSelect.value;
         const doctorPriceValue = doctorPrice.textContent || "غير محدد";
         const selectedDoctorOption = doctorsSelect.options[doctorsSelect.selectedIndex];
-        const doctorContact = selectedDoctorOption ? (selectedDoctorOption.dataset.whatsapp || selectedDoctorOption.dataset.phone) : '';
+        let doctorContact = selectedDoctorOption ? (selectedDoctorOption.dataset.whatsapp || selectedDoctorOption.dataset.phone) : '';
 
         let hasError = false;
 
-        // دالة لضبط تنسيق الأخطاء
+        // دالة لإظهار الخطأ في الحقول
         function setError(inputElement) {
             inputElement.style.borderColor = "red";
             inputElement.style.backgroundColor = "#f8d7da";
             hasError = true;
         }
 
-        // دالة لإزالة الأخطاء عند التصحيح
         function clearError(inputElement) {
             inputElement.style.borderColor = "";
             inputElement.style.backgroundColor = "";
         }
 
-        // التحقق من كل الحقول النصية
+        // التحقق من صحة جميع الحقول
         if (!nameInput.value.trim()) {
             setError(nameInput);
         } else {
             clearError(nameInput);
         }
 
-        if (!phone) {
+        // التحقق من رقم الهاتف
+        const phoneRegex = /^(010|011|012|015)[0-9]{8}$/;
+        if (!phone || !phoneRegex.test(phone)) {
             setError(phoneInput);
         } else {
             clearError(phoneInput);
         }
 
-        // التحقق من الـ Select (التخصص - الطبيب - اليوم - الوقت)
         if (!selectedSpecialty || selectedSpecialty === "اختر التخصص") {
             setError(specialtiesSelect);
         } else {
@@ -357,63 +351,45 @@ document.addEventListener("DOMContentLoaded", function () {
             clearError(timeSelect);
         }
 
-        // إيقاف الإرسال في حالة وجود خطأ
         if (hasError) {
-            return;
+            return;  // لا يتم الإرسال إذا كانت هناك خطأ
         }
 
         const selectedDayText = daySelect.options[daySelect.selectedIndex].text;
         const formattedTime = formatTime(selectedTime);
 
+        // بناء الرسالة
         const message = `
-        👤 الاسم: ${nameInput.value.trim()}
-        📞 رقم الهاتف: ${phone}
-        📅 اليوم: ${selectedDayText} 
-        🕓 الوقت: ${formattedTime} 
-        🩺 التخصص: ${specialtiesSelect.options[specialtiesSelect.selectedIndex].text}
-        👨‍⚕️ الطبيب: ${doctorsSelect.options[doctorsSelect.selectedIndex].text}
-        💰 سعر الكشف: ${doctorPriceValue}
+            👤 الاسم: ${nameInput.value.trim()}
+            📞 رقم الهاتف: ${phone}
+            📅 اليوم: ${selectedDayText} 
+            🕓 الوقت: ${formattedTime} 
+            🩺 التخصص: ${specialtiesSelect.options[specialtiesSelect.selectedIndex].text}
+            👨‍⚕️ الطبيب: ${doctorsSelect.options[doctorsSelect.selectedIndex].text}
+            💰 سعر الكشف: ${doctorPriceValue}
         `;
 
-        const whatsappLink = `https://wa.me/${doctorContact}?text=${encodeURIComponent(message)}`;
+        // إضافة رمز البلد إذا لم يكن موجودًا
+        if (doctorContact && !doctorContact.startsWith("+")) {
+            doctorContact = "+20" + doctorContact;  // إضافة رمز البلد لمصر
+        }
+
+        // التحقق من وجود رقم الهاتف/واتساب قبل بناء الرابط
+        if (!doctorContact) {
+            alert("لم يتم العثور على رقم الطبيب! يرجى التحقق من الرقم.");
+            return;
+        }
+
+        // بناء الرابط بشكل صحيح
+        const whatsappLink = `https://wa.me/${doctorContact}?text=${encodeURIComponent(message.trim())}`;
+
+        // فتح الرابط في نافذة جديدة
         window.open(whatsappLink, "_blank");
     });
 
-    // تحويل الوقت إلى تنسيق 12 ساعة
-    // تحويل الوقت إلى تنسيق 12 ساعة
-function formatTime(time) {
-    if (!time || typeof time !== "string" || !time.includes(":")) {
-        return "غير محدد";  
-    }
-
-    let [hours, minutes] = time.split(":").map(Number);
-
-    if (isNaN(hours) || isNaN(minutes)) {
-        return "غير محدد";
-    }
-
-    let period = "صباحًا";
-
-    // تحويل إلى نظام 12 ساعة
-    if (hours >= 12) {
-        period = "مساءً";
-        if (hours > 12) {
-            hours -= 12;
-        }
-    } else if (hours === 0) {
-        hours = 12; // تحويل 00:00 إلى 12 صباحًا
-    }
-
-    return `${hours}:${minutes.toString().padStart(2, "0")} ${period}`;
-}
-
-    
-    
-    
-
-    // تحميل التخصصات عند فتح الصفحة
     fetchSpecialties();
 });
+
 //******************************************************************** */
     //   عرض الاطباء في صفحة index  // 
     fetch("js/doctors.json") // تأكد من المسار الصحيح للملف

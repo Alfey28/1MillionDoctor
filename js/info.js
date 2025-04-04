@@ -13,19 +13,25 @@ document.getElementById('bmi-form').addEventListener('submit', function(e) {
     const bmi = weight / (height * height);
     const bmiValue = document.getElementById('bmi-value');
     const bmiCategory = document.getElementById('bmi-category');
+    const bmiMessage = document.getElementById('bmi-message');
 
     bmiValue.innerText = `مؤشر كتلة الجسم: ${bmi.toFixed(2)}`;
 
     // تصنيف BMI
     if (bmi < 18.5) {
         bmiCategory.innerText = "الوزن تحت الطبيعي.";
+        bmiMessage.innerText = "يجب عليك زيادة وزنك. حاول تناول وجبات غنية بالعناصر الغذائية. الاهتمام بالصحة مهم جدًا. قد تحتاج لاستشارة طبيب أو مختص للتأكد من صحتك. احرص على تناول البروتينات والدهون الصحية.";
     } else if (bmi >= 18.5 && bmi < 24.9) {
         bmiCategory.innerText = "الوزن طبيعي.";
+        bmiMessage.innerText = "أنت في الوزن المثالي! حاول الحفاظ على نمط حياة صحي ومتوازن للحفاظ على صحتك. أكمل الرياضة المنتظمة للحفاظ على لياقتك البدنية. تناول طعام متوازن يضمن لك استمرارية الوزن المثالي.";
     } else if (bmi >= 25 && bmi < 29.9) {
         bmiCategory.innerText = "زيادة في الوزن.";
+        bmiMessage.innerText = "وزنك جيد، لكن قد لا يكون مثالي. ممارسة الرياضة والتمارين بشكل منتظم قد تساعد في تحسين لياقتك. احرص على تقليل تناول السكريات والمأكولات الدسمة. إذا استمرت الزيادة، قد يكون من الأفضل استشارة مختص.";
     } else {
         bmiCategory.innerText = "سمنة.";
+        bmiMessage.innerText = "يجب أن تهتم بصحتك وتعمل على تقليل الوزن. حاول اتباع نظام غذائي صحي مع ممارسة الرياضة. من المهم أن تبدأ بخطوات صغيرة لتحسين صحتك مثل المشي اليومي. قد تحتاج إلى مساعدة طبيب مختص في التغذية أو الرياضة.";
     }
+    
 });
 
 
@@ -54,6 +60,12 @@ async function loadContent() {
                 const img = document.createElement('img');
                 img.src = image;
                 img.alt = article.title;
+                
+                // إضافة CSS لتوحيد مقاس الصور
+                img.style.width = "250px"; // عرض الصورة
+                img.style.height = "180px"; // ارتفاع الصورة
+                img.style.objectFit = "cover"; // لضبط الصورة داخل المساحة المحددة بشكل جيد
+
                 articleImagesContainer.appendChild(img);
             });
         }
