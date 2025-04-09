@@ -408,7 +408,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             <div class="team-text text-center p-4">
                                 <h5>${doctor.name}</h5>
                                 <p class="special-color">${doctor.specialty}</p>
-                                <p class="address-color">${doctor.clinic_address}</p>
+                                <p class="address-color">${doctor.clinic_address1}</p>
                             </div>
                         </div>
                     </a>
