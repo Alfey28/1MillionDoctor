@@ -2,68 +2,66 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 20px; /* مسافة بين السكشنين */
-    max-width: 1200px;
-    margin: auto;
-}
-#book-info{
-    background-color: #eeecec;
-    margin-top: 5%;
-    padding: 20px;
-    border-radius: 10px;
-    width: 50%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
-}
-@media screen and (max-width: 768px) {
-    #book-info{
-        width: 100%;
-    }
-    #book-info select{
-        width: 100%;
-    }
-}
-#doctor-info, #booking-form {
-    flex: 1;
-    background-color: #eeecec;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    gap: 20px;
+    flex-wrap: wrap; /* يسمح بتغيير الاتجاه */
 }
 
-#doctor-info {
-    max-width: 45%;
-}
-
-#booking-form {
-    max-width: 45%;
-}
-
-/* استجابة للشاشات الصغيرة */
 @media screen and (max-width: 768px) {
     .container {
-        display: block;
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column-reverse; /* يجعل بيانات الدكتور تحت الفورم */
+        align-items: stretch; /* يجعل كل عنصر ياخذ العرض كامل */
     }
-    
-    #doctor-info, #booking-form {
-        max-width: 100%;
+
+    #book-info,
+    #doctor-info {
+        width: 100%;
     }
+}   
+
+#doctor-info, #book-info {
+    background-color: #eeecec;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    flex: 1;
+  }
+
+
+#book-info {
+    background-color: #eeecec;
+    margin-top: 30px; /* المسافة بين الأجزاء */
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
 }
 
+@media screen and (max-width: 768px) {
+    #doctor-info, #booking-form {
+        max-width: 100%; /* في الشاشات الصغيرة، العرض سيكون كامل */
+        margin-bottom: 20px;
+    }
+
+    #book-info {
+        width: 100%;
+    }
+}
 
 h2,
 main {
     direction: rtl;
 }
+
 body,
 ul {
     padding: 0;
 }
+
 #doctor-info a:hover,
 .doctor-card a:hover {
     color: #0056b3;
 }
+
 #doctor-info,
 main {
     max-width: 1000px;
@@ -73,15 +71,18 @@ main {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
 }
+
 #doctor-info,
 .doctor-card,
 header {
     text-align: center;
 }
+
 .doctor-info,
 h2 {
     text-align: right;
 }
+
 #doctor-info a,
 #doctor-info a:hover,
 #doctor-info p a,
@@ -89,6 +90,7 @@ h2 {
 .zoom-effect {
     text-decoration: none;
 }
+
 body {
     font-family: Tajawal;
     background-color: #f9f9f9;
@@ -96,48 +98,59 @@ body {
     margin: 0;
     line-height: 1.6;
 }
+
 header {
     background-color: #32bccb;
     color: #fff;
     padding: 20px;
 }
+
 header h1 {
     margin: 0;
     font-size: 2.5em;
     font-weight: 600;
 }
+
 #specialty-description {
     font-size: 1.1em;
     margin-bottom: 20px;
     color: #555;
 }
+
 .doc-section{
     margin-bottom: 20%;
 }
+
 .h2-style {
     font-weight: 700;
     font-size: 30px;
 }
+
 .text-color {
     color: #32bccb;
     font-weight: 700;
     font-size: 25px;
 }
+
 .location,
 .social-icon {
-    font-size: 30px;
+    font-size: 20px;
 }
+
 section {
     margin-bottom: 30px;
 }
+
 h2 {
     font-size: 1.8em;
     color: #007bff;
     margin-bottom: 10px;
 }
+
 ul {
     list-style-type: none;
 }
+
 ul li {
     margin: 8px 0;
     padding: 10px;
@@ -145,9 +158,11 @@ ul li {
     font-size: 1.1em;
     transition: background-color 0.3s;
 }
+
 ul li:hover {
     background-color: #e7f3ff;
 }
+
 #doctors-list {
     display: flex;
     flex-wrap: wrap;
@@ -156,45 +171,54 @@ ul li:hover {
     gap: 20px;
     justify-content: center;
 }
+
 .doctor-card h3 {
     font-size: 1.3em;
     color: #333;
     margin: 10px 0;
 }
+
 .doctor-card p {
     color: #777;
     font-size: 1em;
     margin: 5px 0;
 }
+
 .doctor-card a {
     color: #007bff;
     margin: 5px;
 }
+
 section h2 {
     border-bottom: 2px solid #e0e0e0;
     padding-bottom: 10px;
 }
+
 @media (min-width: 1024px) {
     #doctors-list {
         grid-template-columns: repeat(4, 1fr);
     }
 }
+
 @media (max-width: 1023px) and (min-width: 768px) {
     #doctors-list {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
 @media (max-width: 767px) {
     #doctors-list {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
 .doctors-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     padding: 20px;
 }
+
 .doctor-card {
     width: 200px;
     background: #fff;
@@ -205,55 +229,63 @@ section h2 {
     transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
 }
+
 .doctor-card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
     border-radius: 10px;
 }
+
 #doctor-info a {
     color: #007bff;
 }
+
 .social-icon {
     transition: transform 0.3s;
 }
+
 .social-icon:hover {
     transform: scale(1.3);
 }
+
 .zoom-effect {
     transition: transform 0.2s;
 }
-.doctor-info {
-    width: 50%;
-    margin-left: auto;
-}
+
 .doctor-card:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
 #doctor-info h1 {
     font-size: 2em;
     font-weight: 700;
     color: #007bff;
     margin-bottom: 20px;
 }
+
 #doctor-info p {
     font-size: 1.1em;
     margin: 10px 0;
 }
+
 #doctor-info img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
 }
+
 .zoom-effect:hover {
     transform: scale(1.4);
 }
+
 #doctor-info p a {
     display: inline-block;
     margin: 0 5px;
 }
+
 @media screen and (max-width: 1024px) {
     #doctor-info {
         width: 80%;
@@ -266,6 +298,7 @@ section h2 {
         height: 130px;
     }
 }
+
 @media screen and (max-width: 768px) {
     #doctor-info {
         width: 90%;
@@ -279,6 +312,7 @@ section h2 {
         height: 120px;
     }
 }
+
 @media screen and (max-width: 480px) {
     #doctor-info {
         width: 100%;
@@ -292,12 +326,14 @@ section h2 {
         height: 100px;
     }
 }
+
 .special-text {
     font-weight: 700;
     font-size: 15px;
     color: #000000dc;
     font-family: Cairo, sans-serif;
 }
+
 .procedure-divider {
     border: none;
     width: 80%;
@@ -305,4 +341,68 @@ section h2 {
     background-color: #444;
     margin: 50px 0;
     opacity: 0.4;
+}
+
+/* تعديل الـ CSS للقسم clinic-info بحيث يظهر تحت الأقسام الأخرى */
+.clinic-info {
+    direction: rtl;
+    display: block; /* لتعرض المحتوى في ترتيب عمودي */
+    margin-top: 30px; /* لضبط المسافة بين الأقسام */
+    width: 100%; /* تأكد من أنه يعرض المساحة الكاملة */
+}
+
+/* تعديل الـ CSS للصور داخل العيادة بحيث تظهر بشكل منسق */
+.image-gallery {
+    gap: 20px; /* إضافة مسافة بين الصور */
+    margin-top: 20px;
+}
+#before-after-images,
+#equipment-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.image-with-caption {
+    text-align: center;
+}
+
+.image-with-caption img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.image-caption {
+    margin-top: 8px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #353333;
+    background-color: #dddddd;
+    border-radius: 12px;
+}
+
+/* جعل الصور داخل المعرض متناسقة */
+.clinic-image {
+    width: 100%; /* عرض الصورة ليأخذ العرض الكامل */
+    max-width: 300px; /* تحديد الحد الأقصى للعرض */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+#clinic-details{
+    font-size: 30PX;
+    font-weight: bold;
+    
+}
+/* تأثير التحويم (hover) على الصور */
+.clinic-image:hover {
+    transform: scale(1.05);
+}
+
+/* إضافة بعض المسافات للقسم قبل الصورة */
+#clinic-details-container, #before-after-container, #equipment-container {
+    margin-bottom: 30px;
 }

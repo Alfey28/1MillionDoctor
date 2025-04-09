@@ -227,6 +227,9 @@
         width: 100%;
     }
 }
+    #vertical-clinic{
+        width: 70%;
+    }
         </style>
     </head>
 <body>
@@ -275,35 +278,23 @@
             <div class="vertical-booking-section">
                 <p id="vertical-error-message" style="display: none; color: red; text-align: center; font-weight: bold; margin-bottom: 10px;"></p>
                 <form id="vertical-bookingForm" class="vertical-form" novalidate>
-            
                     <input type="text" id="vertical-name" class="vertical-input" placeholder="👤 الاسم" required>
-            
                     <input type="text" id="vertical-phone" class="vertical-input" placeholder="📞 رقم الهاتف" required maxlength="11">
-            
-                    <div class="select-wrapper">
-                        <select id="vertical-specialty-input" class="vertical-select" required>
-                            <option selected disabled>اختر التخصص</option>
-                        </select>
+                    <div class="select-wrapper w-100 mb-3">
+                        <select id="vertical-clinic" required>
+                            <option selected disabled> اختر العيادة </option>
+                          </select>
                     </div>
-            
-                    <div class="select-wrapper">
-                        <select id="vertical-doctor" class="vertical-select" required>
-                            <option selected disabled> اختر الطبيب </option>
-                        </select>
-                    </div>
-    
                     <div class="select-wrapper">
                         <select id="vertical-daySelect" class="vertical-select" required>
                             <option selected disabled> اختر اليوم </option>
                         </select>
                     </div>
-                    
                     <div class="select-wrapper">
                         <select id="vertical-timeSelect" class="vertical-select" required>
                             <option selected disabled> اختر الوقت </option>
                         </select>
                     </div>
-            
                     <div class="price-container" id="vertical-priceContainer" style="display: none;">
                         <span id="vertical-doctorPriceLabel" style="color: rgb(245, 207, 152); font-weight: bold; font-size: 25px;">سعر الكشف : </span>
                         <span id="vertical-doctorPrice" style="color: rgb(245, 207, 152); font-weight: bold; font-size: 25px;"></span>
@@ -312,27 +303,28 @@
                     <button class="vertical-btn" type="submit">احجز الآن</button>
                 </form>
             </div>
+            
         </div>
-
+    
         <div id="doctor-info" class="doctor-info">
             <h1><span id="doctor-name"></span></h1>
             <img id="doctor-image" src="" alt="صورة الدكتور" style="width: 200px; height: 200px; border-radius: 50%;">
-        
+            
             <div id="specialty-container" class="special" style="display: none;">
-                <p  style="font-size: 25px;"><strong>التخصص:</strong> <span id="doctor-specialty" style="font-weight: bold;"></span></p>
-            </div> 
-    
-            <p>
-                <a class="location" id="clinic-address" href="#" target="_blank"></a>
-                <i class="fas fa-map-marker-alt zoom-effect" style="color: red;"></i>
+                <p style="font-size: 25px;"><strong>التخصص:</strong> <span id="doctor-specialty" style="font-weight: bold;"></span></p>
+            </div>
+            <p> 
+                <a class="location" id="clinic-address1" href="#" target="_blank"></a>
+                <i class="fas fa-map-marker-alt zoom-effect" style="color: red;"></i>   
+                <a class="location" id="clinic-address2" href="#" target="_blank"></a>
+                <i class="fas fa-map-marker-alt zoom-effect d-none" id="icon-location" style="color: red;"></i>
             </p>
-        
+            
             <p>
                 <span id="doctor-phone" class="phone-link d-inline"></span>
                 <i class="fas fa-phone zoom-effect" style="color: red;"></i>
             </p>
-        
-    
+            
             <div id="bio-container" style="display: none;">
                 <p><strong>السيرة الذاتية:</strong> <span id="doctor-bio"></span></p>
             </div>
@@ -349,7 +341,6 @@
                 <p><strong>البريد الإلكتروني:</strong> <span id="doctor-email"></span></p>
             </div>
             
-        
             <div id="social-container" style="display: none;">
                 <p>
                     <a href="#" id="doctor-instagram" target="_blank" style="display: none;">
@@ -366,9 +357,23 @@
                     </a>
                 </p>
             </div>
-            
         </div>
     </div>
+
+    <div class="container clinic-info">
+        <div id="clinic-details-container" style="display: none;">
+            <p><strong></strong> <span id="clinic-details"></span></p>
+        </div>
+        
+        <div id="before-after-container" style="display: none;">
+            <div id="before-after-images" class="images-grid"></div>
+        </div>
+        
+        <div id="equipment-container" style="display: none;">
+            <div id="equipment-images" class="images-grid"></div>
+        </div>
+    </div>
+    
 
 
     <!-- Footer Start -->
@@ -432,7 +437,7 @@
                     <img width="80%" src="img/O.png" alt="logo">
                     <ul style="direction: rtl;margin-top: 10%;">
                         <li class="fs-5">📞 : 01201233396</li>
-                        <li class="mt-3 fs-5">📍 : 79 أبراج النصر طريق النصر مدينة نصر</li>
+                        <li class="mt-3 fs-5">📍 : 79 أبراج طيبة طريق النصر مدينة نصر</li>
                     </ul>
                     <div class="d-flex mt-4">
                         <a href="https://www.instagram.com/emereldemarkting?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="btn btn-link" style="color: #E4405F;font-size: 30px;" target="_blank">
@@ -476,269 +481,5 @@
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
     <script src="js/docotors.js"></script>
     <script src="js/main.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-    const specialtiesSelect = document.getElementById("vertical-specialty-input");
-    const doctorsSelect = document.getElementById("vertical-doctor");
-    const daySelect = document.getElementById("vertical-daySelect");
-    const timeSelect = document.getElementById("vertical-timeSelect");
-    const priceContainer = document.getElementById("vertical-priceContainer");
-    const doctorPrice = document.getElementById("vertical-doctorPrice");
-    const phoneInput = document.getElementById("vertical-phone");
-    const phoneError = document.getElementById("phoneError");
-    const bookingForm = document.getElementById("vertical-bookingForm");
-
-    let specialtiesData = [];
-
-    async function fetchSpecialties() {
-        try {
-            const response = await fetch("js/specialties.json");
-            specialtiesData = await response.json();
-            populateSpecialties();
-        } catch (error) {
-            console.error("فشل تحميل بيانات التخصصات:", error);
-        }
-    }
-
-    function populateSpecialties() {
-        specialtiesSelect.innerHTML = "<option selected disabled>اختر التخصص </option>";
-        specialtiesData.forEach((specialty) => {
-            const option = document.createElement("option");
-            option.value = specialty.id;
-            option.textContent = specialty.name;
-            specialtiesSelect.appendChild(option);
-        });
-    }
-
-    specialtiesSelect.addEventListener("change", function () {
-        const selectedSpecialty = specialtiesData.find((s) => s.id === this.value);
-        updateDoctorsList(selectedSpecialty);
-    });
-
-    function updateDoctorsList(selectedSpecialty) {
-        doctorsSelect.innerHTML = "<option selected disabled>اختر الطبيب </option>";
-        daySelect.innerHTML = "<option selected disabled>اختر اليوم </option>";
-        timeSelect.innerHTML = "<option selected disabled>اختر الوقت </option>";
-        priceContainer.style.display = "none";
-
-        if (selectedSpecialty && selectedSpecialty.doctors) {
-            selectedSpecialty.doctors.forEach((doctor) => {
-                const option = document.createElement("option");
-                option.value = doctor.id;
-                option.textContent = doctor.name;
-                option.dataset.days = JSON.stringify(doctor.availableDays);
-                option.dataset.times = JSON.stringify(doctor.availableTimes);
-                option.dataset.price = doctor.price;
-                option.dataset.phone = doctor.phone;
-                option.dataset.whatsapp = doctor.whatsapp;
-                doctorsSelect.appendChild(option);
-            });
-        }
-    }
-
-    doctorsSelect.addEventListener("change", function () {
-        const selectedDoctor = doctorsSelect.options[doctorsSelect.selectedIndex];
-        const availableDays = JSON.parse(selectedDoctor.dataset.days || "[]");
-        const price = selectedDoctor.dataset.price;
-
-        daySelect.innerHTML = "<option selected disabled>اختر اليوم </option>";
-        timeSelect.innerHTML = "<option selected disabled>اختر الوقت </option>";
-
-        availableDays.forEach((day) => {
-            const dates = getNextDates(day);
-            dates.forEach(date => {
-                daySelect.innerHTML += `<option value="${day}">${day} - ${date}</option>`;
-            });
-        });
-
-        if (price) {
-            doctorPrice.textContent = `${price} جنيه`;
-            priceContainer.style.display = "flex";
-        } else {
-            priceContainer.style.display = "none";
-        }
-    });
-
-    function getNextDates(dayName) {
-        const daysOfWeek = {
-            "الأحد": 0,
-            "الإثنين": 1,
-            "الثلاثاء": 2,
-            "الأربعاء": 3,
-            "الخميس": 4,
-            "الجمعة": 5,
-            "السبت": 6
-        };
-
-        const today = new Date();
-        let currentDay = today.getDay();
-        let targetDay = daysOfWeek[dayName];
-
-        let difference = targetDay - currentDay;
-        if (difference < 0) difference += 7;
-
-        const firstDate = new Date();
-        firstDate.setDate(today.getDate() + difference);
-
-        const secondDate = new Date(firstDate);
-        secondDate.setDate(firstDate.getDate() + 7);
-
-        return [
-            firstDate.toLocaleDateString("ar-EG"),
-            secondDate.toLocaleDateString("ar-EG")
-        ];
-    }
-
-    daySelect.addEventListener("change", function () {
-        const selectedDoctor = doctorsSelect.options[doctorsSelect.selectedIndex];
-        const availableTimes = JSON.parse(selectedDoctor.dataset.times || "{}");
-
-        timeSelect.innerHTML = "<option selected disabled>اختر الوقت </option>";
-
-        if (availableTimes[this.value]) {
-            availableTimes[this.value].forEach((time) => {
-                timeSelect.innerHTML += `<option value="${time}">${time}</option>`;
-            });
-        }
-    });
-
-    // إضافة التحقق من صحة رقم الهاتف
-    if (phoneError) {
-        phoneInput.addEventListener("input", function () {
-    const phoneRegex = /^(010|011|012|015)[0-9]{8}$/; // التحقق من رقم الهاتف
-    if (!phoneRegex.test(phoneInput.value)) {
-        phoneError.style.display = "block";
-        phoneError.textContent = "رقم الهاتف يجب أن يبدأ بـ 010 أو 011 أو 012 أو 015 ويحتوي على 11 رقم.";
-        phoneInput.style.borderColor = "red";  // تغيير لون الحدود للون الأحمر
-        phoneInput.style.backgroundColor = "#f8d7da";  // تغيير لون الخلفية للون الأحمر الفاتح
-        phoneInput.style.color = "red";  // تغيير لون النص للون الأحمر
-    } else {
-        phoneError.style.display = "none";
-        phoneInput.style.borderColor = "";  // إلغاء تلوين الحدود
-        phoneInput.style.backgroundColor = "";  // إلغاء تلوين الخلفية
-        phoneInput.style.color = "";  // إلغاء تلوين النص
-    }
-});
-
-
-
-
-    }
-
-    // إضافة دالة formatTime
-    function formatTime(time) {
-        return time;  // يمكنك تعديل التنسيق بناءً على الحاجة
-    }
-
-    bookingForm.addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    const nameInput = document.getElementById("vertical-name");
-    const phone = phoneInput.value.trim();
-    const selectedSpecialty = specialtiesSelect.value;
-    const selectedDoctor = doctorsSelect.value;
-    const selectedDay = daySelect.value;
-    const selectedTime = timeSelect.value;
-    const doctorPriceValue = doctorPrice.textContent || "غير محدد";
-    const selectedDoctorOption = doctorsSelect.options[doctorsSelect.selectedIndex];
-    let doctorContact = selectedDoctorOption ? (selectedDoctorOption.dataset.whatsapp || selectedDoctorOption.dataset.phone) : '';
-
-    let hasError = false;
-
-    // دالة لإظهار الخطأ في الحقول
-    function setError(inputElement) {
-        inputElement.style.borderColor = "red";
-        inputElement.style.backgroundColor = "#f8d7da";
-        hasError = true;
-    }
-
-    function clearError(inputElement) {
-        inputElement.style.borderColor = "";
-        inputElement.style.backgroundColor = "";
-    }
-
-    // التحقق من صحة جميع الحقول
-    if (!nameInput.value.trim()) {
-        setError(nameInput);
-    } else {
-        clearError(nameInput);
-    }
-
-    // التحقق من رقم الهاتف
-    const phoneRegex = /^(010|011|012|015)[0-9]{8}$/;
-    if (!phone || !phoneRegex.test(phone)) {
-        setError(phoneInput);
-    } else {
-        clearError(phoneInput);
-    }
-
-    if (!selectedSpecialty || selectedSpecialty === "اختر التخصص") {
-        setError(specialtiesSelect);
-    } else {
-        clearError(specialtiesSelect);
-    }
-
-    if (!selectedDoctor || selectedDoctor === "اختر الطبيب") {
-        setError(doctorsSelect);
-    } else {
-        clearError(doctorsSelect);
-    }
-
-    if (!selectedDay || selectedDay === "اختر اليوم") {
-        setError(daySelect);
-    } else {
-        clearError(daySelect);
-    }
-
-    if (!selectedTime || selectedTime === "اختر الوقت") {
-        setError(timeSelect);
-    } else {
-        clearError(timeSelect);
-    }
-
-    if (hasError) {
-        return;  // لا يتم الإرسال إذا كانت هناك خطأ
-    }
-
-    const selectedDayText = daySelect.options[daySelect.selectedIndex].text;
-    const formattedTime = formatTime(selectedTime);
-
-    // بناء الرسالة
-    const message = `
-        👤 الاسم: ${nameInput.value.trim()}
-        📞 رقم الهاتف: ${phone}
-        📅 اليوم: ${selectedDayText} 
-        🕓 الوقت: ${formattedTime} 
-        🩺 التخصص: ${specialtiesSelect.options[specialtiesSelect.selectedIndex].text}
-        👨‍⚕️ الطبيب: ${doctorsSelect.options[doctorsSelect.selectedIndex].text}
-        💰 سعر الكشف: ${doctorPriceValue}
-    `;
-
-    // إضافة رمز البلد إذا لم يكن موجودًا
-    if (doctorContact && !doctorContact.startsWith("+")) {
-        doctorContact = "+20" + doctorContact;  // إضافة رمز البلد لمصر
-    }
-
-    // التحقق من وجود رقم الهاتف/واتساب قبل بناء الرابط
-    if (!doctorContact) {
-        alert("لم يتم العثور على رقم الطبيب! يرجى التحقق من الرقم.");
-        return;
-    }
-
-    // بناء الرابط بشكل صحيح
-    const whatsappLink = `https://wa.me/${doctorContact}?text=${encodeURIComponent(message.trim())}`;
-
-    // فتح الرابط في نافذة جديدة
-    window.open(whatsappLink, "_blank");
-});
-
-
-
-
-    fetchSpecialties();
-});
-
-
-    </script>
 </body>
 </html>

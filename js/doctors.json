@@ -3,7 +3,7 @@
         "id": 1,
         "name": " أحمد علي",
         "specialty": "أمراض القلب",
-        "clinic_address": "شارع التحرير، القاهرة",
+        "clinic_address1": "شارع التحرير، القاهرة",
         "phone": "01001234567",
         "rating": 4.8,
         "bio": "استشاري أمراض القلب والقسطرة القلبية، خبرة 15 عامًا.",
@@ -29,7 +29,7 @@
       "id": 2,
       "name": "محمد حسن",
       "specialty": " جراحة عامة",
-      "clinic_address": "شارع النصر، الإسكندرية",
+      "clinic_address1": "شارع النصر، الإسكندرية",
       "location":"",
       "phone": "01002345678",
       "rating": 4.7,
@@ -54,9 +54,9 @@
     },
     {
       "id": 3,
-      "name": "الدكتور/ فرحة",
+      "name": "دكتور فرحة",
       "specialty": " تجميل",
-      "clinic_address": " السراج مول, مدينة نصر",
+      "clinic_address1": " السراج مول, مدينة نصر",
       "location":"https://www.google.com/maps/place/Zoal+Restaurant+-+%D9%85%D8%B7%D8%B9%D9%85+%D8%B2%D9%88%D9%84%E2%80%AD/@30.0508022,31.3506012,17z/data=!4m6!3m5!1s0x14583ffbcdba991f:0x9224a173cb231866!8m2!3d30.0509215!4d31.3506594!16s%2Fg%2F11rjrwr97w?hl=en&entry=ttu&g_ep=EgoyMDI1MDMyMy4wIKXMDSoJLDEwMjExNjQwSAFQAw%3D%3D",
       "phone": "01157651377",
       "whatsapp": "01008518823",
@@ -77,7 +77,7 @@
       "id": 4,
       "name": "سامي عبد الله",
       "specialty": " جلدية",
-      "clinic_address": "شارع الجيش، المنصورة",
+      "clinic_address1": "شارع الجيش، المنصورة",
       "phone": "01004567890",
       "rating": 4.6,
       "bio": "خبير في أمراض القلب التداخلية، خبرة 18 عامًا.",
@@ -101,9 +101,9 @@
     },
     {
       "id": 5,
-      "name": "الدكتور/ وفاء نصر الله",
+      "name": "دكتور وفاء نصر الله",
       "specialty": "نفسية ",
-      "clinic_address": "شارع النصر أمام بنك مصر بنزينة عويد",
+      "clinic_address1": "شارع النصر أمام بنك مصر بنزينة عويد",
       "phone": "01080609963",
       "whatsapp":"01276217871",
       "rating": 4.8,
@@ -124,36 +124,49 @@
       "image": "img/وفاء نفسية.jpg"
     },
     {
-      "id": 6,
-      "name": "كريم الشرقاوي",
-      "specialty": " نساوتوليد",
-      "clinic_address": "شارع النزهة، القاهرة",
-      "phone": "01006789012",
+      "id": "1gyn",
+      "name": "دكتور سلوى بكري",
+      "specialty": " نساء و توليد",
+      "clinic_address1": "الزيتون 282 شارع ترعة الجبل",
+      "clinic_address2": "مترو عين شمس برج كايرو الناحيه الغربيه",
+      "phone": "01001207592",
+      "whatsapp":"01001207592",
       "rating": 4.5,
-      "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
+      "bio": " استشاري جراحة النساء و التوليد   ",
+      "clinicDetails": " العيادة مجهزة بأحدث الأجهزة في مجال النساء والتوليد  .", 
+        "beforeAfterImages": [
+          
+        ],
+        "equipmentImages": [
+          
+          {"src" : "img/سونار.jpeg", "caption" : "جهاز السونار الرباعي"},
+          {"src" : "img/يافطة.jpeg"},
+          {"src" : "img/عيادة.jpeg"},
+          {"src" : "img/جهاز.jpeg"},
+          {"src" : "img/دسلوى.jpeg"},
+          {"src" : "img/عيادة2.jpeg"},
+          {"src" : "img/عيادة3.jpeg"}
+        ],
       "experience": [
-        "ماجستير أمراض القلب",
-        "خبرة في زراعة القوقعة القلبية"
+        "إخصائي نساء وتوليد",
+        "خبرة ٣٥ عام"
       ],
       "services": [
-        "علاج فشل القلب",
-        "تركيب الدعامات القلبية",
-        "تشخيص أمراض القلب الوراثية"
+        "اختبارات الخصوبه للنساء",
+        "علاج تأخر الانجاب"
       ],
       "contact": {
-        "email": "karimsharkawy@clinic.com",
         "social": {
-          "facebook": "https://facebook.com/karimsharkawy",
-          "twitter": "https://twitter.com/karimsharkawy"
+          "facebook": "https://www.facebook.com/dr.salwa.bakry.clinic?rdid=y7tJZ46314AH0ZFi&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F15wAz1Lmz4%2F#"
         }
       },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor6.jpg?raw=true"
+      "image": "img/سلوى.jpeg"
     },
     {
       "id": 7,
       "name": "عمرو شفيق",
       "specialty": " تجميل",
-      "clinic_address": "شارع خليفة المأمون، القاهرة",
+      "clinic_address1": "شارع خليفة المأمون، القاهرة",
       "phone": "01006789012",
       "rating": 4.5,
       "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
@@ -179,7 +192,7 @@
       "id": 8,
       "name": "علي بيومي",
       "specialty": " أطفال",
-      "clinic_address": "شارع النصر، القاهرة",
+      "clinic_address1": "شارع النصر، القاهرة",
       "phone": "01006789012",
       "rating": 4.5,
       "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
@@ -205,7 +218,7 @@
       "id": 9,
       "name": " يوسف مصطفى",
       "specialty": " عظام",
-      "clinic_address": "شارع عباس العقاد، القاهرة",
+      "clinic_address1": "شارع عباس العقاد، القاهرة",
       "phone": "01006789012",
       "rating": 4.5,
       "bio": "أخصائي في علاج فشل القلب، خبرة 11 عامًا.",
