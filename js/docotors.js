@@ -380,22 +380,27 @@ function validateForm() {
 
     if (!name.value) {
         name.style.backgroundColor = '#fccbcb';
+        name.style.borderColor = 'red';
         allFieldsValid = false;
     }
     if (!phone.value) {
         phone.style.backgroundColor = '#fccbcb';
+        phone.style.borderColor = 'red';
         allFieldsValid = false;
     }
     if (!clinic.value || clinic.selectedIndex === 0) {  // تحقق إذا كانت العيادة غير مختارة
         clinic.style.backgroundColor = '#fccbcb';
+        clinic.style.borderColor = 'red';
         allFieldsValid = false;
     }
     if (!day.value || day.selectedIndex === 0) {  // تحقق إذا كان اليوم غير مختار
         day.style.backgroundColor = '#fccbcb';
+        day.style.borderColor = 'red';
         allFieldsValid = false;
     }
     if (!time.value || time.selectedIndex === 0) {  // تحقق إذا كان الوقت غير مختار
         time.style.backgroundColor = '#fccbcb';
+        time.style.borderColor = 'red';
         allFieldsValid = false;
     }
 

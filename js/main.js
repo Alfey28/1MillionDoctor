@@ -140,6 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     const specialtiesSelect = document.getElementById("specialty-input");
     const doctorsSelect = document.getElementById("doctor");
+    const clinicSelect = document.getElementById("clinic-select");
     const daySelect = document.getElementById("daySelect");
     const timeSelect = document.getElementById("timeSelect");
     const priceContainer = document.getElementById("priceContainer");
@@ -177,6 +178,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function updateDoctorsList(selectedSpecialty) {
         doctorsSelect.innerHTML = "<option selected disabled>اختر الطبيب </option>";
+        clinicSelect.innerHTML = "<option selected disabled>اختر العيادة </option>";
         daySelect.innerHTML = "<option selected disabled>اختر اليوم </option>";
         timeSelect.innerHTML = "<option selected disabled>اختر الوقت </option>";
         priceContainer.style.display = "none";
@@ -186,45 +188,83 @@ document.addEventListener("DOMContentLoaded", function () {
                 const option = document.createElement("option");
                 option.value = doctor.id;
                 option.textContent = doctor.name;
-                option.dataset.days = JSON.stringify(doctor.availableDays);
-                option.dataset.times = JSON.stringify(doctor.availableTimes);
-                option.dataset.price = doctor.price;
-                option.dataset.phone = doctor.phone;
-                option.dataset.whatsapp = doctor.whatsapp;
+                option.dataset.doctor = JSON.stringify(doctor);
                 doctorsSelect.appendChild(option);
             });
         }
     }
 
     doctorsSelect.addEventListener("change", function () {
-        const selectedDoctor = doctorsSelect.options[doctorsSelect.selectedIndex];
-        const availableDays = JSON.parse(selectedDoctor.dataset.days || "[]");
-        const price = selectedDoctor.dataset.price;
+        const selectedDoctorOption = doctorsSelect.options[doctorsSelect.selectedIndex];
+        const doctor = JSON.parse(selectedDoctorOption.dataset.doctor);
 
-        daySelect.innerHTML = "<option selected disabled>اختر اليوم </option>";
-        timeSelect.innerHTML = "<option selected disabled>اختر الوقت </option>";
+        populateClinics(doctor);
+        doctorPrice.textContent = `${doctor.price} جنيه`;
+        priceContainer.style.display = "flex";
+    });
 
-        availableDays.forEach((day) => {
-            const dates = getNextDates(day);
-            dates.forEach(date => {
-                daySelect.innerHTML += `<option value="${day}">${day} - ${date}</option>`;
-            });
+    function populateClinics(doctor) {
+        clinicSelect.innerHTML = '<option selected disabled>اختر العيادة</option>';
+        daySelect.innerHTML = '<option selected disabled>اختر اليوم</option>';
+        timeSelect.innerHTML = '<option selected disabled>اختر الوقت</option>';
+
+        const clinics = [
+            doctor.clinic1?.clinic_address1,
+            doctor.clinic2?.clinic_address2
+        ].filter(Boolean);
+
+        clinics.forEach(clinicAddress => {
+            const option = document.createElement('option');
+            option.value = clinicAddress;
+            option.textContent = clinicAddress;
+            clinicSelect.appendChild(option);
         });
 
-        if (price) {
-            doctorPrice.textContent = `${price} جنيه`;
-            priceContainer.style.display = "flex";
-        } else {
-            priceContainer.style.display = "none";
-        }
-    });
+        clinicSelect.addEventListener('change', function () {
+            const selectedClinic = clinicSelect.value;
+
+            let availableDays = [];
+            let availableTimes = [];
+
+            if (selectedClinic === doctor.clinic1?.clinic_address1) {
+                availableDays = doctor.clinic1?.availableDays || [];
+                availableTimes = doctor.clinic1?.availableTimes || [];
+            } else if (selectedClinic === doctor.clinic2?.clinic_address2) {
+                availableDays = doctor.clinic2?.availableDays || [];
+                availableTimes = doctor.clinic2?.availableTimes || [];
+            }
+
+            daySelect.innerHTML = '<option selected disabled>اختر اليوم</option>';
+            timeSelect.innerHTML = '<option selected disabled>اختر الوقت</option>';
+
+            availableDays.forEach(day => {
+                const daysWithDates = getNextDates(day);
+                daysWithDates.forEach(dayWithDate => {
+                    const option = document.createElement('option');
+                    option.value = dayWithDate.date;
+                    option.textContent = `${dayWithDate.day} - ${dayWithDate.date}`;
+                    daySelect.appendChild(option);
+                });
+            });
+
+            daySelect.addEventListener('change', function () {
+                timeSelect.innerHTML = '<option selected disabled>اختر الوقت</option>';
+                availableTimes.forEach(time => {
+                    const option = document.createElement('option');
+                    option.value = time;
+                    option.textContent = time;
+                    timeSelect.appendChild(option);
+                });
+            });
+        });
+    }
 
     function getNextDates(dayName) {
         const daysOfWeek = {
             "الأحد": 0,
-            "الإثنين": 1,
-            "الثلاثاء": 2,
-            "الأربعاء": 3,
+            "الأثنين": 1,
+            "الثلاث": 2,
+            "الأربع": 3,
             "الخميس": 4,
             "الجمعة": 5,
             "السبت": 6
@@ -244,151 +284,106 @@ document.addEventListener("DOMContentLoaded", function () {
         secondDate.setDate(firstDate.getDate() + 7);
 
         return [
-            firstDate.toLocaleDateString("ar-EG"),
-            secondDate.toLocaleDateString("ar-EG")
+            { day: dayName, date: firstDate.toLocaleDateString("ar-EG") },
+            { day: dayName, date: secondDate.toLocaleDateString("ar-EG") }
         ];
     }
 
-    daySelect.addEventListener("change", function () {
-        const selectedDoctor = doctorsSelect.options[doctorsSelect.selectedIndex];
-        const availableTimes = JSON.parse(selectedDoctor.dataset.times || "{}");
-
-        timeSelect.innerHTML = "<option selected disabled>اختر الوقت </option>";
-
-        if (availableTimes[this.value]) {
-            availableTimes[this.value].forEach((time) => {
-                timeSelect.innerHTML += `<option value="${time}">${time}</option>`;
-            });
-        }
-    });
-
-    // إضافة التحقق من صحة رقم الهاتف
+    // التحقق من صحة رقم الهاتف
     if (phoneError) {
         phoneInput.addEventListener("input", function () {
-            const phoneRegex = /^(010|011|012|015)[0-9]{8}$/; // التحقق من رقم الهاتف
+            const phoneRegex = /^(010|011|012|015)[0-9]{8}$/;
             if (!phoneRegex.test(phoneInput.value)) {
                 phoneError.style.display = "block";
-                phoneInput.style.borderColor = "red";  // تغيير لون الحدود للون الأحمر
-                phoneInput.style.backgroundColor = "#f8d7da";  // تغيير لون الخلفية للون الأحمر الفاتح
-                phoneInput.style.color = "red";  // تغيير لون النص للون الأحمر
+                phoneInput.style.borderColor = "red";
+                phoneInput.style.backgroundColor = "#f8d7da";
+                phoneInput.style.color = "red";
             } else {
                 phoneError.style.display = "none";
-                phoneInput.style.borderColor = "";  // إلغاء تلوين الحدود
-                phoneInput.style.backgroundColor = "";  // إلغاء تلوين الخلفية
-                phoneInput.style.color = "";  // إلغاء تلوين النص
+                phoneInput.style.borderColor = "";
+                phoneInput.style.backgroundColor = "";
+                phoneInput.style.color = "";
             }
         });
     }
 
-    // إضافة دالة formatTime
     function formatTime(time) {
-        return time;  // يمكنك تعديل التنسيق بناءً على الحاجة
+        return time;
     }
 
     bookingForm.addEventListener("submit", function (event) {
         event.preventDefault();
-
-        const nameInput = document.getElementById("name");
-        const phone = phoneInput.value.trim();
-        const selectedSpecialty = specialtiesSelect.value;
-        const selectedDoctor = doctorsSelect.value;
-        const selectedDay = daySelect.value;
-        const selectedTime = timeSelect.value;
-        const doctorPriceValue = doctorPrice.textContent || "غير محدد";
-        const selectedDoctorOption = doctorsSelect.options[doctorsSelect.selectedIndex];
-        let doctorContact = selectedDoctorOption ? (selectedDoctorOption.dataset.whatsapp || selectedDoctorOption.dataset.phone) : '';
-
+        
+        const fields = bookingForm.querySelectorAll("input, select");
         let hasError = false;
-
-        // دالة لإظهار الخطأ في الحقول
-        function setError(inputElement) {
-            inputElement.style.borderColor = "red";
-            inputElement.style.backgroundColor = "#f8d7da";
-            hasError = true;
-        }
-
-        function clearError(inputElement) {
-            inputElement.style.borderColor = "";
-            inputElement.style.backgroundColor = "";
-        }
-
-        // التحقق من صحة جميع الحقول
-        if (!nameInput.value.trim()) {
-            setError(nameInput);
-        } else {
-            clearError(nameInput);
-        }
-
-        // التحقق من رقم الهاتف
-        const phoneRegex = /^(010|011|012|015)[0-9]{8}$/;
-        if (!phone || !phoneRegex.test(phone)) {
-            setError(phoneInput);
-        } else {
-            clearError(phoneInput);
-        }
-
-        if (!selectedSpecialty || selectedSpecialty === "اختر التخصص") {
-            setError(specialtiesSelect);
-        } else {
-            clearError(specialtiesSelect);
-        }
-
-        if (!selectedDoctor || selectedDoctor === "اختر الطبيب") {
-            setError(doctorsSelect);
-        } else {
-            clearError(doctorsSelect);
-        }
-
-        if (!selectedDay || selectedDay === "اختر اليوم") {
-            setError(daySelect);
-        } else {
-            clearError(daySelect);
-        }
-
-        if (!selectedTime || selectedTime === "اختر الوقت") {
-            setError(timeSelect);
-        } else {
-            clearError(timeSelect);
-        }
-
+    
+        fields.forEach(field => {
+            if ((field.tagName === "SELECT" && field.selectedIndex === 0) || !field.value.trim()) {
+                field.style.backgroundColor = "#f8d7da";  // تلوين الخلفية باللون الأحمر
+                field.style.borderColor = "red";           // تلوين الحدود باللون الأحمر
+                hasError = true;
+            } else {
+                field.style.backgroundColor = "";         // إعادة الخلفية للطبيعي
+                field.style.borderColor = "";             // إعادة الحدود للطبيعي
+            }
+        });
+    
         if (hasError) {
-            return;  // لا يتم الإرسال إذا كانت هناك خطأ
+            return;  // وقف الإرسال لو كان فيه أخطاء
         }
-
-        const selectedDayText = daySelect.options[daySelect.selectedIndex].text;
-        const formattedTime = formatTime(selectedTime);
-
-        // بناء الرسالة
+    
+        // باقي الكود بعد التحقق من الحقول
+        const nameInput = document.getElementById("name");
+        const phoneInput = document.getElementById("phone");
+        const specialtiesSelect = document.getElementById("specialty-input");
+        const doctorsSelect = document.getElementById("doctor");
+        const clinicSelect = document.getElementById("clinic-select");
+        const daySelect = document.getElementById("daySelect"); // تأكد من استخدام ID الصحيح
+        const timeSelect = document.getElementById("timeSelect"); // تأكد من استخدام ID الصحيح
+        const doctorPriceValue = document.getElementById("doctorPrice").textContent || "غير محدد";
+    
+        const selectedDoctorOption = doctorsSelect.options[doctorsSelect.selectedIndex];
+        let doctorContact = selectedDoctorOption ? JSON.parse(selectedDoctorOption.dataset.doctor).whatsapp || JSON.parse(selectedDoctorOption.dataset.doctor).phone : '';
+    
+        // تأكد من اختيار اليوم
+        const selectedDayText = daySelect.value ? daySelect.options[daySelect.selectedIndex].text : "غير محدد";
+        
+        // تأكد من اختيار الوقت
+        const selectedTimeText = timeSelect.value || "غير محدد";
+    
         const message = `
-            👤 الاسم: ${nameInput.value.trim()}
-            📞 رقم الهاتف: ${phone}
-            📅 اليوم: ${selectedDayText} 
-            🕓 الوقت: ${formattedTime} 
-            🩺 التخصص: ${specialtiesSelect.options[specialtiesSelect.selectedIndex].text}
-            👨‍⚕️ الطبيب: ${doctorsSelect.options[doctorsSelect.selectedIndex].text}
-            💰 سعر الكشف: ${doctorPriceValue}
+        👤 الاسم: ${nameInput.value.trim()}
+        📞 رقم الهاتف: ${phoneInput.value.trim()}
+        🏥 العيادة: ${clinicSelect.value}
+        📅 اليوم: ${selectedDayText}
+        🕓 الوقت: ${selectedTimeText}
+        🩺 التخصص: ${specialtiesSelect.options[specialtiesSelect.selectedIndex].text}
+        👨‍⚕️ الطبيب: ${doctorsSelect.options[doctorsSelect.selectedIndex].text}
+        💰 سعر الكشف: ${doctorPriceValue}
         `;
-
-        // إضافة رمز البلد إذا لم يكن موجودًا
+    
         if (doctorContact && !doctorContact.startsWith("+")) {
-            doctorContact = "+20" + doctorContact;  // إضافة رمز البلد لمصر
+            doctorContact = "+20" + doctorContact;
         }
-
-        // التحقق من وجود رقم الهاتف/واتساب قبل بناء الرابط
+    
         if (!doctorContact) {
             alert("لم يتم العثور على رقم الطبيب! يرجى التحقق من الرقم.");
             return;
         }
-
-        // بناء الرابط بشكل صحيح
+    
         const whatsappLink = `https://wa.me/${doctorContact}?text=${encodeURIComponent(message.trim())}`;
-
-        // فتح الرابط في نافذة جديدة
         window.open(whatsappLink, "_blank");
     });
+    
+    
+    
+
+    
+    
 
     fetchSpecialties();
 });
+
 
 //******************************************************************** */
     //   عرض الاطباء في صفحة index  // 

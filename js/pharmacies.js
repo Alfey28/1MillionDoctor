@@ -14,17 +14,21 @@ fetch('js/pharmacies.json')
       pharmacyName.textContent = pharmacy["اسم الصيدلية"];
       pharmacyDiv.appendChild(pharmacyName);
 
+      const doctorName = document.createElement("h6");
+      doctorName.textContent = pharmacy["الدكتور"];
+      pharmacyDiv.appendChild(doctorName);
+
       // إضافة معلومات الصيدلية (رقم الخط الساخن، الفرع، الهاتف، الموقع)
       const infoDiv = document.createElement("div");
       infoDiv.classList.add("pharmacy-info");
 
-      const hotline = document.createElement("p");
-      hotline.textContent = `رقم الخط الساخن: ${pharmacy["رقم الخط الساخن"]}`;
-      infoDiv.appendChild(hotline);
-
       const branch = document.createElement("p");
       branch.textContent = `الفرع: ${pharmacy["الفرع"]}`;
       infoDiv.appendChild(branch);
+
+      const hotline = document.createElement("p");
+      hotline.textContent = `رقم الخط الساخن: ${pharmacy["رقم الخط الساخن"]}`;
+      infoDiv.appendChild(hotline);
 
       const phoneNumber = document.createElement("p");
       phoneNumber.textContent = `رقم الهاتف: ${pharmacy["رقم الهاتف"]}`;

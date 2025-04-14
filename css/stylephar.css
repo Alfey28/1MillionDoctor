@@ -41,13 +41,20 @@
     transform: scale(2.2); /* تأثير التكبير عند التمرير */
   }
   
-  .pharmacy-item h2 {
+.pharmacy-item h2 {
     color: rgb(44, 47, 196);
-    margin-bottom: 10px;
     font-weight: bold;
     font-size: 30px;
-  }
-  
+    margin-bottom: 0; /* إزالة المسافة السفلية */
+}
+
+.pharmacy-item h6 {
+    color: #454546;
+    position: absolute;
+    margin-top: 5%;
+    font-size: 18px; /* يمكنك تغيير الحجم حسب رغبتك */
+}
+
   .pharmacy-info p {
     margin: 5px 0;
   }
@@ -86,6 +93,10 @@
         margin-right: 10px;
     }
 
+    .pharmacy-item h6{
+      position: relative;
+    }
+
     .pharmacy {
         font-size: 28px; /* تصغير حجم النص */
     }
@@ -107,6 +118,10 @@
     .pharmacy-image {
         width: 70px; /* تقليص حجم الصورة أكثر */
         height: 70px;
+    }
+
+    .pharmacy-item h6{
+      position: relative;
     }
 
     .pharmacy {

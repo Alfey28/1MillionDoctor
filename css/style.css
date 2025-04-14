@@ -804,7 +804,7 @@ select:focus {
 /* ✅ الصف الثاني: التخصص - الطبيب - اليوم - الوقت */
 .select-row {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 10px;
     margin-bottom: 2%;
 }
@@ -852,18 +852,22 @@ select:focus {
 
     /* تخصيص ترتيب العناصر في select-row */
     .select-row select:nth-child(1) {
-        order: 3; /* اليوم يأتي أولًا */
+        order: 4; /* اليوم يأتي أولًا */
     }
 
     .select-row select:nth-child(2) {
-        order: 4; /* الوقت يأتي ثانيًا */
+        order: 3; /* الوقت يأتي ثانيًا */
     }
 
     .select-row select:nth-child(3) {
-        order: 1; /* التخصص يأتي ثالثًا */
+        order: 3; /* التخصص يأتي ثالثًا */
     }
 
     .select-row select:nth-child(4) {
+        order: 2; /* الطبيب يأتي رابعًا */
+    }
+
+    .select-row select:nth-child(5) {
         order: 2; /* الطبيب يأتي رابعًا */
     }
 }
@@ -904,12 +908,6 @@ select:focus {
         width: 100%; /* الزر يأخذ العرض بالكامل على الشاشات الصغيرة */
     }
 }
-
-
-
-
-
-
 
 /* *********************************************************************************** */
 

@@ -53,7 +53,7 @@
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor2.jpg?raw=true"
     },
     {
-      "id": 3,
+      "id": "1cos",
       "name": "دكتور فرحة",
       "specialty": " تجميل",
       "clinic_address1": " السراج مول, مدينة نصر",
@@ -100,7 +100,7 @@
       "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor4.jpg?raw=true"
     },
     {
-      "id": 5,
+      "id": "4psy",
       "name": "دكتور وفاء نصر الله",
       "specialty": "نفسية ",
       "clinic_address1": "شارع النصر أمام بنك مصر بنزينة عويد",

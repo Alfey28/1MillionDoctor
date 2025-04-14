@@ -1146,6 +1146,7 @@
         "specialty": "نساء و توليد",
         "clinic1" : {"clinic_address1":"الزيتون 282 شارع ترعة الجبل","availableDays":["السبت","الأحد","الأثنين","الثلاث","الأربع","الخميس"],"availableTimes":["4:00 مساء","4:30 مساء","5:00 مساء","5:30 مساء","6:00 مساء","6:30 مساء","7:00 مساء","7:30 مساء","8:00 مساء","8:30 مساء","9:00 مساء","9:30 مساء","10:00 مساء"]},
         "clinic2" : {"clinic_address2":"مترو عين شمس برج كايرو الناحيه الغربيه", "availableDays":["السبت","الأحد","الأثنين","الثلاث","الأربع","الخميس"],"availableTimes":["2:00 مساء","2:30 مساء","3:00 مساء","3:30 مساء","4:00 مساء"]},
+        "clinic_address":"الزيتون 282 شارع ترعة الجبل",
         "phone": "01001207592",
         "whatsapp":"01001207592",
         "rating": 4.8,
@@ -1175,122 +1176,6 @@
             }
         },
         "image": "img/سلوى.jpeg"
-        },
-        {
-          "id": "2card",
-      "name": "محمد حسن",
-      "specialty": " جراحة عامة",
-      "clinic_address": "شارع النصر، الإسكندرية",
-      "phone": "01002345678",
-      "price" : "280",
-      "clinic1" : {"clinic_address1":"الزيتون 282 شارع ترعة الجبل","availableDays":["السبت","الأحد","الأثنين","الثلاث","الأربع","الخميس"],"availableTimes":["4:00 مساء","4:30 مساء","5:00 مساء","5:30 مساء","6:00 مساء","6:30 مساء","7:00 مساء","7:30 مساء","8:00 مساء","8:30 مساء","9:00 مساء","9:30 مساء","10:00 مساء"]},
-      "clinic2" : {"clinic_address2":"مترو عين شمس برج كايرو الناحيه الغربيه", "availableDays":["السبت","الأحد","الأثنين","الثلاث","الأربع","الخميس"],"availableTimes":["2:00 مساء","2:30 مساء","3:00 مساء","3:30 مساء","4:00 مساء"]},
-      "rating": 4.7,
-      "bio": "أخصائي أمراض القلب والأوعية الدموية، خبرة 12 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "زمالة الكلية الملكية البريطانية"
-      ],
-      "services": [
-        "رسم القلب بالمجهود",
-        "علاج الذبحة الصدرية",
-        "تشخيص اضطرابات النبض"
-      ],
-      "contact": {
-        "email": "mohamedhassan@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/mohamedhassan",
-          "twitter": "https://twitter.com/mohamedhassan"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor2.jpg?raw=true"
-        },
-        {
-          "id": "3card",
-      "name": "ياسمين محمود",
-      "specialty": " عيون",
-      "clinic_address": "شارع الثورة، الجيزة",
-      "phone": "01003456789",
-      "price" : "300",
-      "clinic1" : {"clinic_address1":"الزيتون 282 شارع ترعة الجبل","availableDays":["السبت","الأحد","الأثنين","الثلاث","الأربع","الخميس"],"availableTimes":["4:00 مساء","4:30 مساء","5:00 مساء","5:30 مساء","6:00 مساء","6:30 مساء","7:00 مساء","7:30 مساء","8:00 مساء","8:30 مساء","9:00 مساء","9:30 مساء","10:00 مساء"]},
-      "clinic2" : {"clinic_address2":"مترو عين شمس برج كايرو الناحيه الغربيه", "availableDays":["السبت","الأحد","الأثنين","الثلاث","الأربع","الخميس"],"availableTimes":["2:00 مساء","2:30 مساء","3:00 مساء","3:30 مساء","4:00 مساء"]},
-      "rating": 4.9,
-      "bio": "متخصصة في أمراض القلب للأطفال، خبرة 10 سنوات.",
-      "experience": [
-        "ماجستير طب الأطفال",
-        "زمالة في أمراض القلب للأطفال"
-      ],
-      "services": [
-        "علاج العيوب الخلقية للقلب",
-        "متابعة حالات القلب الحرجة",
-        "تخطيط صدى القلب للأطفال"
-      ],
-      "contact": {
-        "email": "yasminmahmoud@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/yasminmahmoud",
-          "twitter": "https://twitter.com/yasminmahmoud"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor3.png?raw=true"
-        },
-        {
-          "id": "4card",
-      "name": "سامي عبد الله",
-      "specialty": " جلدية",
-      "clinic_address": "شارع الجيش، المنصورة",
-      "phone": "01004567890",
-      "rating": 4.6,
-      "clinic1" : {"clinic_address1":"الزيتون 282 شارع ترعة الجبل","availableDays":["السبت","الأحد","الأثنين","الثلاث","الأربع","الخميس"],"availableTimes":["4:00 مساء","4:30 مساء","5:00 مساء","5:30 مساء","6:00 مساء","6:30 مساء","7:00 مساء","7:30 مساء","8:00 مساء","8:30 مساء","9:00 مساء","9:30 مساء","10:00 مساء"]},
-      "clinic2" : {"clinic_address2":"مترو عين شمس برج كايرو الناحيه الغربيه", "availableDays":["السبت","الأحد","الأثنين","الثلاث","الأربع","الخميس"],"availableTimes":["2:00 مساء","2:30 مساء","3:00 مساء","3:30 مساء","4:00 مساء"]},
-      "price" : "250",
-      "bio": "خبير في أمراض القلب التداخلية، خبرة 18 عامًا.",
-      "experience": [
-        "دكتوراه في القسطرة القلبية",
-        "عضو الجمعية الأمريكية لأمراض القلب"
-      ],
-      "services": [
-        "علاج قصور الشرايين التاجية",
-        "تركيب أجهزة تنظيم ضربات القلب",
-        "علاج ضعف عضلة القلب"
-      ],
-      "contact": {
-        "email": "samiabdullah@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/samiabdullah",
-          "twitter": "https://twitter.com/samiabdullah"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor4.jpg?raw=true"
-        },
-        {
-          "id": "5card",
-      "name": "ليلى إبراهيم",
-      "specialty": "أسنان ",
-      "clinic_address": "شارع الوحدة، أسيوط",
-      "phone": "01005678901",
-      "rating": 4.8,
-      "clinic1" : {"clinic_address1":"الزيتون 282 شارع ترعة الجبل","availableDays":["السبت","الأحد","الأثنين","الثلاث","الأربع","الخميس"],"availableTimes":["4:00 مساء","4:30 مساء","5:00 مساء","5:30 مساء","6:00 مساء","6:30 مساء","7:00 مساء","7:30 مساء","8:00 مساء","8:30 مساء","9:00 مساء","9:30 مساء","10:00 مساء"]},
-      "clinic2" : {"clinic_address2":"مترو عين شمس برج كايرو الناحيه الغربيه", "availableDays":["السبت","الأحد","الأثنين","الثلاث","الأربع","الخميس"],"availableTimes":["2:00 مساء","2:30 مساء","3:00 مساء","3:30 مساء","4:00 مساء"]},
-      "price" : "330",
-      "bio": "استشارية في علاج اضطرابات القلب، خبرة 14 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "زمالة في طب القلب الوقائي"
-      ],
-      "services": [
-        "علاج ارتفاع ضغط الدم",
-        "متابعة مرضى جلطات القلب",
-        "تشخيص أمراض الصمامات"
-      ],
-      "contact": {
-        "email": "leilaibrahim@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/leilaibrahim",
-          "twitter": "https://twitter.com/leilaibrahim"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor5.jpg?raw=true"
         }
       ]
     },
@@ -1384,6 +1269,7 @@
         "name": "الدكتور/ فرحة",
       "specialty": " تجميل",
       "clinic_address": " السراج مول, مدينة نصر",
+      "clinic1": {"clinic_address1":"السراج مول, مدينة نصر","availableDays":["السبت","الأحد","الأثنين","الثلاث","الأربع","الخميس"],"availableTimes":["4:00 مساء","4:30 مساء","5:00 مساء","5:30 مساء","6:00 مساء","6:30 مساء","7:00 مساء","7:30 مساء","8:00 مساء","8:30 مساء","9:00 مساء","9:30 مساء","10:00 مساء"]},
       "location":"https://www.google.com/maps/place/Zoal+Restaurant+-+%D9%85%D8%B7%D8%B9%D9%85+%D8%B2%D9%88%D9%84%E2%80%AD/@30.0508022,31.3506012,17z/data=!4m6!3m5!1s0x14583ffbcdba991f:0x9224a173cb231866!8m2!3d30.0509215!4d31.3506594!16s%2Fg%2F11rjrwr97w?hl=en&entry=ttu&g_ep=EgoyMDI1MDMyMy4wIKXMDSoJLDEwMjExNjQwSAFQAw%3D%3D",
       "phone": "01157651377",
       "whatsapp": "01008518823",
@@ -1398,80 +1284,8 @@
           "facebook": "https://www.facebook.com/profile.php?id=61552216941838&mibextid=ZbWKwL"
         }
       },
-      "image": "img/فرحة تجميل.jpeg",
-        "availableDays": ["الأحد", "الثلاثاء", "الخميس"],
-        "availableTimes": {
-          "الأحد": ["10:00 صباحًا", "12:00 مساءً"],
-          "الثلاثاء": ["2:00 مساءً", "4:00 مساءً"],
-          "الخميس": ["6:00 مساءً", "8:00 مساءً"]
-        },
+      "image": "img/فرحة تجميل.jpeg",  
         "price" : "180"
-        },
-        {
-          "id": "2card",
-      "name": "محمد حسن",
-      "specialty": " جراحة عامة",
-      "clinic_address": "شارع النصر، الإسكندرية",
-      "phone": "01002345678",
-      "price" : "280",
-      "rating": 4.7,
-      "availableDays": ["الأحد", "الثلاثاء", "الخميس"],
-        "availableTimes": {
-          "الأحد": ["10:00 صباحًا", "12:00 مساءً"],
-          "الثلاثاء": ["2:00 مساءً", "4:00 مساءً"],
-          "الخميس": ["6:00 مساءً", "8:00 مساءً"]
-        },
-      "bio": "أخصائي أمراض القلب والأوعية الدموية، خبرة 12 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "زمالة الكلية الملكية البريطانية"
-      ],
-      "services": [
-        "رسم القلب بالمجهود",
-        "علاج الذبحة الصدرية",
-        "تشخيص اضطرابات النبض"
-      ],
-      "contact": {
-        "email": "mohamedhassan@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/mohamedhassan",
-          "twitter": "https://twitter.com/mohamedhassan"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor2.jpg?raw=true"
-        },
-        {
-          "id": "3card",
-      "name": "ياسمين محمود",
-      "specialty": " عيون",
-      "clinic_address": "شارع الثورة، الجيزة",
-      "phone": "01003456789",
-      "price" : "300",
-      "availableDays": ["الأحد", "الثلاثاء", "الخميس"],
-        "availableTimes": {
-          "الأحد": ["10:00 صباحًا", "12:00 مساءً"],
-          "الثلاثاء": ["2:00 مساءً", "4:00 مساءً"],
-          "الخميس": ["6:00 مساءً", "8:00 مساءً"]
-        },
-      "rating": 4.9,
-      "bio": "متخصصة في أمراض القلب للأطفال، خبرة 10 سنوات.",
-      "experience": [
-        "ماجستير طب الأطفال",
-        "زمالة في أمراض القلب للأطفال"
-      ],
-      "services": [
-        "علاج العيوب الخلقية للقلب",
-        "متابعة حالات القلب الحرجة",
-        "تخطيط صدى القلب للأطفال"
-      ],
-      "contact": {
-        "email": "yasminmahmoud@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/yasminmahmoud",
-          "twitter": "https://twitter.com/yasminmahmoud"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor3.png?raw=true"
         }
       ]
     },
@@ -3397,109 +3211,11 @@
       ,
       "doctors": [
         {
-          "id": "1card",
-        "name": " أحمد علي",
-        "specialty": "أمراض القلب",
-        "clinic_address": "شارع التحرير، القاهرة",
-        "phone": "01001234567",
-        "rating": 4.8,
-        "availableDays": ["الأحد", "الثلاثاء", "الخميس"],
-        "availableTimes": {
-          "الأحد": ["10:00 صباحًا", "12:00 مساءً"],
-          "الثلاثاء": ["2:00 مساءً", "4:00 مساءً"],
-          "الخميس": ["6:00 مساءً", "8:00 مساءً"]
-        },
-        "price" : "180",
-        "bio": "استشاري أمراض القلب والقسطرة القلبية، خبرة 15 عامًا.",
-        "experience": [
-            "دكتوراه في أمراض القلب",
-            "عضو الجمعية الأوروبية لأمراض القلب"
-        ],
-        "services": [
-            "تشخيص أمراض القلب",
-            "القسطرة القلبية",
-            "تركيب الدعامات"
-        ],
-        "contact": {
-            "email": "ahmedali@clinic.com",
-            "social": {
-                "facebook": "https://facebook.com/ahmedali",
-                "twitter": "https://twitter.com/ahmedali"
-            }
-        },
-        "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor1.jpg?raw=true"
-        },
-        {
-          "id": "2card",
-      "name": "محمد حسن",
-      "specialty": " جراحة عامة",
-      "clinic_address": "شارع النصر، الإسكندرية",
-      "phone": "01002345678",
-      "price" : "280",
-      "rating": 4.7,
-      "availableDays": ["الأحد", "الثلاثاء", "الخميس"],
-        "availableTimes": {
-          "الأحد": ["10:00 صباحًا", "12:00 مساءً"],
-          "الثلاثاء": ["2:00 مساءً", "4:00 مساءً"],
-          "الخميس": ["6:00 مساءً", "8:00 مساءً"]
-        },
-      "bio": "أخصائي أمراض القلب والأوعية الدموية، خبرة 12 عامًا.",
-      "experience": [
-        "ماجستير أمراض القلب",
-        "زمالة الكلية الملكية البريطانية"
-      ],
-      "services": [
-        "رسم القلب بالمجهود",
-        "علاج الذبحة الصدرية",
-        "تشخيص اضطرابات النبض"
-      ],
-      "contact": {
-        "email": "mohamedhassan@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/mohamedhassan",
-          "twitter": "https://twitter.com/mohamedhassan"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor2.jpg?raw=true"
-        },
-        {
-          "id": "3card",
-      "name": "ياسمين محمود",
-      "specialty": " عيون",
-      "clinic_address": "شارع الثورة، الجيزة",
-      "phone": "01003456789",
-      "price" : "300",
-      "availableDays": ["الأحد", "الثلاثاء", "الخميس"],
-        "availableTimes": {
-          "الأحد": ["10:00 صباحًا", "12:00 مساءً"],
-          "الثلاثاء": ["2:00 مساءً", "4:00 مساءً"],
-          "الخميس": ["6:00 مساءً", "8:00 مساءً"]
-        },
-      "rating": 4.9,
-      "bio": "متخصصة في أمراض القلب للأطفال، خبرة 10 سنوات.",
-      "experience": [
-        "ماجستير طب الأطفال",
-        "زمالة في أمراض القلب للأطفال"
-      ],
-      "services": [
-        "علاج العيوب الخلقية للقلب",
-        "متابعة حالات القلب الحرجة",
-        "تخطيط صدى القلب للأطفال"
-      ],
-      "contact": {
-        "email": "yasminmahmoud@clinic.com",
-        "social": {
-          "facebook": "https://facebook.com/yasminmahmoud",
-          "twitter": "https://twitter.com/yasminmahmoud"
-        }
-      },
-      "image": "https://github.com/Alfey28/clinck/blob/main/img/doctor3.png?raw=true"
-        },
-        {
           "id": "4psy",
       "name": "الدكتور/ وفاء نصر الله",
       "specialty": "نفسية ",
-      "clinic_address": "شارع النصر أمام بنك مصر بنزينة عويد",
+      "clinic1":{"clinic_address1" : "شارع النصر أمام بنك مصر بنزينة عويد","availableDays":["السبت","الأحد","الأثنين","الثلاث","الأربع","الخميس"],"availableTimes":["4:00 مساء","4:30 مساء","5:00 مساء","5:30 مساء","6:00 مساء","6:30 مساء","7:00 مساء","7:30 مساء","8:00 مساء","8:30 مساء","9:00 مساء","9:30 مساء","10:00 مساء"]},      
+      "clinic_address":"شارع النصر أمام بنك مصر بنزينة عويد",
       "phone": "01080609963",
       "whatsapp":"01276217871",
       "rating": 4.8,
@@ -3518,13 +3234,7 @@
         }
       },
       "image": "img/وفاء نفسية.jpg",
-      "price" : "250",
-      "availableDays": ["الأحد", "الثلاثاء", "الخميس"],
-        "availableTimes": {
-          "الأحد": ["10:00 صباحًا", "12:00 مساءً"],
-          "الثلاثاء": ["2:00 مساءً", "4:00 مساءً"],
-          "الخميس": ["6:00 مساءً", "8:00 مساءً"]
-        }
+      "price" : "250"
         }
       ]
     }
