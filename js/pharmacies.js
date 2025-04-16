@@ -10,51 +10,72 @@ fetch('js/pharmacies.json')
       pharmacyDiv.classList.add("pharmacy-item");
 
       // إضافة اسم الصيدلية
-      const pharmacyName = document.createElement("h2");
-      pharmacyName.textContent = pharmacy["اسم الصيدلية"];
-      pharmacyDiv.appendChild(pharmacyName);
+if (pharmacy["اسم الصيدلية"]) {
+  const pharmacyName = document.createElement("h2");
+  pharmacyName.textContent = pharmacy["اسم الصيدلية"];
+  pharmacyDiv.appendChild(pharmacyName);
+}
 
-      const doctorName = document.createElement("h6");
-      doctorName.textContent = pharmacy["الدكتور"];
-      pharmacyDiv.appendChild(doctorName);
+if (pharmacy["الدكتور"]) {
+  const doctorName = document.createElement("h6");
+  doctorName.textContent = pharmacy["الدكتور"];
+  pharmacyDiv.appendChild(doctorName);
+}
 
-      // إضافة معلومات الصيدلية (رقم الخط الساخن، الفرع، الهاتف، الموقع)
-      const infoDiv = document.createElement("div");
-      infoDiv.classList.add("pharmacy-info");
+// إضافة معلومات الصيدلية
+const infoDiv = document.createElement("div");
+infoDiv.classList.add("pharmacy-info");
 
-      const branch = document.createElement("p");
-      branch.textContent = `الفرع: ${pharmacy["الفرع"]}`;
-      infoDiv.appendChild(branch);
+if (pharmacy["الفرع"]) {
+  const branch = document.createElement("p");
+  branch.textContent = `الفرع: ${pharmacy["الفرع"]}`;
+  infoDiv.appendChild(branch);
+}
 
-      const hotline = document.createElement("p");
-      hotline.textContent = `رقم الخط الساخن: ${pharmacy["رقم الخط الساخن"]}`;
-      infoDiv.appendChild(hotline);
+if (pharmacy["العنوان"]) {
+  const address = document.createElement("p");
+  address.textContent = `العنوان: ${pharmacy["العنوان"]}`;
+  infoDiv.appendChild(address);
+}
 
-      const phoneNumber = document.createElement("p");
-      phoneNumber.textContent = `رقم الهاتف: ${pharmacy["رقم الهاتف"]}`;
-      infoDiv.appendChild(phoneNumber);
+if (pharmacy["رقم الخط الساخن"]) {
+  const hotline = document.createElement("p");
+  hotline.textContent = `رقم الخط الساخن: ${pharmacy["رقم الخط الساخن"]}`;
+  infoDiv.appendChild(hotline);
+}
 
-      const locationLink = document.createElement("a");
-      locationLink.href = pharmacy["موقع"];
-      locationLink.textContent = "عرض الموقع على الخريطة";
-      locationLink.target = "_blank";
-      infoDiv.appendChild(locationLink);
+if (pharmacy["رقم الهاتف"]) {
+  const phoneNumber = document.createElement("p");
+  phoneNumber.textContent = `رقم الهاتف: ${pharmacy["رقم الهاتف"]}`;
+  infoDiv.appendChild(phoneNumber);
+}
 
-      pharmacyDiv.appendChild(infoDiv);
+if (pharmacy["موقع"]) {
+  const locationLink = document.createElement("a");
+  locationLink.href = pharmacy["موقع"];
+  locationLink.textContent = "عرض الموقع على الخريطة";
+  locationLink.target = "_blank";
+  infoDiv.appendChild(locationLink);
+}
 
-      // إضافة الصور
-      const imagesDiv = document.createElement("div");
-      imagesDiv.classList.add("pharmacy-images");
+pharmacyDiv.appendChild(infoDiv);
 
-      pharmacy["صور"].forEach(imageUrl => {
-        const img = document.createElement("img");
-        img.src = imageUrl;
-        img.alt = pharmacy["اسم الصيدلية"];
-        img.classList.add("pharmacy-image");
-        imagesDiv.appendChild(img);
-      });
+// إضافة الصور
+if (pharmacy["صور"] && Array.isArray(pharmacy["صور"])) {
+  const imagesDiv = document.createElement("div");
+  imagesDiv.classList.add("pharmacy-images");
 
-      pharmacyDiv.appendChild(imagesDiv);
+  pharmacy["صور"].forEach(imageUrl => {
+    const img = document.createElement("img");
+    img.src = imageUrl;
+    img.alt = pharmacy["اسم الصيدلية"] || "صورة الصيدلية";
+    img.classList.add("pharmacy-image");
+    imagesDiv.appendChild(img);
+  });
+
+  pharmacyDiv.appendChild(imagesDiv);
+}
+
 
       // إضافة الـ div إلى قائمة الصيدليات
       pharmacyListElement.appendChild(pharmacyDiv);
