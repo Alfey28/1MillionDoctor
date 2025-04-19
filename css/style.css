@@ -248,7 +248,7 @@ select:focus {
 }
 
 .about-section {
-    background-color: #f9f9f9;
+    background-color: #f1f1f1;
 }
 .image-container {
     margin-left: 30%;
@@ -366,7 +366,6 @@ select:focus {
     margin-top: 5%;
 }
 .backg-team {
-    background-color: #f9f9f9;
     width: 100%;
 }
 .team-text {
@@ -517,10 +516,6 @@ select:focus {
 .error {
     border: 2px solid rgba(245, 109, 109, 0.856) !important;
     background-color: #ffe6e6;
-}
-.container-xxl {
-    background-color: #eff0f1;
-    padding: 50px 0;
 }
 .title-text-a {
     color: #007bff;
