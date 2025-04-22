@@ -1,0 +1,189 @@
+#pharmacy-details {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 24px;
+    background-color: #f2fdff8f;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    direction: rtl; /* لأن البيانات بالعربي */
+    font-family: 'Cairo', sans-serif;
+    line-height: 1.8;
+  }
+  
+  #pharmacy-details h2 {
+    font-size: 28px;
+    color: #0042F1;
+    margin-bottom: 10px;
+  }
+  
+  #pharmacy-details h4 {
+    font-size: 22px;
+    color: #264653;
+    margin-bottom: 10px;
+  }
+  
+  #pharmacy-details h6 {
+    font-size: 18px;
+    color: #6c757d;
+    margin-bottom: 10px;
+  }
+  
+  #pharmacy-details p {
+    font-size: 16px;
+    margin: 6px 0;
+    color: #333;
+  }
+  
+  #pharmacy-details a {
+    text-decoration: underline;
+  }
+  
+  #pharmacy-details a:hover {
+    color: #e76f51;
+  }
+  
+  .pharmacy-image {
+    width: 150px;
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .pharmacy-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  #pharmacy-details div {
+    margin-top: 16px;
+  }
+  
+  @media (max-width: 600px) {
+    .pharmacy-image {
+      width: 40%;
+      margin: 10px 10px;
+    }
+  
+    #pharmacy-details {
+      padding: 16px;
+    }
+  }
+
+
+  .lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+    margin-top: 10%; /* مسافة من الأعلى */
+  }
+  
+  
+  .lightbox .close {
+    position: absolute;
+    top: 10px; /* بدل 30px */
+    right: 30px; /* ممكن تصغرها لو تحب */
+    font-size: 36px;
+    color: transparent;
+    cursor: pointer;
+    z-index: 1010;
+  }
+  
+  
+  .controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .controls button {
+    background: transparent;
+    border: none;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  
+  .controls button:hover {
+    background: rgba(0, 0, 0, 0.001); /* نفس الخلفية العادية */
+    color: white;
+  }
+  
+  
+
+  /* #prescription-form {
+    margin-top: 40px;
+    padding: 24px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 66, 241, 0.1);
+    direction: rtl;
+    font-family: 'Cairo', sans-serif;
+  }
+  
+  #prescription-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #0042F1;
+    font-size: 16px;
+  }
+  
+  #prescription-form input[type="text"],
+#prescription-form input[type="file"] {
+  width: 100%;
+  padding: 8px 12px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 14px;
+  background-color: #fafafa;
+  transition: border 0.3s ease;
+}
+
+#prescription-form input[type="file"] {
+  cursor: pointer;
+  font-family: 'Cairo', sans-serif;
+  color: #444;
+}
+
+  
+  #prescription-form input:focus {
+    border-color: #0042F1;
+    outline: none;
+  }
+  
+  #prescription-form button {
+    background-color: #0042F1;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  #prescription-form button:hover {
+    background-color: #002fb3;
+    transform: translateY(-2px);
+  } */
+  
+  
