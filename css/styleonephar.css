@@ -128,7 +128,7 @@
   
   
 
-  /* #prescription-form {
+  #prescription-form {
     margin-top: 40px;
     padding: 24px;
     background-color: #ffffff;
@@ -184,6 +184,6 @@
   #prescription-form button:hover {
     background-color: #002fb3;
     transform: translateY(-2px);
-  } */
+  }
   
   

@@ -111,39 +111,73 @@ document.addEventListener("DOMContentLoaded", function() {
         prevBtn.addEventListener("click", showPrev);
     }
 
-    // document.getElementById("prescription-form").addEventListener("submit", function (e) {
-    //     e.preventDefault();
-      
-    //     const imageInput = document.getElementById("prescription-image");
-    //     const medName = document.getElementById("medicine-name").value.trim();
-    //     let pharmacyWhatsapp = pharmacy["whatsapp"]?.replace(/\s+/g, "") || "";  // استخدم رقم الواتساب المحلي من JSON
-    //     const errorMessage = document.getElementById("error-message");
-
-    //     // إضافة كود البلد المصري +20 إذا كان الرقم محليًا
-    //     if (pharmacyWhatsapp && !pharmacyWhatsapp.startsWith("+20")) {
-    //         pharmacyWhatsapp = "+20" + pharmacyWhatsapp;
-    //     }
-
-    //     // تحقق من أن العميل دخل اسم الدواء أو رفع صورة الروشتة
-    //     if (!medName && imageInput.files.length === 0) {
-    //       errorMessage.textContent = "يرجى إدخال اسم الدواء أو رفع صورة الروشتة.";
-    //       errorMessage.style.display = "block";  // عرض التنبيه
-    //       return;  // لا يمكن إرسال الطلب إلا في حال إدخال أحدهم
-    //     } else {
-    //       errorMessage.style.display = "none";  // إخفاء التنبيه إذا كان صحيح
-    //     }
-      
-    //     let message = `مرحبًا، أود إرسال طلب للصيدلية:`;
-      
-    //     if (medName) {
-    //       message += `\n📝 اسم الدواء: ${medName}`;
-    //     }
-      
-    //     if (imageInput.files.length > 0) {
-    //       message += `\n📸 قمت بإرفاق صورة للروشتة، برجاء الاطلاع عليها بعد فتح المحادثة.`;
-    //     }
-    //     // إرسال الرسالة عبر واتساب باستخدام رقم الواتساب المحلي من ملف JSON
-    //     const whatsappURL = `https://wa.me/${pharmacyWhatsapp}?text=${encodeURIComponent(message)}`;
-    //     window.open(whatsappURL, "_blank");
-    // });
+    document.getElementById("prescription-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+  
+      const imageInput = document.getElementById("prescription-image");
+      const medName = document.getElementById("medicine-name").value.trim();
+      const customerName = document.getElementById("customer-name").value.trim();
+      const customerAddress = document.getElementById("customer-address").value.trim();
+      const customerPhone = document.getElementById("customer-phone").value.trim();
+      let pharmacyWhatsapp = pharmacy["whatsapp"]?.replace(/\s+/g, "") || "";  // استخدم رقم الواتساب المحلي من JSON
+      const errorMessage = document.getElementById("error-message");
+  
+      // Reset error styles
+      document.getElementById("customer-name").style.borderColor = "";
+      document.getElementById("customer-address").style.borderColor = "";
+      document.getElementById("customer-phone").style.borderColor = "";
+  
+      // تحقق من الحقول الإجبارية
+      if (!customerName) {
+          document.getElementById("customer-name").style.borderColor = "red";
+      }
+      if (!customerAddress) {
+          document.getElementById("customer-address").style.borderColor = "red";
+      }
+      if (!customerPhone) {
+          document.getElementById("customer-phone").style.borderColor = "red";
+      }
+  
+      // تحقق من أن العميل دخل اسم الدواء أو رفع صورة الروشتة
+      if (!medName && imageInput.files.length === 0) {
+          errorMessage.textContent = "يرجى إدخال اسم الدواء أو رفع صورة الروشتة.";
+          errorMessage.style.display = "block";  // عرض التنبيه
+          return;  // لا يمكن إرسال الطلب إلا في حال إدخال أحدهم
+      } else {
+          errorMessage.style.display = "none";  // إخفاء التنبيه إذا كان صحيح
+      }
+  
+      // إذا لم يكن هناك خطأ في الحقول الإجبارية
+      if (customerName && customerAddress && customerPhone) {
+          let message = `مرحبًا، أود إرسال طلب للصيدلية:`;
+  
+          // إضافة المعلومات الجديدة
+          if (customerName) {
+              message += `\n👤 الاسم: ${customerName}`;
+          }
+          if (customerAddress) {
+              message += `\n🏠 العنوان: ${customerAddress}`;
+          }
+          if (customerPhone) {
+              message += `\n📱 رقم الهاتف: ${customerPhone}`;
+          }
+  
+          if (medName) {
+              message += `\n📝 اسم الدواء: ${medName}`;
+          }
+  
+          if (imageInput.files.length > 0) {
+              message += `\n📸 قمت بإرفاق صورة للروشتة، برجاء الاطلاع عليها بعد فتح المحادثة.`;
+          }
+  
+          // إرسال الرسالة عبر واتساب باستخدام رقم الواتساب المحلي من ملف JSON
+          const whatsappURL = `https://wa.me/${pharmacyWhatsapp}?text=${encodeURIComponent(message)}`;
+          window.open(whatsappURL, "_blank");
+      } else {
+          errorMessage.textContent = "يرجى ملء جميع الحقول الإلزامية.";
+          errorMessage.style.display = "block";
+      }
+  });
+  
+  
 });
