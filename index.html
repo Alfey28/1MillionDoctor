@@ -31,7 +31,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.css?v=2" rel="stylesheet">
 
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
@@ -50,37 +50,34 @@
 
 
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-2 shadow"> 
+    <nav class="navbar navbar-expand-lg  navbar-light sticky-top p-2 shadow"> 
         <div class="container-fluid d-flex align-items-center">
             <!-- زر القائمة عند تصغير الشاشة -->
             <button class="navbar-toggler order-1 " type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <i class="fas fa-bars" style="color: #fff; font-size: 24px;"></i>
             </button>
     
             <!-- القائمة اليمنى -->
-            <div class="collapse navbar-collapse order-2" id="navbarContent">
-                <ul class="navbar-nav mb-2 mb-lg-0">
-                    <li class="nav-item"><a href="#amount" class="nav-link">أحجز كشفك الأن</a></li>
+            <div class="collapse navbar-collapse  order-2" id="navbarContent">
+                <!-- اللوجو في المنتصف -->
+                <a href="index.html" class="navbar-brand  d-none d-lg-block">
+                    <img width="50%" src="img/om.png" alt="logo">
+                </a>
+
+                <ul class="navbar-nav mx-lg-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a href="index.html" class="nav-link">الرئيسية</a></li>
                     <li class="nav-item"><a href="phar.html" class="nav-link">صيدليات</a></li>
                     <li class="nav-item"><a href="info.html" class="nav-link">معلومات طبية</a></li>
-                </ul>
-    
-                <!-- اللوجو في المنتصف -->
-                <a href="index.html" class="navbar-brand mx-lg-auto d-none d-lg-block">
-                    <img width="90%" src="img/O.png" alt="logo">
-                </a>
-    
-                <!-- القائمة اليسرى -->
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a href="index.html" class="nav-link active">الرئيسية</a></li>
                     <li class="nav-item"><a href="#specialization" class="nav-link">تخصصات</a></li>
                     <li class="nav-item"><a href="#doctors" class="nav-link">أطباء</a></li>
+                    <li class="nav-item"><a href="#amount" class="nav-link">أحجز كشفك الأن</a></li>
+
                 </ul>
             </div>
     
             <!-- اللوجو في الشاشات الصغيرة -->
             <a href="index.html" class="navbar-brand d-lg-none ms-auto">
-                <img width="100%" src="img/O.png" alt="logo">
+                <img width="100%" src="img/om.png" alt="logo">
             </a>
         </div>
     </nav>
@@ -91,7 +88,7 @@
     <div class="header-section">
         <div class="position-relative">
             <!-- الصورة المتغيرة -->
-            <img id="carousel-image" class="img-fluid full-height" src="img/carousel-3.jpg" alt="">
+            <img id="carousel-image" class="img-fluid" src="img/carousel-5.jpg" alt="">
     
             <!-- طبقة سوداء شفافة -->
             <div class="overlay"></div>
@@ -101,7 +98,7 @@
                 <h1 class="header-text-h1">أحجز دلوقتي كشفك مع دكتورك المفضل بسهولة</h1>
                 <p class="header-text-p">رعاية صحية لحياة أفضل</p>
                 
-                <div class="rounded d-flex flex-column p-5 booking-section">
+                <div class="rounded p-5 booking-section">
                     <p id="error-message" style="display: none; color: red; text-align: center; font-weight: bold; margin-bottom: 10px;"></p>
                 
                     <form id="bookingForm" novalidate>
@@ -458,7 +455,7 @@
                 <!-- النص في اليمين -->
                 <div class="text-section">
                     <h2>...سجل معنا في </h2>
-                    <img width="40%" src="img/O.png" alt="logo" class="bg-img">
+                    <img width="40%" src="img/om.png" alt="logo">
                 </div>
         
                 <!-- الخيارات وزر التسجيل في اليسار -->
@@ -499,7 +496,7 @@
                 <!-- عمود المعلومات -->
                 <div class="col-lg-3 col-md-6 col-info">
                     <h5 class="mb-4">المعلومات</h5>
-                    <p>نحن هنا لتسهيل حياتك الصحية. في 1MillionDoctor، نقدم لك مجموعة من الخدمات التي تساعدك في العناية بصحتك بكل سهولة. يمكنك حجز مواعيدك الطبية، تحديد فحوصاتك اللازمة، والاستفادة من الاستشارات الطبية المتخصصة، بالإضافة إلى الوصول إلى مقالات طبية معلوماتية تدعم صحتك. كما نوفر لك إمكانية اختيار الصيدلية المناسبة لاحتياجاتك. نحن هنا لدعمك وتقديم أفضل الحلول الصحية بطريقة سهلة وموثوقة.</p>
+                    <p style="color: #fff;">نحن هنا لتسهيل حياتك الصحية. في 1MillionDoctor، نقدم لك مجموعة من الخدمات التي تساعدك في العناية بصحتك بكل سهولة. يمكنك حجز مواعيدك الطبية، تحديد فحوصاتك اللازمة، والاستفادة من الاستشارات الطبية المتخصصة، بالإضافة إلى الوصول إلى مقالات طبية معلوماتية تدعم صحتك. كما نوفر لك إمكانية اختيار الصيدلية المناسبة لاحتياجاتك. نحن هنا لدعمك وتقديم أفضل الحلول الصحية بطريقة سهلة وموثوقة.</p>
                 </div>
             
                 <!-- عمود التخصصات -->
@@ -538,8 +535,8 @@
                 </div>
     
                 <!-- عمود جديد (العمود الرابع) -->
-                <div class="col-lg-3 col-md-6">
-                    <img width="80%" src="img/O.png" alt="logo">
+                <div class="col-lg-3 col-md-6" style="color: #fff;">
+                    <img width="80%" src="img/om.png" alt="logo">
                     <ul style="direction: rtl;margin-top: 10%;">
                         <li class="fs-5">📞 : 01201233396</li>
                         <li class="mt-3 fs-5">📍 : 79 أبراج طيبة طريق النصر مدينة نصر</li>

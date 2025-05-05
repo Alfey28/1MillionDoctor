@@ -32,6 +32,12 @@ fetch('js/pharmacies.json')
         infoDiv.appendChild(branch);
       }
 
+      if (pharmacy["رقم الهاتف"]) {
+        const phone = document.createElement("p");
+        phone.textContent = `رقم الهاتف: ${pharmacy["رقم الهاتف"]}`;
+        infoDiv.appendChild(phone);
+      }
+
       pharmacyDiv.appendChild(infoDiv);
       pharmacyListElement.appendChild(pharmacyDiv);
     });

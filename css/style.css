@@ -45,7 +45,7 @@ body {
 .title-text-about {
     font-size: 28px;
     text-align: center;
-    color: #32bccb;
+    color: #0e3d2b;
 }
 .filter-btn:hover {
     background: #03376e;
@@ -65,7 +65,7 @@ body {
     font-weight: 900 !important;
 }
 .back-to-top {
-    background-color: #32bccb !important;
+    background-color: #0e3d2b !important;
     position: fixed;
     right: 20px;
     bottom: 20px;
@@ -112,10 +112,15 @@ body {
     font-weight: 400;
 }
 .navbar {
-    border-bottom: 2px solid #0042f7;
+    background-color: #0e3d2b;
+    border-bottom: 2px solid #0e3d2b;
+}
+.nav-link{
+    color: #fff;
 }
 .navbar-nav .nav-link:hover {
-    color: #0042f7;
+    /* color: #0042f7; */
+    color: #ffffff;
     font-weight: 700;
     transition: color 0.1s ease-in-out;
 }
@@ -139,6 +144,9 @@ body {
     .navbar {
         position: relative;
     }
+    .nav-link{
+        color: #0e3d2b;
+    }
     .navbar li {
         transition: color 0.3s ease-in-out;
     }
@@ -147,6 +155,7 @@ body {
     }
     .navbar .navbar-brand {
         position: absolute;
+        width: 50%;
         left: 70%;
         transform: translateX(-50%);
         white-space: nowrap;
@@ -332,7 +341,7 @@ select:focus {
     border: 1px solid #ddd;
 }
 .service-item:hover {
-    background-color: #32bccb !important;
+    background-color: #0e3d2b !important;
     color: #fff;
     box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.08);
 }
@@ -360,7 +369,7 @@ select:focus {
 }
 .offer-text,
 .team-social {
-    color: #0463fa;
+    color: #0e3d2b;
 }
 .team {
     margin-top: 5%;
@@ -376,7 +385,7 @@ select:focus {
     font-weight: 700;
 }
 .team-text .special-color {
-    color: #32bccb;
+    color: #0D6EFD;
     font-size: 18px;
     font-weight: 700;
 }
@@ -538,8 +547,8 @@ select:focus {
     background-color: #e9ecef;
 }
 .rounded-circle {
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
     background-color: #007bff;
     color: #fff;
     font-size: 22px;
@@ -634,7 +643,6 @@ select:focus {
 }
 .bg-img{
     margin-top: 3%;
-    background-color: rgba(255, 255, 255, 0.699);
 }
 .options {
     display: flex;
@@ -642,7 +650,7 @@ select:focus {
     margin-bottom: 15px;
 }
 .option {
-    background: #32bccb;
+    background: #0e3d2b;
     color: #fff;
     padding: 10px;
     border-radius: 10px;
@@ -652,7 +660,7 @@ select:focus {
 }
 .btn-register,
 .footer h5 {
-    color: #32bccb;
+    color: #0e3d2b;
     font-weight: 700;
 }
 .option i {
@@ -677,7 +685,7 @@ select:focus {
     color: #fff;
 }
 .footer {
-    background-color: #eff0f1;
+    background-color: #0e3d2b;
     color: #000;
 }
 .footer h5 {
@@ -692,7 +700,7 @@ select:focus {
 .footer .specialty-column a {
     display: block;
     font-size: 18px;
-    color: #444;
+    color: #fff;
     text-decoration: underline;
     text-underline-offset: 5px;
     transition: transform 0.3s;
@@ -705,7 +713,7 @@ select:focus {
 }
 .footer .btn:hover,
 .footer .specialty-column a:hover {
-    color: #0042f7;
+    color: #fff;
     transform: scale(1.1);
 }
 .footer .specialties {
@@ -718,12 +726,12 @@ select:focus {
 }
 
 .copyright {
-    background-color: #1b2c51;
-    color: #fff;
+    background-color: #fff;
+    color: #0e3d2b;
 }
 .copyright a {
     text-decoration: none;
-    color: #fff;
+    color: #0e3d2b;
 }
 .header-section{
     margin-bottom: 5%;
@@ -754,9 +762,18 @@ select:focus {
 
 /* تحسين العرض على الشاشات الصغيرة */
 @media (max-width: 768px) {
+    .header-section{
+        height: 60vh;
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url('/img/carousel-5.jpg');        background-size: cover;
+        background-repeat:no-repeat;
+        background-position:center;	
+    }
+    .header-section img{
+        display: none;
+    }
     .header-text-h1 {
         font-size: 1.8rem; /* تصغير حجم h1 للشاشات الصغيرة */
-        margin-bottom: 15%;
+        top: 100px;
     }
 
     .header-text-p {
@@ -780,10 +797,11 @@ select:focus {
 
 /* *********************************************************************************** */
 .booking-section {
+    display: block;
     position: relative;
     margin-top: 25%;
-    background-color: rgba(52, 85, 155, 0.582);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.281);
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
     width: 90%;
     text-align: center;
     gap: 15px; /* مسافة بين الصفوف */
@@ -832,7 +850,7 @@ select:focus {
 /* 📱 تحسين استجابة التصميم للشاشات الصغيرة */
 @media (max-width: 768px) {
     .booking-section {
-        margin-top: 70%; /* تغيير المسافة العلوية إلى قيمة أقل */
+        margin-top: 650px !important;/* تغيير المسافة العلوية إلى قيمة أقل */
     }
 
     .input-row {
@@ -950,7 +968,7 @@ select:focus {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    background: #34559B;
+    background: #0e3d2b;
     padding: 25px;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
@@ -1118,7 +1136,6 @@ select:focus {
     background: white;
     cursor: pointer;
 }
-
 /* استجابة للشاشات الصغيرة */
 @media screen and (max-width: 768px) {
     .Surgical-section {
